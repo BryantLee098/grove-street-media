@@ -1,0 +1,2702 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+<!-- ═══ SEO META TAGS ═══ -->
+<title>Grove Street Media | Photography · Film &amp; Video · Graphic Design</title>
+<meta name="description" content="Grove Street Media is a full-service visual production studio specializing in photography, videography, and graphic design. Based in Detroit — available worldwide."/>
+<meta name="keywords" content="photography, videography, graphic design, music video, wedding photography, commercial photography, Detroit photographer, lifestyle & culture photography, album artwork"/>
+<meta name="author" content="Grove Street Media"/>
+<meta name="robots" content="index, follow"/>
+
+<!-- ═══ OPEN GRAPH (Social Media Previews) ═══ -->
+<meta property="og:title" content="Grove Street Media | Photography · Film &amp; Video · Graphic Design"/>
+<meta property="og:description" content="Visual storytelling rooted in authenticity. Photography, film, and design for brands, artists, and culture."/>
+<meta property="og:type" content="website"/>
+<meta property="og:url" content="https://grovestreetmedia.com"/>
+<!-- Replace the image URL below with a real hero/logo image from Cloudinary -->
+<meta property="og:image" content="https://res.cloudinary.com/YOUR_CLOUD_NAME/image/upload/og-preview.jpg"/>
+<meta property="og:image:width" content="1200"/>
+<meta property="og:image:height" content="630"/>
+<meta property="og:site_name" content="Grove Street Media"/>
+
+<!-- ═══ TWITTER / X CARD ═══ -->
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:title" content="Grove Street Media"/>
+<meta name="twitter:description" content="Photography · Film &amp; Video · Graphic Design. Based in Detroit — available worldwide."/>
+<meta name="twitter:image" content="https://res.cloudinary.com/YOUR_CLOUD_NAME/image/upload/og-preview.jpg"/>
+
+<!-- ═══ GOOGLE ANALYTICS ═══ -->
+<!-- TO ACTIVATE: Replace G-XXXXXXXXXX with your real Measurement ID from analytics.google.com -->
+<!-- <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-XXXXXXXXXX');</script> -->
+
+<!-- ═══ FONTS ═══ -->
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Space+Mono:ital,wght@0,400;0,700;1,400&family=Rajdhani:wght@300;400;600;700&display=swap" rel="stylesheet"/>
+<style>
+:root{--green:#00ff41;--green-dim:#00c832;--green-dark:#004d14;--black:#050a05;--black2:#0b110b;--black3:#121a12;--text:#d4f5d4;--text-dim:#7daa7d;--font-display:'Bebas Neue',sans-serif;--font-mono:'Space Mono',monospace;--font-body:'Rajdhani',sans-serif;}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+html{scroll-behavior:smooth;}
+body{background:var(--black);color:var(--text);font-family:var(--font-body);overflow-x:hidden;}
+.cursor{width:14px;height:14px;background:var(--green);border-radius:50%;position:fixed;top:0;left:0;pointer-events:none;z-index:9999;transform:translate(-50%,-50%);transition:width .2s,height .2s;box-shadow:0 0 8px var(--green);}
+.cursor-ring{width:36px;height:36px;border:1.5px solid var(--green);border-radius:50%;position:fixed;top:0;left:0;pointer-events:none;z-index:9998;transform:translate(-50%,-50%);opacity:.6;transition:width .2s,height .2s;}
+body.hovering .cursor{width:20px;height:20px;}
+body.hovering .cursor-ring{width:50px;height:50px;opacity:1;}
+body::before{content:'';position:fixed;inset:0;background:repeating-linear-gradient(0deg,transparent,transparent 2px,rgba(0,0,0,.07) 2px,rgba(0,0,0,.07) 4px);pointer-events:none;z-index:10000;animation:scanMove 8s linear infinite;}
+@keyframes scanMove{0%{background-position:0 0;}100%{background-position:0 100px;}}
+.noise{position:fixed;inset:0;pointer-events:none;z-index:9997;opacity:.025;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E");}
+
+/* NAV */
+nav{position:fixed;top:0;left:0;right:0;z-index:1000;display:flex;align-items:center;justify-content:space-between;padding:18px 48px;background:rgba(5,10,5,.99);border-bottom:1px solid rgba(0,255,65,.12);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);}
+.nav-logo{font-family:var(--font-display);font-size:1.9rem;color:var(--green);letter-spacing:3px;text-decoration:none;text-shadow:0 0 18px var(--green),0 0 40px rgba(0,255,65,.4);-webkit-font-smoothing:antialiased;cursor:pointer;background:none;border:none;}
+.nav-links{display:flex;gap:28px;list-style:none;}
+.nav-links button{font-family:var(--font-mono);font-size:.72rem;color:var(--text-dim);letter-spacing:2px;text-transform:uppercase;transition:color .2s,text-shadow .2s;background:none;border:none;cursor:pointer;padding:0;}
+.nav-links button:hover,.nav-links button.active{color:var(--green);text-shadow:0 0 12px var(--green);}
+.nav-cta{font-family:var(--font-mono);font-size:.72rem;color:var(--black);background:var(--green);padding:8px 22px;letter-spacing:2px;text-transform:uppercase;clip-path:polygon(8px 0%,100% 0%,calc(100% - 8px) 100%,0% 100%);transition:background .2s,box-shadow .2s;border:none;cursor:pointer;}
+.nav-cta:hover{background:var(--green-dim);box-shadow:0 0 20px var(--green);}
+.hamburger{display:none;flex-direction:column;justify-content:center;gap:5px;width:36px;height:36px;cursor:pointer;background:none;border:none;padding:4px;z-index:1100;}
+.hamburger span{display:block;width:100%;height:2px;background:var(--green);transition:transform .3s,opacity .3s,width .3s;transform-origin:center;}
+.hamburger.open span:nth-child(1){transform:translateY(7px) rotate(45deg);}
+.hamburger.open span:nth-child(2){opacity:0;width:0;}
+.hamburger.open span:nth-child(3){transform:translateY(-7px) rotate(-45deg);}
+.mobile-nav{display:none;position:fixed;top:0;left:0;right:0;bottom:0;background:rgba(5,10,5,.98);z-index:1050;flex-direction:column;align-items:center;justify-content:center;opacity:0;pointer-events:none;transition:opacity .3s;}
+.mobile-nav.open{opacity:1;pointer-events:all;}
+.mobile-nav button{font-family:var(--font-display);font-size:2.8rem;letter-spacing:4px;color:var(--text);text-transform:uppercase;padding:12px 0;line-height:1;transition:color .2s;border:none;border-bottom:1px solid rgba(0,255,65,.08);width:80%;text-align:center;background:none;cursor:pointer;}
+.mobile-nav button:hover{color:var(--green);}
+.mobile-nav .mob-cta{margin-top:24px;font-family:var(--font-mono);font-size:.85rem;letter-spacing:3px;color:var(--black);background:var(--green);padding:14px 40px;border:none;clip-path:polygon(10px 0%,100% 0%,calc(100% - 10px) 100%,0% 100%);}
+
+/* PAGE SYSTEM */
+.page{display:none;min-height:100vh;padding-top:80px;}
+#page-home{padding-top:0;overflow:hidden;}
+.page.active{display:block;opacity:1;}
+
+/* BREADCRUMB */
+.breadcrumb{display:flex;align-items:center;gap:10px;padding:24px 48px 0;font-family:var(--font-mono);font-size:.62rem;letter-spacing:2px;color:var(--text-dim);text-transform:uppercase;flex-wrap:wrap;}
+.breadcrumb button{background:none;border:none;color:var(--text-dim);cursor:pointer;font-family:var(--font-mono);font-size:.62rem;letter-spacing:2px;text-transform:uppercase;transition:color .2s;padding:0;}
+.breadcrumb button:hover{color:var(--green);}
+.breadcrumb .sep{color:rgba(0,255,65,.3);}
+.breadcrumb .cur{color:var(--green);}
+
+/* SECTION */
+.page-inner{padding:40px 48px 80px;}
+.section-label{font-family:var(--font-mono);font-size:.65rem;letter-spacing:5px;color:var(--green);text-transform:uppercase;margin-bottom:10px;display:flex;align-items:center;gap:14px;}
+.section-label::after{content:'';flex:0 0 60px;height:1px;background:var(--green);}
+.section-title{font-family:var(--font-display);font-size:clamp(2.5rem,6vw,5rem);line-height:1;color:var(--text);margin-bottom:16px;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;}
+.section-title .accent{color:var(--green);}
+.section-desc{font-family:var(--font-body);font-size:1.05rem;color:var(--text-dim);max-width:560px;line-height:1.7;margin-bottom:40px;font-weight:300;}
+
+/* HERO */
+#page-home{overflow:hidden;}
+.hero-wrap{min-height:100vh;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:100px 48px 60px;position:relative;width:100%;box-sizing:border-box;}
+.hero-grid-bg{position:absolute;inset:0;background-image:linear-gradient(rgba(0,255,65,.04) 1px,transparent 1px),linear-gradient(90deg,rgba(0,255,65,.04) 1px,transparent 1px);background-size:60px 60px;animation:gridPulse 4s ease-in-out infinite alternate;}
+@keyframes gridPulse{0%{opacity:.5;}100%{opacity:1;}}
+.hero-glow{position:absolute;width:700px;height:700px;background:radial-gradient(circle,rgba(0,255,65,.12) 0%,transparent 70%);top:50%;left:50%;transform:translate(-50%,-50%);animation:glowPulse 3s ease-in-out infinite alternate;}
+@keyframes glowPulse{0%{transform:translate(-50%,-50%) scale(1);opacity:.7;}100%{transform:translate(-50%,-50%) scale(1.15);opacity:1;}}
+.hero-tag{font-family:var(--font-mono);font-size:.7rem;color:var(--green);letter-spacing:5px;text-transform:uppercase;margin-bottom:20px;animation:fadeUp .8s .3s both;-webkit-animation:fadeUp .8s .3s both;text-align:center;width:100%;}
+.hero-title{font-family:var(--font-display);font-size:clamp(4rem,12vw,10rem);line-height:.9;text-align:center;position:relative;z-index:2;animation:fadeUp .8s .5s both;-webkit-animation:fadeUp .8s .5s both;-webkit-font-smoothing:antialiased;width:100%;margin-left:auto;margin-right:auto;}
+.hero-title .line1{color:var(--text);display:block;text-align:center;}
+.hero-title .line2{color:var(--green);display:block;text-shadow:0 0 40px rgba(0,255,65,.5),0 0 80px rgba(0,255,65,.2);text-align:center;}
+.hero-sub{font-family:var(--font-body);font-size:1.15rem;color:var(--text-dim);letter-spacing:4px;text-transform:uppercase;margin-top:28px;text-align:center;animation:fadeUp .8s .7s both;-webkit-animation:fadeUp .8s .7s both;font-weight:300;width:100%;}
+.hero-sub span{color:var(--green);}
+.hero-btns{display:flex;gap:20px;margin-top:50px;animation:fadeUp .8s .9s both;-webkit-animation:fadeUp .8s .9s both;flex-wrap:wrap;justify-content:center;width:100%;}
+.hero-scroll{position:absolute;bottom:36px;left:50%;transform:translateX(-50%);display:flex;flex-direction:column;align-items:center;gap:8px;animation:fadeUp 1s 1.3s both;-webkit-animation:fadeUp 1s 1.3s both;}
+.hero-scroll span{font-family:var(--font-mono);font-size:.6rem;letter-spacing:3px;color:var(--text-dim);text-transform:uppercase;}
+.scroll-line{width:1px;height:50px;background:linear-gradient(180deg,var(--green),transparent);animation:scrollDrop 1.5s ease-in-out infinite;}
+@keyframes scrollDrop{0%,100%{transform:scaleY(0);transform-origin:top;}50%{transform:scaleY(1);transform-origin:top;}}
+@keyframes fadeUp{from{opacity:0;transform:translateY(24px);}to{opacity:1;transform:translateY(0);}}
+@-webkit-keyframes fadeUp{from{opacity:0;-webkit-transform:translateY(24px);}to{opacity:1;-webkit-transform:translateY(0);}}
+
+/* TICKER */
+.ticker-wrap{overflow:hidden;background:var(--green);padding:10px 0;}
+.ticker-track{display:flex;white-space:nowrap;animation:tickerMove 30s linear infinite;}
+.ticker-track span{font-family:var(--font-display);font-size:1.1rem;letter-spacing:3px;color:var(--black);padding:0 40px;}
+@keyframes tickerMove{0%{transform:translateX(0);}100%{transform:translateX(-50%);}}
+
+/* BUTTONS */
+.btn-primary{font-family:var(--font-mono);font-size:.75rem;letter-spacing:2px;text-transform:uppercase;padding:14px 38px;background:var(--green);color:var(--black);clip-path:polygon(10px 0%,100% 0%,calc(100% - 10px) 100%,0% 100%);font-weight:700;transition:background .2s,box-shadow .3s,transform .2s;border:none;cursor:pointer;text-decoration:none;}
+.btn-primary:hover{background:var(--green-dim);box-shadow:0 0 30px var(--green);transform:translateY(-2px);}
+.btn-outline{font-family:var(--font-mono);font-size:.75rem;letter-spacing:2px;text-transform:uppercase;padding:13px 38px;background:transparent;color:var(--green);border:1px solid var(--green);clip-path:polygon(10px 0%,100% 0%,calc(100% - 10px) 100%,0% 100%);transition:background .2s,box-shadow .3s,transform .2s;cursor:pointer;}
+.btn-outline:hover{background:rgba(0,255,65,.1);box-shadow:0 0 20px rgba(0,255,65,.3);transform:translateY(-2px);}
+.add-btn{font-family:var(--font-mono);font-size:.65rem;letter-spacing:2px;text-transform:uppercase;padding:10px 24px;background:transparent;border:1px solid rgba(0,255,65,.3);color:var(--green);cursor:pointer;margin-top:30px;transition:background .2s,border-color .2s;}
+.add-btn:hover{background:rgba(0,255,65,.08);border-color:var(--green);}
+
+/* PORTFOLIO HUB */
+.portfolio-hub-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:20px;margin-top:8px;}
+.portfolio-hub-card{position:relative;overflow:hidden;background:var(--black3);border:1px solid rgba(0,255,65,.1);padding:40px 32px 32px;cursor:pointer;transition:border-color .3s,transform .3s;display:flex;flex-direction:column;gap:14px;}
+.portfolio-hub-card::before{content:'';position:absolute;inset:0;background:linear-gradient(135deg,rgba(0,255,65,.06),transparent);opacity:0;transition:opacity .3s;}
+.portfolio-hub-card:hover{border-color:rgba(0,255,65,.5);transform:translateY(-5px);}
+.portfolio-hub-card:hover::before{opacity:1;}
+.phub-bg-num{position:absolute;top:12px;right:20px;font-family:var(--font-display);font-size:5rem;color:rgba(0,255,65,.04);line-height:1;pointer-events:none;}
+.phub-icon{font-size:2.8rem;line-height:1;}
+.phub-title{font-family:var(--font-display);font-size:2.2rem;color:var(--text);-webkit-font-smoothing:antialiased;line-height:1;}
+.phub-desc{font-family:var(--font-body);font-size:.95rem;color:var(--text-dim);line-height:1.6;font-weight:300;}
+.phub-sub-links{display:flex;flex-wrap:wrap;gap:8px;margin-top:4px;}
+.phub-sub{font-family:var(--font-mono);font-size:.62rem;letter-spacing:1px;color:var(--green);background:rgba(0,255,65,.06);border:1px solid rgba(0,255,65,.2);padding:6px 12px;cursor:pointer;text-transform:uppercase;transition:background .2s,border-color .2s;}
+.phub-sub:hover{background:rgba(0,255,65,.15);border-color:var(--green);}
+.phub-cta{font-family:var(--font-mono);font-size:.68rem;letter-spacing:2px;color:var(--green);text-transform:uppercase;margin-top:auto;padding-top:16px;border-top:1px solid rgba(0,255,65,.1);}
+.portfolio-hub-card:hover .phub-cta{letter-spacing:3px;}
+@media(max-width:900px){.portfolio-hub-grid{grid-template-columns:1fr;}}
+
+
+/* ═══ MEDIA URL INPUT OVERLAY ═══ */
+.media-url-overlay{position:absolute;inset:0;background:rgba(5,10,5,.92);display:none;flex-direction:column;align-items:center;justify-content:center;gap:10px;padding:16px;z-index:10;}
+.media-url-overlay.active{display:flex;}
+.media-url-overlay input{font-family:var(--font-mono);font-size:.65rem;background:var(--black);border:1px solid rgba(0,255,65,.4);color:var(--text);padding:10px 12px;width:100%;outline:none;text-align:center;}
+.media-url-overlay input:focus{border-color:var(--green);}
+.media-url-overlay input::placeholder{color:var(--text-dim);opacity:.6;}
+.media-url-overlay-btns{display:flex;gap:8px;width:100%;}
+.media-url-overlay-btns button{font-family:var(--font-mono);font-size:.6rem;letter-spacing:1px;text-transform:uppercase;padding:8px 0;flex:1;cursor:pointer;border:none;}
+.media-url-confirm{background:var(--green);color:var(--black);}
+.media-url-cancel{background:transparent;border:1px solid rgba(0,255,65,.3) !important;color:var(--text-dim);}
+.media-url-label{font-family:var(--font-mono);font-size:.58rem;letter-spacing:2px;color:var(--green);text-transform:uppercase;}
+.media-url-or{font-family:var(--font-mono);font-size:.55rem;color:var(--text-dim);letter-spacing:1px;}
+.media-url-file-btn{font-family:var(--font-mono);font-size:.6rem;letter-spacing:1px;text-transform:uppercase;padding:6px 16px;background:transparent;border:1px solid rgba(0,255,65,.2);color:var(--text-dim);cursor:pointer;}
+.media-url-file-btn:hover{border-color:var(--green);color:var(--green);}
+
+
+/* ══ CART SYSTEM ══ */
+.cart-btn{position:relative;background:none;border:1px solid rgba(0,255,65,.3);color:var(--green);font-family:var(--font-mono);font-size:.7rem;letter-spacing:1px;padding:7px 14px;cursor:pointer;transition:all .2s;display:flex;align-items:center;gap:7px;}
+.cart-btn:hover{background:rgba(0,255,65,.08);border-color:var(--green);box-shadow:0 0 12px rgba(0,255,65,.2);}
+.cart-count{background:var(--green);color:var(--black);font-family:var(--font-mono);font-size:.55rem;font-weight:700;width:18px;height:18px;border-radius:50%;display:flex;align-items:center;justify-content:center;line-height:1;}
+.cart-count.hidden{display:none;}
+
+/* CART DRAWER */
+.cart-overlay{position:fixed;inset:0;background:rgba(0,0,0,.7);z-index:2000;display:none;opacity:0;transition:opacity .3s;}
+.cart-overlay.open{display:block;opacity:1;}
+.cart-drawer{position:fixed;top:0;right:-420px;width:420px;max-width:100vw;height:100vh;background:var(--black2);border-left:1px solid rgba(0,255,65,.15);z-index:2001;display:flex;flex-direction:column;transition:right .35s cubic-bezier(.4,0,.2,1);overflow:hidden;}
+.cart-drawer.open{right:0;}
+.cart-drawer-header{padding:24px 24px 20px;border-bottom:1px solid rgba(0,255,65,.1);display:flex;align-items:center;justify-content:space-between;flex-shrink:0;}
+.cart-drawer-title{font-family:var(--font-display);font-size:1.6rem;color:var(--text);-webkit-font-smoothing:antialiased;letter-spacing:2px;}
+.cart-drawer-close{background:none;border:none;color:var(--text-dim);font-size:1.3rem;cursor:pointer;transition:color .2s;padding:4px;}
+.cart-drawer-close:hover{color:var(--green);}
+.cart-items{flex:1;overflow-y:auto;padding:16px;}
+.cart-empty{display:flex;flex-direction:column;align-items:center;justify-content:center;height:100%;gap:14px;color:var(--text-dim);font-family:var(--font-mono);font-size:.65rem;letter-spacing:2px;text-transform:uppercase;text-align:center;padding:40px;}
+.cart-empty-icon{font-size:3rem;opacity:.3;}
+.cart-item{background:var(--black3);border:1px solid rgba(0,255,65,.1);padding:16px;margin-bottom:10px;position:relative;transition:border-color .2s;}
+.cart-item:hover{border-color:rgba(0,255,65,.25);}
+.cart-item-header{display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:8px;}
+.cart-item-name{font-family:var(--font-display);font-size:1.1rem;color:var(--text);-webkit-font-smoothing:antialiased;line-height:1.2;}
+.cart-item-remove{background:none;border:none;color:var(--text-dim);cursor:pointer;font-size:.9rem;transition:color .2s;padding:2px 4px;flex-shrink:0;}
+.cart-item-remove:hover{color:var(--red);}
+.cart-item-service{font-family:var(--font-mono);font-size:.58rem;letter-spacing:2px;color:var(--green);text-transform:uppercase;margin-bottom:8px;}
+.cart-item-price{font-family:var(--font-display);font-size:1.5rem;color:var(--green);-webkit-font-smoothing:antialiased;}
+.cart-item-features{list-style:none;display:flex;flex-direction:column;gap:4px;margin-top:8px;}
+.cart-item-features li{font-family:var(--font-body);font-size:.82rem;color:var(--text-dim);display:flex;gap:6px;font-weight:300;}
+.cart-item-features li::before{content:"→";color:var(--green);font-family:var(--font-mono);font-size:.6rem;flex-shrink:0;margin-top:2px;}
+.cart-footer{padding:20px 24px;border-top:1px solid rgba(0,255,65,.1);flex-shrink:0;background:var(--black2);}
+.cart-total-row{display:flex;justify-content:space-between;align-items:center;margin-bottom:16px;}
+.cart-total-label{font-family:var(--font-mono);font-size:.62rem;letter-spacing:2px;color:var(--text-dim);text-transform:uppercase;}
+.cart-total-amount{font-family:var(--font-display);font-size:2rem;color:var(--green);-webkit-font-smoothing:antialiased;}
+.cart-savings{font-family:var(--font-mono);font-size:.58rem;letter-spacing:1px;color:var(--green-dim);margin-bottom:14px;text-align:right;}
+.cart-checkout-btns{display:flex;flex-direction:column;gap:8px;}
+.cart-checkout-stripe{font-family:var(--font-mono);font-size:.68rem;letter-spacing:2px;text-transform:uppercase;padding:14px;background:var(--green);color:var(--black);border:none;cursor:pointer;font-weight:700;text-align:center;transition:background .2s,box-shadow .2s;width:100%;}
+.cart-checkout-stripe:hover{background:var(--green-dim);box-shadow:0 0 20px var(--green);}
+.cart-checkout-paypal{font-family:var(--font-mono);font-size:.68rem;letter-spacing:2px;text-transform:uppercase;padding:13px;background:transparent;color:var(--text-dim);border:1px solid rgba(255,255,255,.1);cursor:pointer;text-align:center;transition:all .2s;width:100%;}
+.cart-checkout-paypal:hover{border-color:rgba(255,215,0,.4);color:#ffd700;}
+.cart-checkout-inquiry{font-family:var(--font-mono);font-size:.6rem;letter-spacing:2px;text-transform:uppercase;padding:11px;background:transparent;color:var(--green);border:1px solid rgba(0,255,65,.25);cursor:pointer;text-align:center;transition:all .2s;width:100%;margin-top:4px;}
+.cart-checkout-inquiry:hover{background:rgba(0,255,65,.06);border-color:var(--green);}
+.cart-note{font-family:var(--font-mono);font-size:.52rem;letter-spacing:1px;color:var(--text-dim);text-align:center;margin-top:10px;line-height:1.6;opacity:.7;}
+
+/* ADD TO CART BUTTON on price cards */
+.price-card-btns{display:flex;flex-direction:column;gap:8px;margin-top:auto;}
+.cart-add-btn{font-family:var(--font-mono);font-size:.62rem;letter-spacing:2px;text-transform:uppercase;padding:10px;background:transparent;border:1px solid rgba(0,255,65,.2);color:var(--text-dim);cursor:pointer;width:100%;transition:all .2s;text-align:center;}
+.cart-add-btn:hover{border-color:var(--green);color:var(--green);background:rgba(0,255,65,.05);}
+.cart-add-btn.added{border-color:var(--green);color:var(--green);background:rgba(0,255,65,.08);}
+
+/* Cart pulse animation */
+@keyframes cartPulse{0%{transform:scale(1);}50%{transform:scale(1.3);}100%{transform:scale(1);}}
+.cart-count.pulse{animation:cartPulse .3s ease;}
+
+/* HOME SECTIONS */
+.home-section{width:100%;}
+.home-section-inner{padding:80px 48px;}
+.pricing-preview-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:16px;margin-top:8px;}
+.pricing-preview-card{background:var(--black3);border:1px solid rgba(0,255,65,.08);padding:32px 28px;transition:border-color .3s,transform .3s;}
+.pricing-preview-card:hover{border-color:rgba(0,255,65,.3);transform:translateY(-4px);}
+.pprev-icon{font-size:2rem;margin-bottom:12px;}
+.pprev-service{font-family:var(--font-display);font-size:1.6rem;color:var(--text);-webkit-font-smoothing:antialiased;margin-bottom:20px;}
+.pprev-tiers{display:flex;flex-direction:column;gap:10px;}
+.pprev-tier{display:flex;justify-content:space-between;align-items:center;font-family:var(--font-body);font-size:.95rem;color:var(--text-dim);padding:8px 0;border-bottom:1px solid rgba(0,255,65,.06);font-weight:300;}
+.pprev-tier.featured-tier{color:var(--text);}
+.pprev-price{font-family:var(--font-mono);font-size:.7rem;color:var(--green);letter-spacing:1px;}
+.book-session-steps{display:flex;align-items:center;gap:16px;margin-top:40px;flex-wrap:wrap;justify-content:center;}
+.book-step{display:flex;flex-direction:column;align-items:center;gap:8px;}
+.book-step-num{font-family:var(--font-display);font-size:2.5rem;color:var(--green);line-height:1;-webkit-font-smoothing:antialiased;}
+.book-step-label{font-family:var(--font-mono);font-size:.62rem;letter-spacing:2px;color:var(--text-dim);text-transform:uppercase;text-align:center;}
+.book-step-divider{font-family:var(--font-display);font-size:1.8rem;color:rgba(0,255,65,.3);margin-bottom:20px;}
+@media(max-width:900px){
+  .home-section-inner{padding:60px 20px;}
+  .book-session-steps{gap:10px;}
+  .book-step-divider{display:none;}
+  .pricing-preview-grid{grid-template-columns:1fr;}
+}
+
+/* CATEGORY HUB CARDS */
+.cat-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:16px;margin-top:20px;}
+.cat-card{position:relative;overflow:hidden;background:var(--black3);border:1px solid rgba(0,255,65,.08);padding:40px 32px;cursor:pointer;transition:border-color .3s,transform .3s;display:flex;flex-direction:column;gap:12px;}
+.cat-card::before{content:'';position:absolute;inset:0;background:linear-gradient(135deg,rgba(0,255,65,.05),transparent);opacity:0;transition:opacity .3s;}
+.cat-card:hover{border-color:rgba(0,255,65,.4);transform:translateY(-4px);}
+.cat-card:hover::before{opacity:1;}
+.cat-card-icon{font-size:2.2rem;}
+.cat-card-title{font-family:var(--font-display);font-size:1.8rem;color:var(--text);-webkit-font-smoothing:antialiased;}
+.cat-card-desc{font-family:var(--font-body);font-size:.95rem;color:var(--text-dim);line-height:1.6;font-weight:300;}
+.cat-card-arrow{font-family:var(--font-mono);font-size:.65rem;letter-spacing:2px;color:var(--green);text-transform:uppercase;margin-top:auto;padding-top:8px;}
+.cat-card-num{position:absolute;top:16px;right:20px;font-family:var(--font-display);font-size:4rem;color:rgba(0,255,65,.05);line-height:1;}
+
+/* GALLERY */
+.gallery-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:6px;}
+.gallery-grid.masonry{columns:3;column-gap:6px;}
+.gallery-grid.masonry .gallery-item{break-inside:avoid;margin-bottom:6px;}
+.gallery-item{position:relative;overflow:hidden;background:var(--black3);border:1px solid rgba(0,255,65,.06);aspect-ratio:4/3;cursor:pointer;transition:border-color .3s;}
+.gallery-item.tall{aspect-ratio:3/4;}
+.gallery-item.square{aspect-ratio:1/1;}
+.gallery-item:hover{border-color:rgba(0,255,65,.4);}
+.gallery-item:hover .gallery-overlay{opacity:1;}
+.gallery-item:hover .gallery-corner-accent{opacity:1;}
+.gallery-placeholder{width:100%;height:100%;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:12px;color:var(--text-dim);font-family:var(--font-mono);font-size:.65rem;letter-spacing:2px;position:relative;}
+.gallery-placeholder-icon{font-size:2rem;color:var(--green);opacity:.3;}
+.gallery-placeholder input[type=file]{position:absolute;inset:0;opacity:0;cursor:pointer;width:100%;height:100%;}
+.gallery-placeholder img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:none;}
+.gallery-overlay{position:absolute;inset:0;background:linear-gradient(180deg,transparent 30%,rgba(0,0,0,.85) 100%);display:flex;flex-direction:column;justify-content:flex-end;padding:20px;opacity:0;transition:opacity .3s;}
+.gallery-overlay-title{font-family:var(--font-display);font-size:1.3rem;color:var(--text);-webkit-font-smoothing:antialiased;}
+.gallery-overlay-tag{font-family:var(--font-mono);font-size:.6rem;letter-spacing:2px;color:var(--green);text-transform:uppercase;margin-top:4px;}
+.gallery-corner-accent{position:absolute;top:8px;right:8px;width:16px;height:16px;border-top:1px solid var(--green);border-right:1px solid var(--green);opacity:0;transition:opacity .3s;}
+
+/* VIDEO */
+.video-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:20px;}
+.video-card{background:var(--black3);border:1px solid rgba(0,255,65,.08);overflow:hidden;transition:border-color .3s,transform .3s;cursor:pointer;}
+.video-card:hover{border-color:rgba(0,255,65,.4);transform:translateY(-4px);}
+.video-thumb{position:relative;aspect-ratio:16/9;background:var(--black);overflow:hidden;display:flex;align-items:center;justify-content:center;}
+.video-thumb-placeholder{width:100%;height:100%;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:10px;color:var(--text-dim);font-family:var(--font-mono);font-size:.65rem;letter-spacing:2px;position:relative;}
+.video-thumb-placeholder input[type=file]{position:absolute;inset:0;opacity:0;cursor:pointer;}
+.video-thumb-placeholder img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:none;}
+.play-btn{width:56px;height:56px;border-radius:50%;border:2px solid var(--green);display:flex;align-items:center;justify-content:center;color:var(--green);font-size:1.4rem;transition:background .2s,box-shadow .2s;position:relative;z-index:2;}
+.video-card:hover .play-btn{background:rgba(0,255,65,.12);box-shadow:0 0 20px var(--green);}
+.video-info{padding:20px;}
+.video-title{font-family:var(--font-display);font-size:1.2rem;color:var(--text);margin-bottom:6px;-webkit-font-smoothing:antialiased;}
+.video-meta{display:flex;gap:14px;align-items:center;}
+.video-tag{font-family:var(--font-mono);font-size:.6rem;letter-spacing:2px;color:var(--green);text-transform:uppercase;border:1px solid rgba(0,255,65,.3);padding:3px 10px;}
+.video-duration{font-family:var(--font-mono);font-size:.65rem;color:var(--text-dim);}
+.video-url-input{font-family:var(--font-mono);font-size:.65rem;background:transparent;border:none;border-bottom:1px dashed rgba(0,255,65,.3);color:var(--text-dim);padding:4px 0;width:100%;outline:none;margin-top:8px;transition:border-color .2s;}
+.video-url-input:focus{border-bottom-color:var(--green);color:var(--text);}
+.video-url-input::placeholder{color:var(--text-dim);opacity:.5;}
+
+/* ABOUT */
+.about-layout{display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center;}
+.about-img-wrap{position:relative;}
+.about-img-placeholder{width:100%;aspect-ratio:4/5;background:var(--black3);border:1px solid rgba(0,255,65,.15);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:14px;color:var(--text-dim);font-family:var(--font-mono);font-size:.7rem;letter-spacing:2px;position:relative;overflow:hidden;cursor:pointer;transition:border-color .3s;}
+.about-img-placeholder:hover{border-color:var(--green);}
+.about-img-placeholder .img-icon{font-size:2.5rem;color:var(--green);opacity:.5;}
+.about-img-placeholder input[type=file]{position:absolute;inset:0;opacity:0;cursor:pointer;width:100%;height:100%;}
+.about-img-placeholder img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:none;}
+.about-corner{position:absolute;width:24px;height:24px;border-color:var(--green);border-style:solid;}
+.about-corner.tl{top:-6px;left:-6px;border-width:2px 0 0 2px;}
+.about-corner.br{bottom:-6px;right:-6px;border-width:0 2px 2px 0;}
+.about-stats{display:grid;grid-template-columns:1fr 1fr;gap:24px;margin-top:40px;}
+.stat-box{border:1px solid rgba(0,255,65,.12);padding:20px;background:var(--black3);position:relative;}
+.stat-box::before{content:'';position:absolute;top:0;left:0;width:3px;height:100%;background:var(--green);}
+.stat-num{font-family:var(--font-display);font-size:2.8rem;color:var(--green);line-height:1;}
+.stat-label{font-family:var(--font-mono);font-size:.65rem;letter-spacing:2px;color:var(--text-dim);text-transform:uppercase;margin-top:4px;}
+.editable-field{outline:none;border-bottom:1px dashed transparent;transition:border-color .2s;cursor:text;}
+.editable-field:hover,.editable-field:focus{border-bottom-color:var(--green);}
+.edit-badge{font-family:var(--font-mono);font-size:.6rem;letter-spacing:2px;color:var(--green);opacity:.6;text-transform:uppercase;margin-bottom:8px;display:inline-block;}
+
+/* SERVICES */
+.services-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:2px;margin-top:20px;}
+.service-card{padding:40px 30px;background:var(--black3);border:1px solid rgba(0,255,65,.06);position:relative;overflow:hidden;transition:border-color .3s;}
+.service-card::before{content:'';position:absolute;inset:0;background:linear-gradient(135deg,rgba(0,255,65,.04),transparent);opacity:0;transition:opacity .3s;}
+.service-card:hover{border-color:rgba(0,255,65,.3);}
+.service-card:hover::before{opacity:1;}
+.service-icon{font-size:2rem;margin-bottom:20px;}
+.service-name{font-family:var(--font-display);font-size:1.6rem;color:var(--text);margin-bottom:12px;-webkit-font-smoothing:antialiased;}
+.service-desc{font-family:var(--font-body);font-size:.95rem;color:var(--text-dim);line-height:1.7;font-weight:300;}
+.service-num{position:absolute;top:16px;right:20px;font-family:var(--font-display);font-size:4rem;color:rgba(0,255,65,.05);line-height:1;}
+
+/* CONTACT */
+.contact-layout{display:grid;grid-template-columns:1fr 1fr;gap:80px;}
+.contact-item{margin-bottom:36px;}
+.contact-item-label{font-family:var(--font-mono);font-size:.6rem;letter-spacing:3px;color:var(--green);text-transform:uppercase;margin-bottom:6px;}
+.contact-item-value{font-family:var(--font-body);font-size:1.1rem;color:var(--text);font-weight:600;}
+.contact-item-value a{color:var(--text);text-decoration:none;transition:color .2s;}
+.contact-item-value a:hover{color:var(--green);}
+.contact-form{display:flex;flex-direction:column;gap:20px;}
+.form-field{display:flex;flex-direction:column;gap:8px;}
+.form-label{font-family:var(--font-mono);font-size:.6rem;letter-spacing:3px;color:var(--text-dim);text-transform:uppercase;}
+.form-input,.form-textarea{background:var(--black3);border:1px solid rgba(0,255,65,.12);color:var(--text);padding:14px 16px;font-family:var(--font-body);font-size:1rem;outline:none;transition:border-color .2s,box-shadow .2s;resize:none;}
+.form-input:focus,.form-textarea:focus{border-color:var(--green);box-shadow:0 0 0 1px rgba(0,255,65,.15);}
+.form-input::placeholder,.form-textarea::placeholder{color:var(--text-dim);opacity:.5;}
+.form-submit{font-family:var(--font-mono);font-size:.75rem;letter-spacing:2px;text-transform:uppercase;padding:16px 40px;background:var(--green);color:var(--black);border:none;cursor:pointer;font-weight:700;clip-path:polygon(10px 0%,100% 0%,calc(100% - 10px) 100%,0% 100%);transition:background .2s,box-shadow .3s;align-self:flex-start;}
+.form-submit:hover{background:var(--green-dim);box-shadow:0 0 24px var(--green);}
+
+/* FOOTER */
+footer{background:var(--black);border-top:1px solid rgba(0,255,65,.15);padding:40px 48px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:20px;}
+.footer-logo{font-family:var(--font-display);font-size:1.4rem;color:var(--green);letter-spacing:3px;text-shadow:0 0 12px rgba(0,255,65,.4);cursor:pointer;background:none;border:none;}
+.footer-links{display:flex;gap:28px;list-style:none;flex-wrap:wrap;}
+.footer-links button{font-family:var(--font-mono);font-size:.65rem;letter-spacing:2px;color:var(--text-dim);text-transform:uppercase;transition:color .2s;background:none;border:none;cursor:pointer;}
+.footer-links button:hover{color:var(--green);}
+.footer-copy{font-family:var(--font-mono);font-size:.6rem;color:var(--text-dim);letter-spacing:1px;}
+
+/* PROJECT GRID */
+.project-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:16px;margin-top:8px;}
+.project-card{position:relative;overflow:hidden;background:var(--black3);border:1px solid rgba(0,255,65,.08);cursor:pointer;transition:border-color .3s,transform .3s;}
+.project-card:hover{border-color:rgba(0,255,65,.4);transform:translateY(-4px);}
+.project-card:hover .project-cover-overlay{opacity:1;}
+.project-cover{position:relative;aspect-ratio:3/2;overflow:hidden;background:var(--black);}
+.project-cover-img{width:100%;height:100%;object-fit:cover;display:none;transition:transform .5s ease;}
+.project-card:hover .project-cover-img{transform:scale(1.05);}
+.project-cover-placeholder{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:10px;color:var(--text-dim);font-family:var(--font-mono);font-size:.6rem;letter-spacing:2px;}
+.project-cover-placeholder .ph-icon{font-size:2rem;color:var(--green);opacity:.25;}
+.project-cover-upload{position:absolute;inset:0;opacity:0;cursor:pointer;width:100%;height:100%;}
+.project-cover-overlay{position:absolute;inset:0;background:linear-gradient(180deg,transparent 40%,rgba(0,0,0,.9) 100%);display:flex;align-items:flex-end;padding:20px;opacity:0;transition:opacity .3s;}
+.project-cover-overlay-text{font-family:var(--font-mono);font-size:.65rem;letter-spacing:2px;color:var(--green);text-transform:uppercase;}
+.project-info{padding:20px 24px 24px;}
+.project-name{font-family:var(--font-display);font-size:1.5rem;color:var(--text);-webkit-font-smoothing:antialiased;margin-bottom:6px;}
+.project-name-input{font-family:var(--font-display);font-size:1.5rem;color:var(--text);background:transparent;border:none;border-bottom:1px dashed rgba(0,255,65,.3);outline:none;width:100%;-webkit-font-smoothing:antialiased;transition:border-color .2s;}
+.project-name-input:focus{border-bottom-color:var(--green);}
+.project-tag-row{display:flex;gap:10px;align-items:center;margin-top:8px;flex-wrap:wrap;}
+.project-tag{font-family:var(--font-mono);font-size:.6rem;letter-spacing:2px;color:var(--green);text-transform:uppercase;border:1px solid rgba(0,255,65,.3);padding:3px 10px;}
+.project-photo-count{font-family:var(--font-mono);font-size:.6rem;letter-spacing:1px;color:var(--text-dim);}
+.project-open-arrow{position:absolute;top:16px;right:16px;font-family:var(--font-mono);font-size:.65rem;letter-spacing:2px;color:var(--green);opacity:0;transition:opacity .3s;text-transform:uppercase;}
+.project-card:hover .project-open-arrow{opacity:1;}
+/* Project meta row */
+.proj-meta-row{display:flex;gap:16px;flex-wrap:wrap;margin-bottom:36px;}
+.proj-meta-tag{font-family:var(--font-mono);font-size:.65rem;letter-spacing:2px;color:var(--green);text-transform:uppercase;border:1px solid rgba(0,255,65,.3);padding:5px 14px;}
+
+/* LIGHTBOX */
+.lightbox{position:fixed;inset:0;background:rgba(0,0,0,.95);z-index:5000;display:none;align-items:center;justify-content:center;padding:40px;}
+.lightbox.open{display:flex;}
+.lightbox-img{max-width:90vw;max-height:85vh;object-fit:contain;border:1px solid rgba(0,255,65,.2);}
+.lightbox-close{position:absolute;top:24px;right:32px;font-family:var(--font-mono);font-size:1.4rem;color:var(--green);cursor:pointer;background:none;border:none;transition:text-shadow .2s;}
+.lightbox-close:hover{text-shadow:0 0 14px var(--green);}
+
+.nav-dropdown-arrow{font-family:var(--font-mono);font-size:.65rem;color:var(--text-dim);background:none;border:none;cursor:pointer;padding:0 2px;transition:color .2s;line-height:1;}
+.nav-dropdown-arrow:hover{color:var(--green);}
+.nav-dropdown-menu.open ~ .nav-dropdown-arrow,.nav-dropdown-arrow:focus{color:var(--green);}
+/* NAV DROPDOWN */
+.nav-dropdown{position:relative;}
+.nav-dropdown-menu{position:absolute;top:calc(100% + 8px);left:50%;transform:translateX(-50%);background:rgba(5,10,5,.98);border:1px solid rgba(0,255,65,.2);min-width:190px;flex-direction:column;z-index:2000;backdrop-filter:blur(8px);display:none;box-shadow:0 8px 32px rgba(0,0,0,.6);}
+.nav-dropdown-menu.open{display:flex;}
+.nav-dropdown-menu::before{content:'';position:absolute;top:-6px;left:50%;transform:translateX(-50%);width:10px;height:10px;background:rgba(5,10,5,.98);border-left:1px solid rgba(0,255,65,.2);border-top:1px solid rgba(0,255,65,.2);clip-path:polygon(0 100%,100% 0,100% 100%);}
+.nav-dropdown-menu button{font-family:var(--font-mono);font-size:.68rem;letter-spacing:2px;color:var(--text-dim);background:none;border:none;border-bottom:1px solid rgba(0,255,65,.06);padding:14px 18px;text-align:left;cursor:pointer;text-transform:uppercase;transition:color .2s,background .2s;white-space:nowrap;width:100%;}
+.nav-dropdown-menu button:last-child{border-bottom:none;}
+.nav-dropdown-menu button:hover{color:var(--green);background:rgba(0,255,65,.05);}
+.nav-dropdown-trigger.open{color:var(--green);}
+.mob-sub{font-size:1.8rem !important;color:var(--text-dim) !important;padding:8px 0 !important;letter-spacing:2px !important;}
+.mob-sub:hover{color:var(--green) !important;}
+/* ── SERVICE BLOCKS ── */
+.svc-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:8px;}
+.svc-block{background:var(--black3);border:1px solid rgba(0,255,65,.1);padding:32px 28px;display:flex;flex-direction:column;gap:20px;transition:border-color .3s;}
+.svc-block:hover{border-color:rgba(0,255,65,.3);}
+.svc-header{display:flex;align-items:center;gap:16px;cursor:pointer;padding:4px 0;}
+.svc-header:hover .svc-title{color:var(--green);}
+.svc-header:hover .svc-subtitle{opacity:1;}
+.svc-icon{font-size:2rem;flex-shrink:0;}
+.svc-title{font-family:var(--font-display);font-size:1.8rem;color:var(--text);-webkit-font-smoothing:antialiased;transition:color .2s;line-height:1;}
+.svc-subtitle{font-family:var(--font-mono);font-size:.6rem;letter-spacing:2px;color:var(--green);text-transform:uppercase;margin-top:4px;opacity:.6;transition:opacity .2s;}
+.svc-desc{font-family:var(--font-body);font-size:.95rem;color:var(--text-dim);line-height:1.7;font-weight:300;}
+.svc-sub-list{display:flex;flex-direction:column;gap:2px;flex:1;}
+.svc-sub-item{display:flex;align-items:center;gap:14px;padding:12px 14px;background:var(--black);border:1px solid rgba(0,255,65,.06);cursor:pointer;text-align:left;transition:border-color .2s,background .2s;width:100%;}
+.svc-sub-item:hover{border-color:rgba(0,255,65,.3);background:rgba(0,255,65,.03);}
+.svc-sub-icon{font-size:1.1rem;flex-shrink:0;}
+.svc-sub-name{font-family:var(--font-body);font-size:.95rem;color:var(--text);font-weight:600;line-height:1.2;}
+.svc-sub-desc{font-family:var(--font-mono);font-size:.58rem;letter-spacing:1px;color:var(--text-dim);text-transform:uppercase;margin-top:3px;}
+.svc-sub-arrow{font-family:var(--font-mono);font-size:.8rem;color:var(--green);margin-left:auto;flex-shrink:0;opacity:0;transition:opacity .2s;}
+.svc-sub-item:hover .svc-sub-arrow{opacity:1;}
+.svc-book-btn{font-family:var(--font-mono);font-size:.65rem;letter-spacing:2px;text-transform:uppercase;padding:12px 20px;background:transparent;border:1px solid rgba(0,255,65,.3);color:var(--green);cursor:pointer;transition:background .2s,border-color .2s;}
+.svc-book-btn:hover{background:rgba(0,255,65,.08);border-color:var(--green);}
+/* Book Now CTA at bottom of portfolio pages */
+.portfolio-booknow{margin-top:60px;padding:48px;background:var(--black3);border:1px solid rgba(0,255,65,.12);display:flex;flex-direction:column;align-items:center;gap:16px;text-align:center;}
+.portfolio-booknow-title{font-family:var(--font-display);font-size:2.5rem;color:var(--text);-webkit-font-smoothing:antialiased;}
+.portfolio-booknow-title span{color:var(--green);}
+.portfolio-booknow-sub{font-family:var(--font-body);font-size:1rem;color:var(--text-dim);font-weight:300;}
+@media(max-width:1024px){.svc-grid{grid-template-columns:1fr;}}
+@media(max-width:900px){.portfolio-booknow{padding:32px 20px;}}
+/* ── PRICING ── */
+.pricing-tab{font-family:var(--font-mono);font-size:.7rem;letter-spacing:2px;text-transform:uppercase;padding:12px 28px;background:transparent;border:none;color:var(--text-dim);cursor:pointer;position:relative;transition:color .2s;}
+.pricing-tab::after{content:'';position:absolute;bottom:-1px;left:0;right:0;height:2px;background:var(--green);transform:scaleX(0);transition:transform .3s;}
+.pricing-tab.active{color:var(--green);}
+.pricing-tab.active::after{transform:scaleX(1);}
+.pricing-panel{display:none;}
+.pricing-panel.active{display:block;}
+.pricing-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:16px;}
+.price-card{background:var(--black3);border:1px solid rgba(0,255,65,.08);padding:36px 28px;position:relative;overflow:hidden;transition:border-color .3s,transform .3s;}
+.price-card:hover{border-color:rgba(0,255,65,.3);transform:translateY(-4px);}
+.price-card.featured{border-color:rgba(0,255,65,.4);background:linear-gradient(135deg,rgba(0,255,65,.06),var(--black3));}
+.price-card.featured::before{content:'POPULAR';position:absolute;top:16px;right:-24px;background:var(--green);color:var(--black);font-family:var(--font-mono);font-size:.55rem;letter-spacing:2px;padding:4px 40px;transform:rotate(45deg) translateX(10px);}
+.price-tier{font-family:var(--font-mono);font-size:.65rem;letter-spacing:3px;color:var(--green);text-transform:uppercase;margin-bottom:12px;}
+.price-name{font-family:var(--font-display);font-size:1.8rem;color:var(--text);-webkit-font-smoothing:antialiased;margin-bottom:8px;}
+.price-from{font-family:var(--font-mono);font-size:.6rem;letter-spacing:2px;color:var(--text-dim);text-transform:uppercase;margin-bottom:4px;}
+.price-amount{font-family:var(--font-display);font-size:3rem;color:var(--green);line-height:1;margin-bottom:4px;}
+.price-amount input{font-family:var(--font-display);font-size:3rem;color:var(--green);background:transparent;border:none;border-bottom:1px dashed rgba(0,255,65,.3);outline:none;width:160px;-webkit-font-smoothing:antialiased;}
+.price-amount input:focus{border-bottom-color:var(--green);}
+.price-note{font-family:var(--font-mono);font-size:.6rem;color:var(--text-dim);letter-spacing:1px;margin-bottom:24px;}
+.price-divider{height:1px;background:rgba(0,255,65,.1);margin-bottom:20px;}
+.price-features{list-style:none;display:flex;flex-direction:column;gap:10px;margin-bottom:28px;}
+.price-features li{font-family:var(--font-body);font-size:.95rem;color:var(--text-dim);display:flex;align-items:flex-start;gap:10px;font-weight:300;line-height:1.4;}
+.price-features li::before{content:'→';color:var(--green);font-family:var(--font-mono);font-size:.7rem;flex-shrink:0;margin-top:2px;}
+.price-cta{font-family:var(--font-mono);font-size:.65rem;letter-spacing:2px;text-transform:uppercase;padding:12px 24px;background:transparent;border:1px solid rgba(0,255,65,.3);color:var(--green);cursor:pointer;width:100%;transition:background .2s,border-color .2s;}
+.price-cta:hover{background:rgba(0,255,65,.08);border-color:var(--green);}
+.price-card.featured .price-cta{background:var(--green);color:var(--black);border-color:var(--green);}
+.price-card.featured .price-cta:hover{background:var(--green-dim);}
+.price-edit-hint{font-family:var(--font-mono);font-size:.6rem;letter-spacing:2px;color:var(--green);opacity:.5;text-transform:uppercase;margin-bottom:32px;}
+
+/* ── SMART QUESTIONNAIRE ── */
+.quiz-wrap{background:var(--black3);border:1px solid rgba(0,255,65,.12);padding:36px;}
+.quiz-progress{display:flex;gap:6px;margin-bottom:32px;}
+.quiz-progress-dot{width:8px;height:8px;border-radius:50%;background:rgba(0,255,65,.2);transition:background .3s;}
+.quiz-progress-dot.done{background:var(--green);}
+.quiz-progress-dot.active{background:var(--green);box-shadow:0 0 8px var(--green);}
+.quiz-step{display:none;}
+.quiz-step.active{display:block;opacity:1;}
+.quiz-q{font-family:var(--font-display);font-size:1.6rem;color:var(--text);-webkit-font-smoothing:antialiased;margin-bottom:8px;}
+.quiz-hint{font-family:var(--font-mono);font-size:.62rem;letter-spacing:2px;color:var(--text-dim);text-transform:uppercase;margin-bottom:24px;}
+.quiz-options{display:grid;grid-template-columns:repeat(auto-fill,minmax(180px,1fr));gap:10px;margin-bottom:24px;}
+.quiz-opt{font-family:var(--font-mono);font-size:.68rem;letter-spacing:1px;padding:14px 16px;background:transparent;border:1px solid rgba(0,255,65,.15);color:var(--text-dim);cursor:pointer;text-align:left;transition:all .2s;text-transform:uppercase;}
+.quiz-opt:hover{border-color:var(--green);color:var(--green);}
+.quiz-opt.selected{border-color:var(--green);color:var(--green);background:rgba(0,255,65,.06);}
+.quiz-input{background:var(--black);border:1px solid rgba(0,255,65,.15);color:var(--text);padding:14px 16px;font-family:var(--font-body);font-size:1rem;outline:none;width:100%;margin-bottom:16px;transition:border-color .2s;}
+.quiz-input:focus{border-color:var(--green);}
+.quiz-input::placeholder{color:var(--text-dim);opacity:.5;}
+.quiz-nav{display:flex;gap:12px;align-items:center;margin-top:8px;}
+.quiz-back{font-family:var(--font-mono);font-size:.65rem;letter-spacing:2px;text-transform:uppercase;padding:10px 20px;background:transparent;border:1px solid rgba(0,255,65,.2);color:var(--text-dim);cursor:pointer;transition:all .2s;}
+.quiz-back:hover{border-color:var(--green);color:var(--green);}
+.quiz-next{font-family:var(--font-mono);font-size:.65rem;letter-spacing:2px;text-transform:uppercase;padding:12px 28px;background:var(--green);color:var(--black);border:none;cursor:pointer;font-weight:700;clip-path:polygon(8px 0%,100% 0%,calc(100% - 8px) 100%,0% 100%);transition:background .2s,box-shadow .2s;}
+.quiz-next:hover{background:var(--green-dim);box-shadow:0 0 16px var(--green);}
+.quiz-next:disabled{opacity:.3;cursor:not-allowed;}
+.quiz-summary{background:var(--black);border:1px solid rgba(0,255,65,.15);padding:24px;margin-bottom:24px;}
+.quiz-summary-row{display:flex;gap:16px;padding:10px 0;border-bottom:1px solid rgba(0,255,65,.06);font-family:var(--font-body);font-size:.95rem;}
+.quiz-summary-row:last-child{border-bottom:none;}
+.quiz-summary-label{font-family:var(--font-mono);font-size:.6rem;letter-spacing:2px;color:var(--green);text-transform:uppercase;min-width:120px;padding-top:2px;}
+.quiz-summary-value{color:var(--text);font-weight:300;}
+.quiz-done{text-align:center;padding:20px 0;}
+.quiz-done-icon{font-size:3rem;margin-bottom:16px;}
+.quiz-done-title{font-family:var(--font-display);font-size:2.5rem;color:var(--green);-webkit-font-smoothing:antialiased;margin-bottom:8px;}
+.quiz-done-sub{font-family:var(--font-body);font-size:1rem;color:var(--text-dim);font-weight:300;}
+@media(max-width:900px){
+  .pricing-grid{grid-template-columns:1fr;}
+  .quiz-options{grid-template-columns:1fr 1fr;}
+  .pricing-tabs{overflow-x:auto;flex-wrap:nowrap;}
+  .pricing-tab{flex-shrink:0;}
+}
+@media(max-width:480px){
+  .quiz-options{grid-template-columns:1fr;}
+  .quiz-wrap{padding:24px 16px;}
+}
+@media(max-width:1024px){.services-grid{grid-template-columns:repeat(2,1fr);}}
+@media(max-width:900px){
+  .cursor,.cursor-ring{display:none !important;}
+  nav{padding:14px 20px;}
+  .nav-links,.nav-cta{display:none;}
+  .hamburger{display:flex;}
+  .mobile-nav{display:flex;}
+  .page-inner{padding:24px 20px 60px;}
+  .breadcrumb{padding:16px 20px 0;}
+  .hero-wrap{padding:100px 20px 80px;text-align:center;}
+  .hero-title{font-size:clamp(3rem,14vw,5.5rem);}
+  .hero-btns{flex-direction:column;align-items:center;gap:14px;}
+  .btn-primary,.btn-outline{width:100%;max-width:280px;text-align:center;padding:16px 20px;}
+  .about-layout{grid-template-columns:1fr;gap:40px;}
+  .about-img-wrap{order:-1;}
+  .about-img-placeholder{aspect-ratio:16/9;}
+  .about-stats{grid-template-columns:1fr 1fr;}
+  .gallery-grid{grid-template-columns:repeat(2,1fr);}
+  .gallery-grid.masonry{columns:2;column-gap:6px;}
+  .project-grid{grid-template-columns:1fr;}
+  .video-grid{grid-template-columns:1fr;}
+  .services-grid{grid-template-columns:1fr;}
+  .contact-layout{grid-template-columns:1fr;gap:48px;}
+  footer{flex-direction:column;align-items:center;text-align:center;padding:32px 20px;gap:16px;}
+  .footer-links{justify-content:center;gap:18px;}
+  .cat-grid{grid-template-columns:1fr;}
+}
+@media(max-width:480px){
+  .hero-title{font-size:clamp(2.6rem,13vw,4rem);}
+  .hero-sub{font-size:.85rem;letter-spacing:2px;}
+  .section-title{font-size:clamp(2rem,10vw,3rem);}
+  .gallery-grid{grid-template-columns:1fr;}
+  .gallery-grid.masonry{columns:1;}
+  .about-stats{grid-template-columns:1fr 1fr;gap:12px;}
+  .stat-num{font-size:2rem;}
+  nav{padding:12px 16px;}
+  .nav-logo{font-size:1.4rem;}
+  .mobile-nav button{font-size:2.2rem;}
+  .form-submit{width:100%;text-align:center;}
+}
+</style>
+</head>
+<body>
+<div class="cursor" id="cursor"></div>
+<div class="cursor-ring" id="cursorRing"></div>
+<div class="noise"></div>
+
+<!-- LIGHTBOX -->
+<div class="lightbox" id="lightbox">
+  <button class="lightbox-close" onclick="closeLightbox()">✕</button>
+  <img class="lightbox-img" id="lightboxImg" src="" alt=""/>
+</div>
+
+<!-- MOBILE DRAWER -->
+<div class="mobile-nav" id="mobileNav">
+  <button onclick="goTo('home');closeMobileNav()">Home</button>
+  <button onclick="goTo('services');closeMobileNav()">Services</button>
+  <button class="mob-sub" onclick="goTo('photos');closeMobileNav()">↳ Photography</button>
+  <button class="mob-sub" onclick="goTo('videos');closeMobileNav()">↳ Film &amp; Video</button>
+  <button class="mob-sub" onclick="goTo('design');closeMobileNav()">↳ Graphic Design</button>
+  <button onclick="goTo('pricing');closeMobileNav()">Pricing</button>
+  <button onclick="goTo('contact');closeMobileNav()">Contact</button>
+  <button onclick="goTo('about');closeMobileNav()">About</button>
+  <button class="mob-cta" onclick="goTo('contact');closeMobileNav()">Book Now</button>
+</div>
+
+<!-- NAV -->
+<nav>
+  <button class="nav-logo" onclick="goTo('home')">GROVE STREET MEDIA</button>
+  <ul class="nav-links">
+    <li><button onclick="goTo('home')" data-page="home">Home</button></li>
+    <li class="nav-dropdown" id="servicesDropdown">
+      <button onclick="goTo('services');closeDropdown();" data-page="services" class="nav-dropdown-trigger" id="servicesBtn">Services</button><button onclick="toggleServicesDropdown(event)" class="nav-dropdown-arrow" aria-label="Show services menu">▾</button>
+      <div class="nav-dropdown-menu" id="servicesMenu">
+        <button onclick="goTo('photos');closeDropdown()">📷 Photography</button>
+        <button onclick="goTo('videos');closeDropdown()">🎬 Film &amp; Video</button>
+        <button onclick="goTo('design');closeDropdown()">🎨 Graphic Design</button>
+      </div>
+    </li>
+    <li><button onclick="goTo('pricing')" data-page="pricing">Pricing</button></li>
+    <li><button onclick="goTo('contact')" data-page="contact">Contact</button></li>
+    <li><button onclick="goTo('about')" data-page="about">About</button></li>
+  </ul>
+  <button class="cart-btn" id="cartBtn" onclick="openCart()">
+    🛒 <span id="cartCount" class="cart-count hidden">0</span>
+  </button>
+  <button class="nav-cta" onclick="goTo('pricing')">Book Now</button>
+  <button class="hamburger" id="hamburger" onclick="toggleMobileNav()" aria-label="Menu">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<!-- ══ CART OVERLAY ══ -->
+<div class="cart-overlay" id="cartOverlay" onclick="closeCart()"></div>
+
+<!-- ══ CART DRAWER ══ -->
+<div class="cart-drawer" id="cartDrawer">
+  <div class="cart-drawer-header">
+    <div class="cart-drawer-title">YOUR CART</div>
+    <button class="cart-drawer-close" onclick="closeCart()">✕</button>
+  </div>
+  <div class="cart-items" id="cartItems">
+    <div class="cart-empty" id="cartEmpty">
+      <div class="cart-empty-icon">🛒</div>
+      <div>Your cart is empty</div>
+      <div style="opacity:.5;font-size:.55rem;">Browse pricing to add packages</div>
+      <button class="cart-checkout-inquiry" style="margin-top:8px;" onclick="goTo('pricing');closeCart()">View Packages →</button>
+    </div>
+  </div>
+  <div class="cart-footer" id="cartFooter" style="display:none;">
+    <div class="cart-total-row">
+      <div class="cart-total-label">Total</div>
+      <div class="cart-total-amount" id="cartTotal">$0</div>
+    </div>
+    <div class="cart-savings" id="cartSavings" style="display:none;"></div>
+    <div class="cart-checkout-btns">
+      <button class="cart-checkout-stripe" onclick="checkoutStripe()">⚡ Checkout with Stripe</button>
+      <button class="cart-checkout-paypal" onclick="checkoutPayPal()">🅿 Checkout with PayPal</button>
+      <button class="cart-checkout-inquiry" onclick="checkoutInquiry()">✉ Request Invoice Instead</button>
+    </div>
+    <div class="cart-note">
+      A 25% deposit is collected at checkout to confirm your booking.<br>
+      Remaining balance due before shoot date.
+    </div>
+  </div>
+</div>
+
+<!-- ══════════ PAGE: HOME ══════════ -->
+<div class="page active" id="page-home">
+
+  <!-- HERO -->
+  <div class="hero-wrap">
+    <div class="hero-grid-bg"></div>
+    <div class="hero-glow"></div>
+    <div class="hero-tag">— Your Vision · Our Lens —</div>
+    <h1 class="hero-title"><span class="line1">GROVE STREET</span><span class="line2">MEDIA</span></h1>
+    <p class="hero-sub">Every Frame Tells <span>Your Story</span></p>
+    <div class="hero-btns">
+      <button class="btn-primary" onclick="goTo('portfolio')">View Portfolio</button>
+      <button class="btn-outline" onclick="goTo('pricing')">Book a Session</button>
+    </div>
+    <div class="hero-scroll"><span>Explore</span><div class="scroll-line"></div></div>
+  </div>
+
+  <!-- TICKER -->
+  <div class="ticker-wrap"><div class="ticker-track"><span>CINEMATIC</span><span>·</span><span>BOLD</span><span>·</span><span>INTENTIONAL</span><span>·</span><span>WE SHOW UP</span><span>·</span><span>WE SHOOT</span><span>·</span><span>WE DELIVER</span><span>·</span><span>BUILT TO LAST</span><span>·</span><span>GROVE STREET MEDIA</span><span>·</span><span>CINEMATIC</span><span>·</span><span>BOLD</span><span>·</span><span>INTENTIONAL</span><span>·</span><span>WE SHOW UP</span><span>·</span><span>WE SHOOT</span><span>·</span><span>WE DELIVER</span><span>·</span><span>BUILT TO LAST</span><span>·</span><span>GROVE STREET MEDIA</span><span>·</span></div></div>
+
+  <!-- SECTION 1: WHAT WE DO -->
+  <div class="home-section" style="background:var(--black);">
+    <div class="home-section-inner">
+      <div class="section-label">Services</div>
+      <h2 class="section-title">WHAT WE<br><span class="accent">DO</span></h2>
+      <p class="section-desc">Three core disciplines built for creators, brands, and culture.</p>
+      <div class="cat-grid" style="grid-template-columns:repeat(auto-fill,minmax(220px,1fr));">
+        <div class="cat-card" onclick="goTo('photos')"><div class="cat-card-num">01</div><div class="cat-card-icon">📷</div><div class="cat-card-title">Photography</div><div class="cat-card-desc">Commercial, Wedding &amp; Lifestyle galleries.</div><div class="cat-card-arrow">View Gallery →</div></div>
+        <div class="cat-card" onclick="goTo('videos')"><div class="cat-card-num">02</div><div class="cat-card-icon">🎬</div><div class="cat-card-title">Film &amp; Video</div><div class="cat-card-desc">Music videos, wedding films &amp; cinematic branded content.</div><div class="cat-card-arrow">Watch Now →</div></div>
+        <div class="cat-card" onclick="goTo('design')"><div class="cat-card-num">03</div><div class="cat-card-icon">🎨</div><div class="cat-card-title">Graphic Design</div><div class="cat-card-desc">Branding, album art, print &amp; digital content.</div><div class="cat-card-arrow">View Work →</div></div>
+      </div>
+      <div style="margin-top:32px;">
+        <button class="btn-outline" onclick="goTo('services')">View All Services →</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- SECTION 2: PRICING PREVIEW -->
+  <div class="home-section" style="background:var(--black2);border-top:1px solid rgba(0,255,65,.08);border-bottom:1px solid rgba(0,255,65,.08);">
+    <div class="home-section-inner">
+      <div class="section-label">Investment</div>
+      <h2 class="section-title">PRICING<br><span class="accent">OVERVIEW</span></h2>
+      <p class="section-desc">Transparent starting prices. No surprises — just great work.</p>
+      <div class="pricing-preview-grid">
+        <div class="pricing-preview-card">
+          <div class="pprev-icon">📷</div>
+          <div class="pprev-service">Photography</div>
+          <div class="pprev-tiers">
+            <div class="pprev-tier"><span>Artist Session</span><span class="pprev-price">From $300</span></div>
+            <div class="pprev-tier"><span>Brand Shoot</span><span class="pprev-price">From $600</span></div>
+            <div class="pprev-tier"><span>Full Production</span><span class="pprev-price">From $900</span></div>
+            <div class="pprev-tier featured-tier"><span>Premium Campaign</span><span class="pprev-price">From $1,200</span></div>
+          </div>
+          <button class="price-cta" style="margin-top:20px;width:100%;" onclick="goTo('pricing')">See Full Pricing →</button>
+        </div>
+        <div class="pricing-preview-card">
+          <div class="pprev-icon">🎬</div>
+          <div class="pprev-service">Film &amp; Video</div>
+          <div class="pprev-tiers">
+            <div class="pprev-tier"><span>Visual Content</span><span class="pprev-price">From $300</span></div>
+            <div class="pprev-tier"><span>Music Video</span><span class="pprev-price">From $600</span></div>
+            <div class="pprev-tier"><span>Brand Film</span><span class="pprev-price">From $1,000</span></div>
+            <div class="pprev-tier featured-tier"><span>Brand Campaign</span><span class="pprev-price">From $1,500</span></div>
+          </div>
+          <button class="price-cta" style="margin-top:20px;width:100%;" onclick="goTo('pricing')">See Full Pricing →</button>
+        </div>
+        <div class="pricing-preview-card">
+          <div class="pprev-icon">🎨</div>
+          <div class="pprev-service">Graphic Design</div>
+          <div class="pprev-tiers">
+            <div class="pprev-tier"><span>Quick Turnaround</span><span class="pprev-price">From $75</span></div>
+            <div class="pprev-tier"><span>Brand Blueprint</span><span class="pprev-price">From $300</span></div>
+            <div class="pprev-tier featured-tier"><span>Full Campaign</span><span class="pprev-price">From $1,000</span></div>
+          </div>
+          <button class="price-cta" style="margin-top:20px;width:100%;" onclick="goTo('pricing')">See Full Pricing →</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- SECTION 3: BOOK A SESSION -->
+  <div class="home-section home-book-section" style="background:var(--black);">
+    <div class="home-section-inner" style="text-align:center;display:flex;flex-direction:column;align-items:center;">
+      <div class="section-label" style="justify-content:center;">Ready To Create</div>
+      <h2 class="section-title" style="text-align:center;">LET'S MAKE<br><span class="accent">SOMETHING</span></h2>
+      <p class="section-desc" style="text-align:center;max-width:480px;">Every great project starts with a conversation. Tell us your vision and we'll bring it to life.</p>
+      <div class="book-session-steps">
+        <div class="book-step"><div class="book-step-num">01</div><div class="book-step-label">Pick Your Service</div></div>
+        <div class="book-step-divider">→</div>
+        <div class="book-step"><div class="book-step-num">02</div><div class="book-step-label">Share Your Vision</div></div>
+        <div class="book-step-divider">→</div>
+        <div class="book-step"><div class="book-step-num">03</div><div class="book-step-label">We Create Together</div></div>
+      </div>
+      <div style="display:flex;gap:16px;flex-wrap:wrap;justify-content:center;margin-top:40px;">
+        <button class="btn-primary" onclick="goTo('pricing')" style="font-size:.8rem;padding:16px 48px;">Start Your Inquiry →</button>
+        <button class="btn-outline" onclick="goTo('pricing')" style="font-size:.8rem;padding:15px 40px;">View Pricing</button>
+      </div>
+    </div>
+  </div>
+
+  <footer><button class="footer-logo" onclick="goTo('home')">GROVE STREET MEDIA</button><ul class="footer-links"><li><button onclick="goTo('about')">About</button></li><li><button onclick="goTo('services')">Services</button></li><li><button onclick="goTo('pricing')">Pricing</button></li><li><button onclick="goTo('contact')">Contact</button></li></ul><div class="footer-copy">© 2025 Grove Street Media. All rights reserved.</div></footer>
+</div>
+
+<!-- ══════════ PAGE: PORTFOLIO HUB ══════════ -->
+<div class="page" id="page-portfolio">
+  <div class="breadcrumb"><button onclick="goTo('home')">Home</button><span class="sep">/</span><span class="cur">Portfolio</span></div>
+  <div class="page-inner">
+    <div class="section-label">Our Work</div>
+    <h2 class="section-title">PORTFOLIO<br><span class="accent">GALLERY</span></h2>
+    <p class="section-desc">Choose a discipline to explore our full body of work.</p>
+    <div class="portfolio-hub-grid">
+      <div class="portfolio-hub-card" onclick="goTo('photos')">
+        <div class="phub-bg-num">01</div>
+        <div class="phub-icon">📷</div>
+        <div class="phub-title">Photography</div>
+        <div class="phub-desc">Commercial shoots, wedding coverage, lifestyle &amp; culture portraits.</div>
+        <div class="phub-sub-links">
+          <button onclick="event.stopPropagation();goTo('photos-commercial')" class="phub-sub">Commercial →</button>
+          <button onclick="event.stopPropagation();goTo('photos-wedding')" class="phub-sub">Wedding →</button>
+          <button onclick="event.stopPropagation();goTo('photos-urban')" class="phub-sub">Lifestyle & Culture →</button>
+        </div>
+        <div class="phub-cta">View All Photography →</div>
+      </div>
+      <div class="portfolio-hub-card" onclick="goTo('videos')">
+        <div class="phub-bg-num">02</div>
+        <div class="phub-icon">🎬</div>
+        <div class="phub-title">Film &amp; Video</div>
+        <div class="phub-desc">Music videos, wedding films, cinematic brand content &amp; short films.</div>
+        <div class="phub-sub-links">
+          <button onclick="event.stopPropagation();goTo('videos-music')" class="phub-sub">Music Videos →</button>
+          <button onclick="event.stopPropagation();goTo('videos-wedding')" class="phub-sub">Wedding Films →</button>
+          <button onclick="event.stopPropagation();goTo('videos-commercial')" class="phub-sub">Commercial →</button>
+        </div>
+        <div class="phub-cta">View All Film &amp; Video →</div>
+      </div>
+      <div class="portfolio-hub-card" onclick="goTo('design')">
+        <div class="phub-bg-num">03</div>
+        <div class="phub-icon">🎨</div>
+        <div class="phub-title">Graphic Design</div>
+        <div class="phub-desc">Branding, album artwork, flyers, merch &amp; digital content.</div>
+        <div class="phub-sub-links">
+          <button onclick="event.stopPropagation();goTo('design-branding')" class="phub-sub">Branding →</button>
+          <button onclick="event.stopPropagation();goTo('design-music')" class="phub-sub">Music &amp; Albums →</button>
+          <button onclick="event.stopPropagation();goTo('design-print')" class="phub-sub">Print &amp; Flyers →</button>
+          <button onclick="event.stopPropagation();goTo('design-social')" class="phub-sub">Social &amp; Digital →</button>
+        </div>
+        <div class="phub-cta">View All Design →</div>
+      </div>
+    </div>
+    <div style="margin-top:48px;display:flex;gap:16px;flex-wrap:wrap;">
+      <button class="btn-primary" onclick="goTo('pricing')">Book a Session →</button>
+      <button class="btn-outline" onclick="goTo('pricing')">View Pricing</button>
+    </div>
+  </div>
+  <footer>
+    <button class="footer-logo" onclick="goTo('home')">GROVE STREET MEDIA</button>
+    <ul class="footer-links">
+      <li><button onclick="goTo('home')">Home</button></li>
+      <li><button onclick="goTo('services')">Services</button></li>
+      <li><button onclick="goTo('contact')">Contact</button></li>
+    </ul>
+    <div class="footer-copy">© 2025 Grove Street Media.</div>
+  </footer>
+</div>
+
+<!-- ══════════ PAGE: ABOUT ══════════ -->
+<div class="page" id="page-about">
+  <div class="breadcrumb"><button onclick="goTo('home')">Home</button><span class="sep">/</span><span class="cur">About</span></div>
+  <div class="page-inner" style="background:var(--black2);">
+    <div class="about-layout">
+      <div>
+        <div class="section-label">About</div>
+        <h2 class="section-title">WE TELL<br><span class="accent">YOUR STORY</span></h2>
+        <div class="edit-badge">✎ Click text to edit</div>
+        <p class="section-desc editable-field" contenteditable="true">Grove Street Media is a full-service visual production studio specializing in photography, videography, and graphic design. Founded in Detroit and available worldwide, we work with artists, brands, and businesses to create visuals that are bold, intentional, and built to last.</p>
+        <p style="font-family:var(--font-body);font-size:1rem;color:var(--text-dim);line-height:1.8;max-width:520px;font-weight:300;margin-bottom:30px;" class="editable-field" contenteditable="true">From artist promo shoots to full brand campaigns — we bring the vision to life. Every project is approached with the same commitment: show up, tell the story, and deliver work that moves people.</p>
+        <div class="about-stats">
+          <div class="stat-box"><div class="stat-num editable-field" contenteditable="true">500+</div><div class="stat-label">Projects Completed</div></div>
+          <div class="stat-box"><div class="stat-num editable-field" contenteditable="true">8+</div><div class="stat-label">Years Experience</div></div>
+          <div class="stat-box"><div class="stat-num editable-field" contenteditable="true">10+</div><div class="stat-label">Notable Clients</div></div>
+          <div class="stat-box"><div class="stat-num editable-field" contenteditable="true">10+</div><div class="stat-label">Locations Traveled</div></div>
+        </div>
+      </div>
+      <div class="about-img-wrap">
+        <div class="about-corner tl"></div><div class="about-corner br"></div>
+        <div class="about-img-placeholder" id="aboutImgWrap" onclick="openAboutMediaInput()">
+          <div class="img-icon">📷</div>
+          <span>Click to add photo</span>
+          <div style="font-family:var(--font-mono);font-size:.55rem;color:var(--text-dim);letter-spacing:1px;opacity:.7;">URL or file upload</div>
+          <img id="aboutImg" src="" alt="About"/>
+          <!-- URL overlay -->
+          <div class="media-url-overlay" id="aboutUrlOverlay" onclick="event.stopPropagation()">
+            <div class="media-url-label">Paste Cloudinary / Image URL</div>
+            <input type="text" id="aboutUrlInput" placeholder="https://res.cloudinary.com/..." onkeydown="if(event.key==='Enter')applyAboutUrl()"/>
+            <div class="media-url-or">— or —</div>
+            <label class="media-url-file-btn">Choose File<input type="file" accept="image/*" style="display:none" onchange="loadAboutFile(event)"/></label>
+            <div class="media-url-overlay-btns">
+              <button class="media-url-confirm" onclick="applyAboutUrl()">Apply ✓</button>
+              <button class="media-url-cancel" onclick="closeAboutOverlay()">Cancel</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div><!-- /about page-inner -->
+  <footer><button class="footer-logo" onclick="goTo('home')">GROVE STREET MEDIA</button><ul class="footer-links"><li><button onclick="goTo('photos')">Photos</button></li><li><button onclick="goTo('contact')">Contact</button></li></ul><div class="footer-copy">© 2025 Grove Street Media.</div></footer>
+</div>
+
+<!-- ══════════ PAGE: PHOTOS HUB ══════════ -->
+<div class="page" id="page-photos">
+  <div class="breadcrumb"><button onclick="goTo('home')">Home</button><span class="sep">/</span><span class="cur">Photography</span></div>
+  <div class="page-inner">
+    <div class="section-label">Photography</div>
+    <h2 class="section-title">PHOTO<br><span class="accent">GALLERIES</span></h2>
+    <p class="section-desc">Choose a category to explore our photography work.</p>
+    <div class="cat-grid">
+      <div class="cat-card" onclick="goTo('photos-all')"><div class="cat-card-num">01</div><div class="cat-card-icon">🖼</div><div class="cat-card-title">All Work</div><div class="cat-card-desc">Every photo across all categories.</div><div class="cat-card-arrow">Browse All →</div></div>
+      <div class="cat-card" onclick="goTo('photos-commercial')"><div class="cat-card-num">02</div><div class="cat-card-icon">📦</div><div class="cat-card-title">Commercial</div><div class="cat-card-desc">Product, brand and campaign photography.</div><div class="cat-card-arrow">View Gallery →</div></div>
+      <div class="cat-card" onclick="goTo('photos-wedding')"><div class="cat-card-num">03</div><div class="cat-card-icon">💍</div><div class="cat-card-title">Wedding</div><div class="cat-card-desc">Ceremony, portraits and reception coverage.</div><div class="cat-card-arrow">View Gallery →</div></div>
+      <div class="cat-card" onclick="goTo('photos-urban')"><div class="cat-card-num">04</div><div class="cat-card-icon">🏙️</div><div class="cat-card-title">Lifestyle & Culture</div><div class="cat-card-desc">Street photography, portraits and culture.</div><div class="cat-card-arrow">View Gallery →</div></div>
+    </div>
+  </div>
+  <footer><button class="footer-logo" onclick="goTo('home')">GROVE STREET MEDIA</button><ul class="footer-links"><li><button onclick="goTo('home')">Home</button></li><li><button onclick="goTo('videos')">Videos</button></li><li><button onclick="goTo('contact')">Contact</button></li></ul><div class="footer-copy">© 2025 Grove Street Media.</div></footer>
+</div>
+
+<!-- PHOTO: ALL -->
+<div class="page" id="page-photos-all">
+  <div class="breadcrumb"><button onclick="goTo('home')">Home</button><span class="sep">/</span><button onclick="goTo('photos')">Photography</button><span class="sep">/</span><span class="cur">All Work</span></div>
+  <div class="page-inner"><div class="section-label">Photography</div><h2 class="section-title">ALL<br><span class="accent">WORK</span></h2><div class="gallery-grid masonry" id="gallery-all"></div><button class="add-btn" onclick="addGalleryItem('all')">+ Add Photo</button><div class="portfolio-booknow"><div class="portfolio-booknow-title">READY TO <span>BOOK?</span></div><div class="portfolio-booknow-sub">Let's create something unforgettable together.</div><button class="btn-primary" onclick="goToPricing('photography')" style="margin-top:8px;">Start Your Inquiry →</button></div></div>
+  <footer><button class="footer-logo" onclick="goTo('home')">GROVE STREET MEDIA</button><ul class="footer-links"><li><button onclick="goTo('photos')">← Back to Photos</button></li><li><button onclick="goTo('pricing')">Pricing</button></li></ul><div class="footer-copy">© 2025 Grove Street Media.</div></footer>
+</div>
+
+<!-- PHOTO: COMMERCIAL PROJECTS -->
+<div class="page" id="page-photos-commercial">
+  <div class="breadcrumb"><button onclick="goTo('home')">Home</button><span class="sep">/</span><button onclick="goTo('photos')">Photography</button><span class="sep">/</span><span class="cur">Commercial</span></div>
+  <div class="page-inner">
+    <div class="section-label">Photography</div>
+    <h2 class="section-title">COMMERCIAL<br><span class="accent">PROJECTS</span></h2>
+    <p class="section-desc">Click a project to open its full gallery.</p>
+    <div class="project-grid" id="proj-commercial"></div>
+    <button class="add-btn" onclick="addProject('commercial')">+ Add Project</button>
+    <div class="portfolio-booknow"><div class="portfolio-booknow-title">READY TO <span>BOOK?</span></div><div class="portfolio-booknow-sub">Let's create something unforgettable together.</div><button class="btn-primary" onclick="goToPricing('photography')" style="margin-top:8px;">Start Your Inquiry →</button></div>
+  <div style="padding:0 48px 60px;"><button class="btn-primary" style="font-size:.75rem;" onclick="goToPricing('photography')">📅 Book Now →</button></div>
+  </div><!-- close page-inner -->
+  <footer><button class="footer-logo" onclick="goTo('home')">GROVE STREET MEDIA</button><ul class="footer-links"><li><button onclick="goTo('photos')">← Back to Photos</button></li><li><button onclick="goTo('contact')">Book Now</button></li></ul><div class="footer-copy">© 2025 Grove Street Media.</div></footer>
+</div>
+
+<!-- PHOTO: WEDDING PROJECTS -->
+<div class="page" id="page-photos-wedding">
+  <div class="breadcrumb"><button onclick="goTo('home')">Home</button><span class="sep">/</span><button onclick="goTo('photos')">Photography</button><span class="sep">/</span><span class="cur">Wedding</span></div>
+  <div class="page-inner">
+    <div class="section-label">Photography</div>
+    <h2 class="section-title">WEDDING<br><span class="accent">PROJECTS</span></h2>
+    <p class="section-desc">Click a project to open its full gallery.</p>
+    <div class="project-grid" id="proj-wedding"></div>
+    <button class="add-btn" onclick="addProject('wedding')">+ Add Project</button>
+    <div class="portfolio-booknow"><div class="portfolio-booknow-title">READY TO <span>BOOK?</span></div><div class="portfolio-booknow-sub">Let's create something unforgettable together.</div><button class="btn-primary" onclick="goToPricing('photography')" style="margin-top:8px;">Start Your Inquiry →</button></div>
+  <div style="padding:0 48px 60px;"><button class="btn-primary" style="font-size:.75rem;" onclick="goToPricing('photography')">📅 Book Now →</button></div>
+  </div><!-- close page-inner -->
+  <footer><button class="footer-logo" onclick="goTo('home')">GROVE STREET MEDIA</button><ul class="footer-links"><li><button onclick="goTo('photos')">← Back to Photos</button></li><li><button onclick="goTo('contact')">Book Now</button></li></ul><div class="footer-copy">© 2025 Grove Street Media.</div></footer>
+</div>
+
+<!-- PHOTO: URBAN PROJECTS -->
+<div class="page" id="page-photos-urban">
+  <div class="breadcrumb"><button onclick="goTo('home')">Home</button><span class="sep">/</span><button onclick="goTo('photos')">Photography</button><span class="sep">/</span><span class="cur">Lifestyle & Culture</span></div>
+  <div class="page-inner">
+    <div class="section-label">Photography</div>
+    <h2 class="section-title">URBAN &amp;<br><span class="accent">PROJECTS</span></h2>
+    <p class="section-desc">Click a project to open its full gallery.</p>
+    <div class="project-grid" id="proj-urban"></div>
+    <button class="add-btn" onclick="addProject('urban')">+ Add Project</button>
+    <div class="portfolio-booknow"><div class="portfolio-booknow-title">READY TO <span>BOOK?</span></div><div class="portfolio-booknow-sub">Let's create something unforgettable together.</div><button class="btn-primary" onclick="goToPricing('photography')" style="margin-top:8px;">Start Your Inquiry →</button></div>
+  </div><!-- /page-inner -->
+  <footer><button class="footer-logo" onclick="goTo('home')">GROVE STREET MEDIA</button><ul class="footer-links"><li><button onclick="goTo('photos')">← Back to Photos</button></li><li><button onclick="goTo('contact')">Book Now</button></li></ul><div class="footer-copy">© 2025 Grove Street Media.</div></footer>
+</div>
+
+<!-- DYNAMIC PROJECT GALLERY PAGE (shared, populated by JS) -->
+<div class="page" id="page-project">
+  <div class="breadcrumb" id="proj-breadcrumb"></div>
+  <div class="page-inner">
+    <div class="section-label" id="proj-label">Project</div>
+    <h2 class="section-title" id="proj-title">PROJECT<br><span class="accent">GALLERY</span></h2>
+    <p class="section-desc editable-field" id="proj-desc" contenteditable="true">Click to add a project description...</p>
+    <div class="proj-meta-row" id="proj-meta-row"></div>
+    <div class="gallery-grid masonry" id="proj-gallery"></div>
+    <button class="add-btn" onclick="addPhotoToProject()">+ Add Photo</button>
+    <div class="portfolio-booknow"><div class="portfolio-booknow-title">LOVE WHAT <span>YOU SEE?</span></div><div class="portfolio-booknow-sub">Book your own session with Grove Street Media.</div><button class="btn-primary" onclick="goToPricing('photography')" style="margin-top:8px;">Start Your Inquiry →</button></div>
+  <div style="padding:0 48px 60px;"><button class="btn-primary" style="font-size:.75rem;" onclick="goToPricing('photography')">📅 Book Now →</button></div>
+  </div><!-- close page-inner -->
+  <footer><button class="footer-logo" onclick="goTo('home')">GROVE STREET MEDIA</button><ul class="footer-links"><li id="proj-back-link"></li><li><button onclick="goTo('contact')">Book Now</button></li></ul><div class="footer-copy">© 2025 Grove Street Media.</div></footer>
+</div>
+
+<!-- ══════════ PAGE: VIDEOS HUB ══════════ -->
+<div class="page" id="page-videos">
+  <div class="breadcrumb"><button onclick="goTo('home')">Home</button><span class="sep">/</span><span class="cur">Film &amp; Video</span></div>
+  <div class="page-inner" style="background:var(--black2);">
+    <div class="section-label">Film &amp; Video Work</div>
+    <h2 class="section-title">FILM &amp;<br><span class="accent">VIDEO</span></h2>
+    <p class="section-desc">Choose a category to explore our film &amp; video work.</p>
+    <div class="cat-grid">
+      <div class="cat-card" onclick="goTo('videos-all')"><div class="cat-card-num">01</div><div class="cat-card-icon">🎞</div><div class="cat-card-title">All Videos</div><div class="cat-card-desc">Everything we've shot in one place.</div><div class="cat-card-arrow">Browse All →</div></div>
+      <div class="cat-card" onclick="goTo('videos-commercial')"><div class="cat-card-num">02</div><div class="cat-card-icon">📺</div><div class="cat-card-title">Commercial</div><div class="cat-card-desc">Brand films, ads and product videos.</div><div class="cat-card-arrow">View Videos →</div></div>
+      <div class="cat-card" onclick="goTo('videos-wedding')"><div class="cat-card-num">03</div><div class="cat-card-icon">💒</div><div class="cat-card-title">Wedding Films</div><div class="cat-card-desc">Cinematic films for your biggest day.</div><div class="cat-card-arrow">View Videos →</div></div>
+      <div class="cat-card" onclick="goTo('videos-music')"><div class="cat-card-num">04</div><div class="cat-card-icon">🎵</div><div class="cat-card-title">Music Videos</div><div class="cat-card-desc">Hip-hop, R&amp;B and urban music visuals.</div><div class="cat-card-arrow">View Videos →</div></div>
+    </div>
+  </div>
+  <footer><button class="footer-logo" onclick="goTo('home')">GROVE STREET MEDIA</button><ul class="footer-links"><li><button onclick="goTo('home')">Home</button></li><li><button onclick="goTo('photos')">Photos</button></li><li><button onclick="goTo('contact')">Contact</button></li></ul><div class="footer-copy">© 2025 Grove Street Media.</div></footer>
+</div>
+
+<!-- VIDEO: ALL -->
+<div class="page" id="page-videos-all">
+  <div class="breadcrumb"><button onclick="goTo('home')">Home</button><span class="sep">/</span><button onclick="goTo('videos')">Video</button><span class="sep">/</span><span class="cur">All Videos</span></div>
+  <div class="page-inner"><div class="section-label">Video</div><h2 class="section-title">ALL<br><span class="accent">VIDEOS</span></h2><div class="video-grid" id="vgrid-all-vid"></div><button class="add-btn" onclick="addVideoItem('all-vid')">+ Add Video</button><div class="portfolio-booknow"><div class="portfolio-booknow-title">READY TO <span>BOOK?</span></div><div class="portfolio-booknow-sub">Let's create something unforgettable together.</div><button class="btn-primary" onclick="goToPricing('video')" style="margin-top:8px;">Start Your Inquiry →</button></div></div>
+  <div style="padding:0 48px 60px;"><button class="btn-primary" style="font-size:.75rem;" onclick="goToPricing('video')">📅 Book Now →</button></div>
+  <footer><button class="footer-logo" onclick="goTo('home')">GROVE STREET MEDIA</button><ul class="footer-links"><li><button onclick="goTo('videos')">← Back to Videos</button></li><li><button onclick="goTo('contact')">Book Now</button></li></ul><div class="footer-copy">© 2025 Grove Street Media.</div></footer>
+</div>
+
+<!-- VIDEO: COMMERCIAL -->
+<div class="page" id="page-videos-commercial">
+  <div class="breadcrumb"><button onclick="goTo('home')">Home</button><span class="sep">/</span><button onclick="goTo('videos')">Video</button><span class="sep">/</span><span class="cur">Commercial</span></div>
+  <div class="page-inner"><div class="section-label">Video</div><h2 class="section-title">COMMERCIAL<br><span class="accent">VIDEOS</span></h2><div class="video-grid" id="vgrid-commercial-vid"></div><button class="add-btn" onclick="addVideoItem('commercial-vid')">+ Add Video</button><div class="portfolio-booknow"><div class="portfolio-booknow-title">READY TO <span>BOOK?</span></div><div class="portfolio-booknow-sub">Let's create something unforgettable together.</div><button class="btn-primary" onclick="goToPricing('video')" style="margin-top:8px;">Start Your Inquiry →</button></div></div>
+  <div style="padding:0 48px 60px;"><button class="btn-primary" style="font-size:.75rem;" onclick="goToPricing('video')">📅 Book Now →</button></div>
+  <footer><button class="footer-logo" onclick="goTo('home')">GROVE STREET MEDIA</button><ul class="footer-links"><li><button onclick="goTo('videos')">← Back to Videos</button></li><li><button onclick="goTo('contact')">Book Now</button></li></ul><div class="footer-copy">© 2025 Grove Street Media.</div></footer>
+</div>
+
+<!-- VIDEO: WEDDING -->
+<div class="page" id="page-videos-wedding">
+  <div class="breadcrumb"><button onclick="goTo('home')">Home</button><span class="sep">/</span><button onclick="goTo('videos')">Video</button><span class="sep">/</span><span class="cur">Wedding Films</span></div>
+  <div class="page-inner"><div class="section-label">Video</div><h2 class="section-title">WEDDING<br><span class="accent">FILMS</span></h2><div class="video-grid" id="vgrid-wedding-vid"></div><button class="add-btn" onclick="addVideoItem('wedding-vid')">+ Add Video</button><div class="portfolio-booknow"><div class="portfolio-booknow-title">READY TO <span>BOOK?</span></div><div class="portfolio-booknow-sub">Let's create something unforgettable together.</div><button class="btn-primary" onclick="goToPricing('video')" style="margin-top:8px;">Start Your Inquiry →</button></div></div>
+  <div style="padding:0 48px 60px;"><button class="btn-primary" style="font-size:.75rem;" onclick="goToPricing('video')">📅 Book Now →</button></div>
+  <footer><button class="footer-logo" onclick="goTo('home')">GROVE STREET MEDIA</button><ul class="footer-links"><li><button onclick="goTo('videos')">← Back to Videos</button></li><li><button onclick="goTo('contact')">Book Now</button></li></ul><div class="footer-copy">© 2025 Grove Street Media.</div></footer>
+</div>
+
+<!-- VIDEO: MUSIC -->
+<div class="page" id="page-videos-music">
+  <div class="breadcrumb"><button onclick="goTo('home')">Home</button><span class="sep">/</span><button onclick="goTo('videos')">Video</button><span class="sep">/</span><span class="cur">Music Videos</span></div>
+  <div class="page-inner"><div class="section-label">Video</div><h2 class="section-title">MUSIC<br><span class="accent">VIDEOS</span></h2><div class="video-grid" id="vgrid-urban-vid"></div><button class="add-btn" onclick="addVideoItem('urban-vid')">+ Add Video</button><div class="portfolio-booknow"><div class="portfolio-booknow-title">READY TO <span>BOOK?</span></div><div class="portfolio-booknow-sub">Let's create something unforgettable together.</div><button class="btn-primary" onclick="goToPricing('video')" style="margin-top:8px;">Start Your Inquiry →</button></div></div>
+  <div style="padding:0 48px 60px;"><button class="btn-primary" style="font-size:.75rem;" onclick="goToPricing('video')">📅 Book Now →</button></div>
+  <footer><button class="footer-logo" onclick="goTo('home')">GROVE STREET MEDIA</button><ul class="footer-links"><li><button onclick="goTo('videos')">← Back to Videos</button></li><li><button onclick="goTo('contact')">Book Now</button></li></ul><div class="footer-copy">© 2025 Grove Street Media.</div></footer>
+</div>
+
+<!-- ══════════ PAGE: DESIGN HUB ══════════ -->
+<div class="page" id="page-design">
+  <div class="breadcrumb"><button onclick="goTo('home')">Home</button><span class="sep">/</span><span class="cur">Graphic Design</span></div>
+  <div class="page-inner" style="background:var(--black3);">
+    <div class="section-label">Graphic Design</div>
+    <h2 class="section-title">DESIGN<br><span class="accent">PORTFOLIO</span></h2>
+    <p class="section-desc">Choose a category to explore our design work.</p>
+    <div class="cat-grid">
+      <div class="cat-card" onclick="goTo('design-all')"><div class="cat-card-num">01</div><div class="cat-card-icon">🎨</div><div class="cat-card-title">All Design</div><div class="cat-card-desc">Everything across all design categories.</div><div class="cat-card-arrow">Browse All →</div></div>
+      <div class="cat-card" onclick="goTo('design-branding')"><div class="cat-card-num">02</div><div class="cat-card-icon">✒️</div><div class="cat-card-title">Branding</div><div class="cat-card-desc">Logos, brand guidelines and identity systems.</div><div class="cat-card-arrow">View Work →</div></div>
+      <div class="cat-card" onclick="goTo('design-music')"><div class="cat-card-num">03</div><div class="cat-card-icon">💿</div><div class="cat-card-title">Music &amp; Albums</div><div class="cat-card-desc">Album covers, single art and EP artwork.</div><div class="cat-card-arrow">View Work →</div></div>
+      <div class="cat-card" onclick="goTo('design-print')"><div class="cat-card-num">04</div><div class="cat-card-icon">🖨️</div><div class="cat-card-title">Print &amp; Flyers</div><div class="cat-card-desc">Event flyers, concert posters and promo print.</div><div class="cat-card-arrow">View Work →</div></div>
+      <div class="cat-card" onclick="goTo('design-social')"><div class="cat-card-num">05</div><div class="cat-card-icon">📱</div><div class="cat-card-title">Social / Digital</div><div class="cat-card-desc">IG packs, banners and digital content templates.</div><div class="cat-card-arrow">View Work →</div></div>
+    </div>
+  </div>
+  <footer><button class="footer-logo" onclick="goTo('home')">GROVE STREET MEDIA</button><ul class="footer-links"><li><button onclick="goTo('home')">Home</button></li><li><button onclick="goTo('photos')">Photos</button></li><li><button onclick="goTo('contact')">Contact</button></li></ul><div class="footer-copy">© 2025 Grove Street Media.</div></footer>
+</div>
+
+<!-- DESIGN: ALL -->
+<div class="page" id="page-design-all">
+  <div class="breadcrumb"><button onclick="goTo('home')">Home</button><span class="sep">/</span><button onclick="goTo('design')">Design</button><span class="sep">/</span><span class="cur">All Design</span></div>
+  <div class="page-inner"><div class="section-label">Design</div><h2 class="section-title">ALL<br><span class="accent">DESIGN</span></h2><div class="gallery-grid" id="dgrid-design-all" style="grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:12px;"></div><button class="add-btn" onclick="addDesignItem('design-all')">+ Add Design</button><div class="portfolio-booknow"><div class="portfolio-booknow-title">READY TO <span>BOOK?</span></div><div class="portfolio-booknow-sub">Let's create something unforgettable together.</div><button class="btn-primary" onclick="goToPricing('design')" style="margin-top:8px;">Start Your Inquiry →</button></div></div>
+  <div style="padding:0 48px 60px;"><button class="btn-primary" style="font-size:.75rem;" onclick="goToPricing('design')">📅 Book Now →</button></div>
+  <footer><button class="footer-logo" onclick="goTo('home')">GROVE STREET MEDIA</button><ul class="footer-links"><li><button onclick="goTo('design')">← Back to Design</button></li><li><button onclick="goTo('contact')">Book Now</button></li></ul><div class="footer-copy">© 2025 Grove Street Media.</div></footer>
+</div>
+
+<!-- DESIGN: BRANDING -->
+<div class="page" id="page-design-branding">
+  <div class="breadcrumb"><button onclick="goTo('home')">Home</button><span class="sep">/</span><button onclick="goTo('design')">Design</button><span class="sep">/</span><span class="cur">Branding</span></div>
+  <div class="page-inner"><div class="section-label">Design</div><h2 class="section-title">BRANDING<br><span class="accent">WORK</span></h2><div class="gallery-grid" id="dgrid-design-branding" style="grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:12px;"></div><button class="add-btn" onclick="addDesignItem('design-branding')">+ Add Design</button><div class="portfolio-booknow"><div class="portfolio-booknow-title">READY TO <span>BOOK?</span></div><div class="portfolio-booknow-sub">Let's create something unforgettable together.</div><button class="btn-primary" onclick="goToPricing('design')" style="margin-top:8px;">Start Your Inquiry →</button></div></div>
+  <div style="padding:0 48px 60px;"><button class="btn-primary" style="font-size:.75rem;" onclick="goToPricing('design')">📅 Book Now →</button></div>
+  <footer><button class="footer-logo" onclick="goTo('home')">GROVE STREET MEDIA</button><ul class="footer-links"><li><button onclick="goTo('design')">← Back to Design</button></li><li><button onclick="goTo('contact')">Book Now</button></li></ul><div class="footer-copy">© 2025 Grove Street Media.</div></footer>
+</div>
+
+<!-- DESIGN: MUSIC -->
+<div class="page" id="page-design-music">
+  <div class="breadcrumb"><button onclick="goTo('home')">Home</button><span class="sep">/</span><button onclick="goTo('design')">Design</button><span class="sep">/</span><span class="cur">Music &amp; Albums</span></div>
+  <div class="page-inner"><div class="section-label">Design</div><h2 class="section-title">MUSIC &amp;<br><span class="accent">ALBUMS</span></h2><div class="gallery-grid" id="dgrid-design-music" style="grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:12px;"></div><button class="add-btn" onclick="addDesignItem('design-music')">+ Add Design</button><div class="portfolio-booknow"><div class="portfolio-booknow-title">READY TO <span>BOOK?</span></div><div class="portfolio-booknow-sub">Let's create something unforgettable together.</div><button class="btn-primary" onclick="goToPricing('design')" style="margin-top:8px;">Start Your Inquiry →</button></div></div>
+  <div style="padding:0 48px 60px;"><button class="btn-primary" style="font-size:.75rem;" onclick="goToPricing('design')">📅 Book Now →</button></div>
+  <footer><button class="footer-logo" onclick="goTo('home')">GROVE STREET MEDIA</button><ul class="footer-links"><li><button onclick="goTo('design')">← Back to Design</button></li><li><button onclick="goTo('contact')">Book Now</button></li></ul><div class="footer-copy">© 2025 Grove Street Media.</div></footer>
+</div>
+
+<!-- DESIGN: PRINT -->
+<div class="page" id="page-design-print">
+  <div class="breadcrumb"><button onclick="goTo('home')">Home</button><span class="sep">/</span><button onclick="goTo('design')">Design</button><span class="sep">/</span><span class="cur">Print &amp; Flyers</span></div>
+  <div class="page-inner"><div class="section-label">Design</div><h2 class="section-title">PRINT &amp;<br><span class="accent">FLYERS</span></h2><div class="gallery-grid" id="dgrid-design-print" style="grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:12px;"></div><button class="add-btn" onclick="addDesignItem('design-print')">+ Add Design</button><div class="portfolio-booknow"><div class="portfolio-booknow-title">READY TO <span>BOOK?</span></div><div class="portfolio-booknow-sub">Let's create something unforgettable together.</div><button class="btn-primary" onclick="goToPricing('design')" style="margin-top:8px;">Start Your Inquiry →</button></div></div>
+  <div style="padding:0 48px 60px;"><button class="btn-primary" style="font-size:.75rem;" onclick="goToPricing('design')">📅 Book Now →</button></div>
+  <footer><button class="footer-logo" onclick="goTo('home')">GROVE STREET MEDIA</button><ul class="footer-links"><li><button onclick="goTo('design')">← Back to Design</button></li><li><button onclick="goTo('contact')">Book Now</button></li></ul><div class="footer-copy">© 2025 Grove Street Media.</div></footer>
+</div>
+
+<!-- DESIGN: SOCIAL -->
+<div class="page" id="page-design-social">
+  <div class="breadcrumb"><button onclick="goTo('home')">Home</button><span class="sep">/</span><button onclick="goTo('design')">Design</button><span class="sep">/</span><span class="cur">Social / Digital</span></div>
+  <div class="page-inner"><div class="section-label">Design</div><h2 class="section-title">SOCIAL &amp;<br><span class="accent">DIGITAL</span></h2><div class="gallery-grid" id="dgrid-design-social" style="grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:12px;"></div><button class="add-btn" onclick="addDesignItem('design-social')">+ Add Design</button><div class="portfolio-booknow"><div class="portfolio-booknow-title">READY TO <span>BOOK?</span></div><div class="portfolio-booknow-sub">Let's create something unforgettable together.</div><button class="btn-primary" onclick="goToPricing('design')" style="margin-top:8px;">Start Your Inquiry →</button></div></div>
+  <div style="padding:0 48px 60px;"><button class="btn-primary" style="font-size:.75rem;" onclick="goToPricing('design')">📅 Book Now →</button></div>
+  <footer><button class="footer-logo" onclick="goTo('home')">GROVE STREET MEDIA</button><ul class="footer-links"><li><button onclick="goTo('design')">← Back to Design</button></li><li><button onclick="goTo('contact')">Book Now</button></li></ul><div class="footer-copy">© 2025 Grove Street Media.</div></footer>
+</div>
+
+<!-- ══════════ PAGE: SERVICES ══════════ -->
+<div class="page" id="page-services">
+  <div class="breadcrumb"><button onclick="goTo('home')">Home</button><span class="sep">/</span><span class="cur">Services</span></div>
+  <div class="page-inner">
+    <div class="section-label">What We Offer</div>
+    <h2 class="section-title">OUR<br><span class="accent">SERVICES</span></h2>
+    <p class="section-desc">Three core disciplines. Click any service to explore the portfolio.</p>
+    <div class="svc-grid">
+
+      <!-- PHOTOGRAPHY -->
+      <div class="svc-block">
+        <div class="svc-header" onclick="goTo('photos')">
+          <div class="svc-icon">📷</div>
+          <div>
+            <div class="svc-title">Photography</div>
+            <div class="svc-subtitle">View Portfolio →</div>
+          </div>
+        </div>
+        <div class="svc-desc">From ceremony aisles to city streets — we capture moments with cinematic precision and cultural authenticity.</div>
+        <div class="svc-sub-list">
+          <button class="svc-sub-item" onclick="goTo('photos-commercial')">
+            <span class="svc-sub-icon">📦</span>
+            <div><div class="svc-sub-name">Commercial Photography</div><div class="svc-sub-desc">Product, brand &amp; campaign work</div></div>
+            <span class="svc-sub-arrow">→</span>
+          </button>
+          <button class="svc-sub-item" onclick="goTo('photos-wedding')">
+            <span class="svc-sub-icon">💍</span>
+            <div><div class="svc-sub-name">Wedding Photography</div><div class="svc-sub-desc">Full-day ceremony &amp; reception coverage</div></div>
+            <span class="svc-sub-arrow">→</span>
+          </button>
+          <button class="svc-sub-item" onclick="goTo('photos-urban')">
+            <span class="svc-sub-icon">🏙️</span>
+            <div><div class="svc-sub-name">Lifestyle &amp; Culture</div><div class="svc-sub-desc">Street, artist &amp; editorial portraits</div></div>
+            <span class="svc-sub-arrow">→</span>
+          </button>
+        </div>
+        <button class="svc-book-btn" onclick="goToPricing('photography')">Book Photography →</button>
+      </div>
+
+      <!-- VIDEO -->
+      <div class="svc-block">
+        <div class="svc-header" onclick="goTo('videos')">
+          <div class="svc-icon">🎬</div>
+          <div>
+            <div class="svc-title">Film &amp; Video</div>
+            <div class="svc-subtitle">View Portfolio →</div>
+          </div>
+        </div>
+        <div class="svc-desc">High-concept film production for brands, artists, and couples. Every frame tells a story worth watching.</div>
+        <div class="svc-sub-list">
+          <button class="svc-sub-item" onclick="goTo('videos-music')">
+            <span class="svc-sub-icon">🎵</span>
+            <div><div class="svc-sub-name">Music Video Production</div><div class="svc-sub-desc">Hip-hop, R&amp;B &amp; urban visuals</div></div>
+            <span class="svc-sub-arrow">→</span>
+          </button>
+          <button class="svc-sub-item" onclick="goTo('videos-wedding')">
+            <span class="svc-sub-icon">💒</span>
+            <div><div class="svc-sub-name">Wedding Films</div><div class="svc-sub-desc">Cinematic films for your biggest day</div></div>
+            <span class="svc-sub-arrow">→</span>
+          </button>
+          <button class="svc-sub-item" onclick="goTo('videos-commercial')">
+            <span class="svc-sub-icon">📺</span>
+            <div><div class="svc-sub-name">Commercial Video &amp; Ads</div><div class="svc-sub-desc">Brand films, social spots &amp; campaigns</div></div>
+            <span class="svc-sub-arrow">→</span>
+          </button>
+        </div>
+        <button class="svc-book-btn" onclick="goToPricing('video')">Book Film &amp; Video →</button>
+      </div>
+
+      <!-- GRAPHIC DESIGN -->
+      <div class="svc-block">
+        <div class="svc-header" onclick="goTo('design')">
+          <div class="svc-icon">🎨</div>
+          <div>
+            <div class="svc-title">Graphic Design</div>
+            <div class="svc-subtitle">View Portfolio →</div>
+          </div>
+        </div>
+        <div class="svc-desc">Bold design rooted in culture. From brand identities to album covers — we make your visual presence unforgettable.</div>
+        <div class="svc-sub-list">
+          <button class="svc-sub-item" onclick="goTo('design-branding')">
+            <span class="svc-sub-icon">✒️</span>
+            <div><div class="svc-sub-name">Branding &amp; Identity</div><div class="svc-sub-desc">Logos, guidelines &amp; brand systems</div></div>
+            <span class="svc-sub-arrow">→</span>
+          </button>
+          <button class="svc-sub-item" onclick="goTo('design-music')">
+            <span class="svc-sub-icon">💿</span>
+            <div><div class="svc-sub-name">Music &amp; Album Art</div><div class="svc-sub-desc">Covers, singles &amp; EP artwork</div></div>
+            <span class="svc-sub-arrow">→</span>
+          </button>
+          <button class="svc-sub-item" onclick="goTo('design-print')">
+            <span class="svc-sub-icon">🖨️</span>
+            <div><div class="svc-sub-name">Print &amp; Flyers</div><div class="svc-sub-desc">Event posters, flyers &amp; merch</div></div>
+            <span class="svc-sub-arrow">→</span>
+          </button>
+          <button class="svc-sub-item" onclick="goTo('design-social')">
+            <span class="svc-sub-icon">📱</span>
+            <div><div class="svc-sub-name">Social &amp; Digital</div><div class="svc-sub-desc">IG packs, banners &amp; templates</div></div>
+            <span class="svc-sub-arrow">→</span>
+          </button>
+        </div>
+        <button class="svc-book-btn" onclick="goToPricing('design')">Book Design →</button>
+      </div>
+
+    </div>
+  </div>
+  <footer><button class="footer-logo" onclick="goTo('home')">GROVE STREET MEDIA</button><ul class="footer-links"><li><button onclick="goTo('pricing')">Pricing</button></li><li><button onclick="goTo('contact')">Book Now</button></li></ul><div class="footer-copy">© 2025 Grove Street Media.</div></footer>
+</div>
+
+<!-- ══════════ PAGE: PRICING ══════════ -->
+<div class="page" id="page-pricing">
+  <div class="breadcrumb"><button onclick="goTo('home')">Home</button><span class="sep">/</span><span class="cur">Pricing</span></div>
+  <div class="page-inner">
+    <div class="section-label">Investment</div>
+    <h2 class="section-title">PRICING &amp;<br><span class="accent">PACKAGES</span></h2>
+    <p class="section-desc">Transparent starting prices across all services. Every project is unique — <a href="javascript:goTo('contact')" style="color:var(--green);text-decoration:none;">reach out</a> for a custom quote.</p>
+    <p class="price-edit-hint">✎ Click any price to edit</p>
+
+    <div class="pricing-tabs">
+      <button class="pricing-tab active" onclick="switchPricing('photography',this)">Photography</button>
+      <button class="pricing-tab" onclick="switchPricing('video',this)">Film &amp; Video</button>
+      <button class="pricing-tab" onclick="switchPricing('design',this)">Graphic Design</button>
+      <button class="pricing-tab" onclick="switchPricing('bundles',this)" style="color:var(--green);">✦ Bundles</button>
+    </div>
+
+    <!-- PHOTOGRAPHY -->
+    <div class="pricing-panel active" id="pricing-photography">
+      <div class="pricing-grid">
+        <div class="price-card">
+          <div class="price-tier">Tier 01</div>
+          <div class="price-name">Artist Session</div>
+          <div class="price-from">Starting from</div>
+          <div class="price-amount"><input type="text" value="$300" /></div>
+          <div class="price-note">1–2 hour artist &amp; promo shoot</div>
+          <div class="price-divider"></div>
+          <ul class="price-features">
+            <li>Up to 2 hours on location</li>
+            <li>25+ edited digital images</li>
+            <li>Online gallery delivery</li>
+            <li>1 location</li>
+            <li>Artist &amp; promo use rights</li>
+          </ul>
+          <div class="price-card-btns">
+          <button class="price-cta" onclick="bookPackage('Photography','Artist Session','$300')">Book This Package</button>
+          <button class="cart-add-btn" onclick="addToCart('Photography','Artist Session','$300',this)">🛒 Add to Cart</button>
+        </div>
+        </div>
+        <div class="price-card">
+          <div class="price-tier">Tier 02</div>
+          <div class="price-name">Brand Shoot</div>
+          <div class="price-from">Starting from</div>
+          <div class="price-amount"><input type="text" value="$600" /></div>
+          <div class="price-note">3–4 hour brand &amp; commercial shoot</div>
+          <div class="price-divider"></div>
+          <ul class="price-features">
+            <li>Up to 4 hours on location</li>
+            <li>50+ edited digital images</li>
+            <li>Online gallery delivery</li>
+            <li>2 locations</li>
+            <li>Commercial use rights</li>
+            <li>Professional retouching</li>
+          </ul>
+          <div class="price-card-btns">
+          <button class="price-cta" onclick="bookPackage('Photography','Brand Shoot','$600')">Book This Package</button>
+          <button class="cart-add-btn" onclick="addToCart('Photography','Brand Shoot','$600',this)">🛒 Add to Cart</button>
+        </div>
+        </div>
+        <div class="price-card featured">
+          <div class="price-tier">Tier 03</div>
+          <div class="price-name">Full Production</div>
+          <div class="price-from">Starting from</div>
+          <div class="price-amount"><input type="text" value="$900" /></div>
+          <div class="price-note">Half-day campaign &amp; editorial</div>
+          <div class="price-divider"></div>
+          <ul class="price-features">
+            <li>Up to 6 hours on location</li>
+            <li>75+ edited digital images</li>
+            <li>Online gallery delivery</li>
+            <li>Multiple locations</li>
+            <li>Full commercial usage rights</li>
+            <li>Advanced retouching</li>
+          </ul>
+          <div class="price-card-btns">
+          <button class="price-cta" onclick="bookPackage('Photography','Full Production','$900')">Book This Package</button>
+          <button class="cart-add-btn" onclick="addToCart('Photography','Full Production','$900',this)">🛒 Add to Cart</button>
+        </div>
+        </div>
+        <div class="price-card">
+          <div class="price-tier">Tier 04</div>
+          <div class="price-name">Premium Campaign</div>
+          <div class="price-from">Starting from</div>
+          <div class="price-amount"><input type="text" value="$1,200" /></div>
+          <div class="price-note">Full day production</div>
+          <div class="price-divider"></div>
+          <ul class="price-features">
+            <li>Full day on location (8hrs)</li>
+            <li>100+ edited digital images</li>
+            <li>Online gallery delivery</li>
+            <li>Unlimited locations</li>
+            <li>Full commercial usage rights</li>
+            <li>Advanced retouching</li>
+            <li>Print &amp; digital ready files</li>
+          </ul>
+          <div class="price-card-btns">
+          <button class="price-cta" onclick="bookPackage('Photography','Premium Campaign','$1,200')">Book This Package</button>
+          <button class="cart-add-btn" onclick="addToCart('Photography','Premium Campaign','$1,200',this)">🛒 Add to Cart</button>
+        </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- VIDEO -->
+    <div class="pricing-panel" id="pricing-video">
+      <div class="pricing-grid">
+        <div class="price-card">
+          <div class="price-tier">Tier 01</div>
+          <div class="price-name">Visual Content</div>
+          <div class="price-from">Starting from</div>
+          <div class="price-amount"><input type="text" value="$300" /></div>
+          <div class="price-note">Short-form social content</div>
+          <div class="price-divider"></div>
+          <ul class="price-features">
+            <li>Up to 2 hours filming</li>
+            <li>60–90 second final cut</li>
+            <li>Color grade included</li>
+            <li>1 round of revisions</li>
+            <li>Social media ready delivery</li>
+          </ul>
+          <div class="price-card-btns">
+          <button class="price-cta" onclick="bookPackage('Video','Visual Content','$300')">Book This Package</button>
+          <button class="cart-add-btn" onclick="addToCart('Video','Visual Content','$300',this)">🛒 Add to Cart</button>
+        </div>
+        </div>
+        <div class="price-card">
+          <div class="price-tier">Tier 02</div>
+          <div class="price-name">Music Video</div>
+          <div class="price-from">Starting from</div>
+          <div class="price-amount"><input type="text" value="$600" /></div>
+          <div class="price-note">Single location music video</div>
+          <div class="price-divider"></div>
+          <ul class="price-features">
+            <li>Up to 4 hours filming</li>
+            <li>2–3 minute final cut</li>
+            <li>Cinematic color grade</li>
+            <li>1 location</li>
+            <li>2 rounds of revisions</li>
+            <li>Vertical cut for social</li>
+          </ul>
+          <div class="price-card-btns">
+          <button class="price-cta" onclick="bookPackage('Video','Music Video','$600')">Book This Package</button>
+          <button class="cart-add-btn" onclick="addToCart('Video','Music Video','$600',this)">🛒 Add to Cart</button>
+        </div>
+        </div>
+        <div class="price-card featured">
+          <div class="price-tier">Tier 03</div>
+          <div class="price-name">Brand Film</div>
+          <div class="price-from">Starting from</div>
+          <div class="price-amount"><input type="text" value="$1,000" /></div>
+          <div class="price-note">Full production music video or brand film</div>
+          <div class="price-divider"></div>
+          <ul class="price-features">
+            <li>Full production day</li>
+            <li>3–4 minute final cut</li>
+            <li>Cinematic color &amp; sound mix</li>
+            <li>Multiple locations</li>
+            <li>2 rounds of revisions</li>
+            <li>Vertical cut for social</li>
+            <li>Behind-the-scenes clip</li>
+          </ul>
+          <div class="price-card-btns">
+          <button class="price-cta" onclick="bookPackage('Video','Brand Film','$1,000')">Book This Package</button>
+          <button class="cart-add-btn" onclick="addToCart('Video','Brand Film','$1,000',this)">🛒 Add to Cart</button>
+        </div>
+        </div>
+        <div class="price-card">
+          <div class="price-tier">Tier 04</div>
+          <div class="price-name">Brand Campaign</div>
+          <div class="price-from">Starting from</div>
+          <div class="price-amount"><input type="text" value="$1,500" /></div>
+          <div class="price-note">Full concept to delivery</div>
+          <div class="price-divider"></div>
+          <ul class="price-features">
+            <li>Multi-day production</li>
+            <li>Full concept development</li>
+            <li>Professional color &amp; sound mix</li>
+            <li>Hero film + social cut-downs</li>
+            <li>Unlimited revisions</li>
+            <li>Commercial usage rights</li>
+            <li>Behind-the-scenes content</li>
+          </ul>
+          <div class="price-card-btns">
+          <button class="price-cta" onclick="bookPackage('Video','Brand Campaign','$1,500')">Book This Package</button>
+          <button class="cart-add-btn" onclick="addToCart('Video','Brand Campaign','$1,500',this)">🛒 Add to Cart</button>
+        </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- DESIGN -->
+    <div class="pricing-panel" id="pricing-design">
+      <div class="pricing-grid">
+        <div class="price-card">
+          <div class="price-tier">Tier 01</div>
+          <div class="price-name">Quick Turnaround</div>
+          <div class="price-from">Starting from</div>
+          <div class="price-amount"><input type="text" value="$75" /></div>
+          <div class="price-note">Single design deliverable</div>
+          <div class="price-divider"></div>
+          <ul class="price-features">
+            <li>1 design deliverable</li>
+            <li>Flyer, cover art, or banner</li>
+            <li>2 concept directions</li>
+            <li>2 rounds of revisions</li>
+            <li>Print &amp; digital ready files</li>
+          </ul>
+          <div class="price-card-btns">
+          <button class="price-cta" onclick="bookPackage('Graphic Design','Quick Turnaround','$75')">Book This Package</button>
+          <button class="cart-add-btn" onclick="addToCart('Graphic Design','Quick Turnaround','$75',this)">🛒 Add to Cart</button>
+        </div>
+        </div>
+        <div class="price-card featured">
+          <div class="price-tier">Tier 02</div>
+          <div class="price-name">Identity System</div>
+          <div class="price-from">Starting from</div>
+          <div class="price-amount"><input type="text" value="$600" /></div>
+          <div class="price-note">Full brand identity</div>
+          <div class="price-divider"></div>
+          <ul class="price-features">
+            <li>Logo + variations</li>
+            <li>Color palette &amp; typography</li>
+            <li>Brand guidelines document</li>
+            <li>Business card design</li>
+            <li>Social media kit</li>
+            <li>Unlimited revisions</li>
+          </ul>
+          <div class="price-card-btns">
+          <button class="price-cta" onclick="bookPackage('Graphic Design','Identity System','$600')">Book This Package</button>
+          <button class="cart-add-btn" onclick="addToCart('Graphic Design','Identity System','$600',this)">🛒 Add to Cart</button>
+        </div>
+        </div>
+        <div class="price-card">
+          <div class="price-tier">Tier 03</div>
+          <div class="price-name">Full Campaign</div>
+          <div class="price-from">Starting from</div>
+          <div class="price-amount"><input type="text" value="$1,500" /></div>
+          <div class="price-note">Complete creative package</div>
+          <div class="price-divider"></div>
+          <ul class="price-features">
+            <li>Full brand identity system</li>
+            <li>Album or merch artwork</li>
+            <li>Event flyers &amp; posters</li>
+            <li>Social content templates (10+)</li>
+            <li>Retainer option available</li>
+            <li>Priority turnaround</li>
+          </ul>
+          <div class="price-card-btns">
+          <button class="price-cta" onclick="bookPackage('Graphic Design','Full Campaign','$1,500')">Book This Package</button>
+          <button class="cart-add-btn" onclick="addToCart('Graphic Design','Full Campaign','$1,500',this)">🛒 Add to Cart</button>
+        </div>
+        </div>
+      </div><!-- /pricing-grid -->
+    </div><!-- /pricing-panel design -->
+
+    <!-- BUNDLES -->
+    <div class="pricing-panel" id="pricing-bundles">
+      <p style="font-family:var(--font-body);font-size:1rem;color:var(--text-dim);line-height:1.7;font-weight:300;max-width:600px;margin-bottom:32px;border-left:2px solid var(--green);padding-left:16px;">Book photo <em>and</em> video together and save — same location, same day, one seamless experience. Every bundle is named after our brand promise: <strong style="color:var(--text);">Every Frame Tells Your Story.</strong></p>
+      <div class="pricing-grid">
+
+        <div class="price-card">
+          <div class="price-tier">Bundle 01</div>
+          <div class="price-name">Story Starter</div>
+          <div class="price-from">Starting from</div>
+          <div class="price-amount"><input type="text" value="$500" /></div>
+          <div class="price-note">Photo T1 + Video T1 — you save $100</div>
+          <div class="price-divider"></div>
+          <ul class="price-features">
+            <li>Up to 2 hours on location</li>
+            <li>25+ edited photos</li>
+            <li>60–90 sec video final cut</li>
+            <li>Color grade included</li>
+            <li>Social media ready delivery</li>
+            <li>Artist &amp; promo use rights</li>
+          </ul>
+          <div style="font-family:var(--font-mono);font-size:.58rem;letter-spacing:1px;color:var(--text-dim);margin-bottom:12px;">Individual: $600 → Bundle: <span style="color:var(--green);">$500</span></div>
+          <div class="price-card-btns">
+          <button class="price-cta" onclick="bookPackage('Bundle','Story Starter','$500')">Book This Bundle</button>
+          <button class="cart-add-btn" onclick="addToCart('Bundle','Story Starter','$500',this)">🛒 Add to Cart</button>
+        </div>
+        </div>
+
+        <div class="price-card featured">
+          <div class="price-tier">Bundle 02</div>
+          <div class="price-name">Brand Story</div>
+          <div class="price-from">Starting from</div>
+          <div class="price-amount"><input type="text" value="$950" /></div>
+          <div class="price-note">Photo T2 + Video T2 — you save $250</div>
+          <div class="price-divider"></div>
+          <ul class="price-features">
+            <li>Up to 4 hours on location</li>
+            <li>50+ edited photos</li>
+            <li>2–3 min video final cut</li>
+            <li>Cinematic color grade</li>
+            <li>2 locations</li>
+            <li>2 rounds of revisions</li>
+            <li>Vertical cut for social</li>
+            <li>Commercial use rights</li>
+          </ul>
+          <div style="font-family:var(--font-mono);font-size:.58rem;letter-spacing:1px;color:var(--text-dim);margin-bottom:12px;">Individual: $1,200 → Bundle: <span style="color:var(--green);">$950</span></div>
+          <div class="price-card-btns">
+          <button class="price-cta" onclick="bookPackage('Bundle','Brand Story','$950')">Book This Bundle</button>
+          <button class="cart-add-btn" onclick="addToCart('Bundle','Brand Story','$950',this)">🛒 Add to Cart</button>
+        </div>
+        </div>
+
+        <div class="price-card">
+          <div class="price-tier">Bundle 03</div>
+          <div class="price-name">Full Story</div>
+          <div class="price-from">Starting from</div>
+          <div class="price-amount"><input type="text" value="$1,500" /></div>
+          <div class="price-note">Photo T3 + Video T3 — you save $500</div>
+          <div class="price-divider"></div>
+          <ul class="price-features">
+            <li>Up to 6 hours on location</li>
+            <li>75+ edited photos</li>
+            <li>3–4 min video final cut</li>
+            <li>Cinematic color &amp; sound mix</li>
+            <li>Multiple locations</li>
+            <li>Advanced retouching</li>
+            <li>Behind-the-scenes clip</li>
+            <li>Full commercial usage rights</li>
+          </ul>
+          <div style="font-family:var(--font-mono);font-size:.58rem;letter-spacing:1px;color:var(--text-dim);margin-bottom:12px;">Individual: $2,000 → Bundle: <span style="color:var(--green);">$1,500</span></div>
+          <div class="price-card-btns">
+          <button class="price-cta" onclick="bookPackage('Bundle','Full Story','$1,500')">Book This Bundle</button>
+          <button class="cart-add-btn" onclick="addToCart('Bundle','Full Story','$1,500',this)">🛒 Add to Cart</button>
+        </div>
+        </div>
+
+        <div class="price-card">
+          <div class="price-tier">Bundle 04</div>
+          <div class="price-name">Premium Story</div>
+          <div class="price-from">Starting from</div>
+          <div class="price-amount"><input type="text" value="$2,200" /></div>
+          <div class="price-note">Photo T4 + Video T4 — you save $500</div>
+          <div class="price-divider"></div>
+          <ul class="price-features">
+            <li>Full day on location (8hrs)</li>
+            <li>100+ edited photos</li>
+            <li>Multi-day video production</li>
+            <li>Professional color &amp; sound mix</li>
+            <li>Unlimited locations</li>
+            <li>Hero film + social cut-downs</li>
+            <li>Unlimited revisions</li>
+            <li>Print &amp; digital ready files</li>
+            <li>Full commercial usage rights</li>
+          </ul>
+          <div style="font-family:var(--font-mono);font-size:.58rem;letter-spacing:1px;color:var(--text-dim);margin-bottom:12px;">Individual: $2,700 → Bundle: <span style="color:var(--green);">$2,200</span></div>
+          <div class="price-card-btns">
+          <button class="price-cta" onclick="bookPackage('Bundle','Premium Story','$2,200')">Book This Bundle</button>
+          <button class="cart-add-btn" onclick="addToCart('Bundle','Premium Story','$2,200',this)">🛒 Add to Cart</button>
+        </div>
+        </div>
+
+      </div>
+
+    </div><!-- /pricing-grid -->
+  </div><!-- /pricing-panel bundles -->
+  </div><!-- /page-inner -->
+  <footer><button class="footer-logo" onclick="goTo('home')">GROVE STREET MEDIA</button><ul class="footer-links"><li><button onclick="goTo('services')">Services</button></li><li><button onclick="goTo('contact')">Book Now</button></li></ul><div class="footer-copy">© 2025 Grove Street Media.</div></footer>
+
+<!-- ══════════ PAGE: CONTACT ══════════ -->
+<div class="page" id="page-contact">
+  <div class="breadcrumb"><button onclick="goTo('home')">Home</button><span class="sep">/</span><span class="cur">Contact</span></div>
+  <div class="page-inner" style="background:var(--black2);">
+    <div class="section-label">Get In Touch</div>
+    <h2 class="section-title">LET'S<br><span class="accent">CREATE</span></h2>
+    <div class="contact-layout">
+      <!-- LEFT: Contact Info -->
+      <div>
+        <p class="section-desc" style="max-width:400px;">Fill out the project builder on the right and we'll be in touch within 24 hours.</p>
+        <div class="contact-item"><div class="contact-item-label">Email</div><div class="contact-item-value editable-field" contenteditable="true"><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="9ff6f1f9f0dff8edf0e9faecebedfafaebf2fafbf6feb1fcf0f2">[email&#160;protected]</a></div></div>
+        <div class="contact-item"><div class="contact-item-label">Phone</div><div class="contact-item-value editable-field" contenteditable="true">(313) 717-5016 · Mobile</div></div>
+        <div class="contact-item"><div class="contact-item-label">Location</div><div class="contact-item-value editable-field" contenteditable="true">Detroit, MI · Mobile — Available Everywhere</div></div>
+        <div class="contact-item"><div class="contact-item-label">Social</div>
+          <div class="contact-item-value" style="display:flex;gap:20px;">
+            <a href="https://instagram.com/grovestreetmedia" target="_blank" style="color:var(--green);font-family:var(--font-mono);font-size:.7rem;letter-spacing:2px;text-decoration:none;">IG</a>
+            
+            
+            
+          </div>
+        </div>
+        <div style="margin-top:32px;display:flex;flex-direction:column;gap:12px;">
+          <button class="btn-outline" style="font-size:.65rem;" onclick="goTo('pricing')">View Pricing →</button>
+          <!-- CALENDLY BOOKING BUTTON -->
+          <!-- TO ACTIVATE: Replace YOUR_CALENDLY_LINK with your real link e.g. calendly.com/grovestreetmedia -->
+          <!-- <a href="https://calendly.com/YOUR_CALENDLY_LINK" target="_blank" class="btn-primary" style="font-size:.65rem;display:inline-block;text-align:center;text-decoration:none;">📅 Schedule a Call</a> -->
+        </div>
+      </div>
+
+      <!-- RIGHT: Smart Questionnaire -->
+      <div class="quiz-wrap" id="quizWrap">
+        <div class="quiz-progress" id="quizProgress"></div>
+
+        <!-- STEP 0: Service -->
+        <div class="quiz-step active" id="qstep-0">
+          <div class="quiz-q">What are you looking for?</div>
+          <div class="quiz-hint">Select a service to get started</div>
+          <div class="quiz-options">
+            <button class="quiz-opt" data-val="Photography" onclick="selectOpt(this,0)">📷 Photography</button>
+            <button class="quiz-opt" data-val="Video" onclick="selectOpt(this,0)">🎬 Film &amp; Video</button>
+            <button class="quiz-opt" data-val="Graphic Design" onclick="selectOpt(this,0)">🎨 Graphic Design</button>
+            <button class="quiz-opt" data-val="Multiple Services" onclick="selectOpt(this,0)">✨ Multiple Services</button>
+          </div>
+          <div class="quiz-nav">
+            <button class="quiz-next" id="qnext-0" onclick="quizNext(0)" disabled>Next →</button>
+          </div>
+        </div>
+
+        <!-- STEP 1: Sub-type (dynamic) -->
+        <div class="quiz-step" id="qstep-1">
+          <div class="quiz-q" id="q1-title">What type of project?</div>
+          <div class="quiz-hint" id="q1-hint">Pick the closest match</div>
+          <div class="quiz-options" id="q1-options"></div>
+          <div class="quiz-nav">
+            <button class="quiz-back" onclick="quizBack(1)">← Back</button>
+            <button class="quiz-next" id="qnext-1" onclick="quizNext(1)" disabled>Next →</button>
+          </div>
+        </div>
+
+        <!-- STEP 2: Details (dynamic) -->
+        <div class="quiz-step" id="qstep-2">
+          <div class="quiz-q" id="q2-title">Tell us more</div>
+          <div class="quiz-hint" id="q2-hint">A few quick details</div>
+          <div id="q2-content"></div>
+          <div class="quiz-nav">
+            <button class="quiz-back" onclick="quizBack(2)">← Back</button>
+            <button class="quiz-next" id="qnext-2" onclick="quizNext(2)" disabled>Next →</button>
+          </div>
+        </div>
+
+        <!-- STEP 3: Date + Budget -->
+        <div class="quiz-step" id="qstep-3">
+          <div class="quiz-q">When, where &amp; who?</div>
+          <div class="quiz-hint">Tell us a little more so we can prepare</div>
+
+          <!-- TIMELINE -->
+          <div style="font-family:var(--font-mono);font-size:.58rem;letter-spacing:2px;color:var(--green);text-transform:uppercase;margin-bottom:8px;">When do you need this?</div>
+          <div class="quiz-options" style="margin-bottom:16px;">
+            <button class="quiz-opt" data-val="ASAP" onclick="selectOpt(this,3)">ASAP</button>
+            <button class="quiz-opt" data-val="Within 1 month" onclick="selectOpt(this,3)">Within 1 month</button>
+            <button class="quiz-opt" data-val="1–3 months" onclick="selectOpt(this,3)">1–3 months</button>
+            <button class="quiz-opt" data-val="3+ months" onclick="selectOpt(this,3)">3+ months</button>
+          </div>
+          <input class="quiz-input" id="q3-date" type="text" placeholder="Specific date or timeframe (optional)" oninput="checkStep3()"/>
+
+          <!-- LOCATION -->
+          <div style="font-family:var(--font-mono);font-size:.58rem;letter-spacing:2px;color:var(--green);text-transform:uppercase;margin:14px 0 8px;">Where? (City, venue, or location)</div>
+          <input class="quiz-input" id="q3-location" type="text" placeholder="e.g. Detroit, MI · Studio · Outdoor · TBD" oninput="checkStep3()"/>
+
+          <!-- HEADCOUNT -->
+          <div style="font-family:var(--font-mono);font-size:.58rem;letter-spacing:2px;color:var(--green);text-transform:uppercase;margin:14px 0 8px;">How many people? (if applicable)</div>
+          <div class="quiz-options">
+            <button class="quiz-opt" data-val="Just me" onclick="selectHeadcount(this)">Just me</button>
+            <button class="quiz-opt" data-val="2–5 people" onclick="selectHeadcount(this)">2–5 people</button>
+            <button class="quiz-opt" data-val="6–20 people" onclick="selectHeadcount(this)">6–20 people</button>
+            <button class="quiz-opt" data-val="20+ people" onclick="selectHeadcount(this)">20+ people</button>
+            <button class="quiz-opt" data-val="N/A" onclick="selectHeadcount(this)">N/A</button>
+          </div>
+
+          <!-- BUDGET — shown only if NOT pre-filled from package -->
+          <div id="q3-budget-section" style="display:none;">
+            <div style="font-family:var(--font-mono);font-size:.58rem;letter-spacing:2px;color:var(--green);text-transform:uppercase;margin:14px 0 8px;">Approximate budget</div>
+            <div class="quiz-options">
+              <button class="quiz-opt" data-val="Under $300" onclick="selectBudget(this)">Under $300</button>
+              <button class="quiz-opt" data-val="$300–$800" onclick="selectBudget(this)">$300–$800</button>
+              <button class="quiz-opt" data-val="$800–$2,000" onclick="selectBudget(this)">$800–$2,000</button>
+              <button class="quiz-opt" data-val="$2,000+" onclick="selectBudget(this)">$2,000+</button>
+            </div>
+          </div>
+
+          <!-- PRE-FILLED BUDGET DISPLAY — shown when package is pre-selected -->
+          <div id="q3-budget-prefilled" style="display:none;font-family:var(--font-mono);font-size:.62rem;letter-spacing:1px;color:var(--text-dim);background:var(--black3);border:1px solid rgba(0,255,65,.15);padding:10px 14px;margin-top:14px;">
+            💰 Budget: <span id="q3-budget-label" style="color:var(--green);"></span> <span style="opacity:.5;">(pre-selected from package)</span>
+          </div>
+
+          <div class="quiz-nav" style="margin-top:16px;">
+            <button class="quiz-back" onclick="quizBack(3)">← Back</button>
+            <button class="quiz-next" id="qnext-3" onclick="quizNext(3)" disabled>Next →</button>
+          </div>
+        </div>
+
+        <!-- STEP 4: Contact Info -->
+        <div class="quiz-step" id="qstep-4">
+          <div class="quiz-q">Almost done!</div>
+          <div class="quiz-hint">How should we reach you?</div>
+          <input class="quiz-input" id="q4-name" type="text" placeholder="Your name *" oninput="checkStep4()"/>
+          <input class="quiz-input" id="q4-email" type="email" placeholder="Your email *" oninput="checkStep4()"/>
+          <input class="quiz-input" id="q4-phone" type="text" placeholder="Phone number (optional)" />
+          <textarea class="quiz-input" id="q4-extra" rows="3" placeholder="Anything else we should know?" oninput="checkStep4()"></textarea>
+          <div class="quiz-nav">
+            <button class="quiz-back" onclick="quizBack(4)">← Back</button>
+            <button class="quiz-next" id="qnext-4" onclick="quizSubmit()">Send Inquiry →</button>
+          </div>
+        </div>
+
+        <!-- STEP 5: Summary + Confirm -->
+        <div class="quiz-step" id="qstep-5">
+          <div class="quiz-q">Review your inquiry</div>
+          <div class="quiz-hint">Confirm before sending</div>
+          <div class="quiz-summary" id="quizSummary"></div>
+          <div class="quiz-nav">
+            <button class="quiz-back" onclick="quizBack(5)">← Edit</button>
+            <button class="quiz-next" id="qnext-5" onclick="quizConfirm()">Confirm &amp; Send ✓</button>
+          </div>
+        </div>
+
+        <!-- DONE -->
+        <div class="quiz-step" id="qstep-done">
+          <div class="quiz-done">
+            <div class="quiz-done-icon">✅</div>
+            <div class="quiz-done-title">Inquiry Sent!</div>
+            <div class="quiz-done-sub">We'll be in touch within 24 hours. Check your email for a confirmation.</div>
+            <button class="quiz-next" style="margin-top:24px;" onclick="quizReset()">Start New Inquiry</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <footer><button class="footer-logo" onclick="goTo('home')">GROVE STREET MEDIA</button><ul class="footer-links"><li><button onclick="goTo('home')">Home</button></li><li><button onclick="goTo('pricing')">Pricing</button></li></ul><div class="footer-copy">© 2025 Grove Street Media.</div></footer>
+</div>
+
+<script>
+// ── NAVIGATION ──
+function goTo(pageId){
+  document.querySelectorAll('.page').forEach(p=>p.classList.remove('active'));
+  const t=document.getElementById('page-'+pageId);
+  if(t){t.classList.add('active');window.scrollTo(0,0);}
+  document.querySelectorAll('.nav-links [data-page]').forEach(b=>{
+    b.classList.toggle('active', pageId===b.dataset.page || pageId.startsWith(b.dataset.page+'-'));
+  });
+  // Trigger entrance animations for the new page
+  setTimeout(()=>initPageAnimations(pageId), 10);
+}
+
+// ── MOBILE NAV ──
+function toggleMobileNav(){
+  const n=document.getElementById('mobileNav'),b=document.getElementById('hamburger');
+  const o=n.classList.toggle('open'); b.classList.toggle('open',o);
+  document.body.style.overflow=o?'hidden':'';
+}
+function closeMobileNav(){
+  document.getElementById('mobileNav').classList.remove('open');
+  document.getElementById('hamburger').classList.remove('open');
+  document.body.style.overflow='';
+}
+
+// ── CURSOR ──
+const cur=document.getElementById('cursor'),ring=document.getElementById('cursorRing');
+let mx=window.innerWidth/2,my=window.innerHeight/2,rx=mx,ry=my;
+// Only use custom cursor on non-touch devices
+const isTouch = window.matchMedia('(hover: none)').matches;
+if(!isTouch){
+  document.body.style.cursor='none';
+  document.querySelectorAll('a,button,input,textarea,select,[contenteditable]').forEach(el=>{
+    el.style.cursor='none';
+  });
+  document.addEventListener('mousemove',e=>{mx=e.clientX;my=e.clientY;});
+  (function animCur(){
+    cur.style.left=mx+'px';cur.style.top=my+'px';
+    rx+=(mx-rx)*.14;ry+=(my-ry)*.14;
+    ring.style.left=rx+'px';ring.style.top=ry+'px';
+    requestAnimationFrame(animCur);
+  })();
+  document.addEventListener('mouseover',e=>{
+    if(e.target.matches('a,button,.cat-card,.project-card,.gallery-item,.video-card,input,textarea,select,[contenteditable]'))
+      document.body.classList.add('hovering');
+  });
+  document.addEventListener('mouseout',e=>{
+    if(e.target.matches('a,button,.cat-card,.project-card,.gallery-item,.video-card,input,textarea,select,[contenteditable]'))
+      document.body.classList.remove('hovering');
+  });
+} else {
+  cur.style.display='none';
+  ring.style.display='none';
+}
+
+// ── PROJECT SYSTEM ──
+// projectStore: { commercial: [{id, name, tag, coverSrc, photos:[]}], wedding:[...], urban:[...] }
+const projectStore = {
+  commercial: [
+    {id:'proj-c1', name:'Product Launch 01', tag:'Commercial', coverSrc:'', photos:[]},
+    {id:'proj-c2', name:'Brand Campaign 02', tag:'Commercial', coverSrc:'', photos:[]},
+    {id:'proj-c3', name:'Lifestyle Shoot',   tag:'Commercial', coverSrc:'', photos:[]},
+    {id:'proj-c4', name:'Studio Portrait',   tag:'Commercial', coverSrc:'', photos:[]},
+  ],
+  wedding: [
+    {id:'proj-w1', name:'Sarah & James',   tag:'Wedding', coverSrc:'', photos:[]},
+    {id:'proj-w2', name:'Marcus & Aisha',  tag:'Wedding', coverSrc:'', photos:[]},
+    {id:'proj-w3', name:'The Rivera Wedding', tag:'Wedding', coverSrc:'', photos:[]},
+  ],
+  urban: [
+    {id:'proj-u1', name:'Street Life Series', tag:'Urban', coverSrc:'', photos:[]},
+    {id:'proj-u2', name:'Culture Portraits',  tag:'Urban', coverSrc:'', photos:[]},
+    {id:'proj-u3', name:'City Skyline Shots', tag:'Urban', coverSrc:'', photos:[]},
+    {id:'proj-u4', name:'Culture & Community',tag:'Urban', coverSrc:'', photos:[]},
+  ],
+};
+
+// Track current open project
+let currentProjectCat = '';
+let currentProjectId  = '';
+
+// Render project cards for a category
+function renderProjectGrid(cat) {
+  const grid = document.getElementById('proj-' + cat);
+  if (!grid) return;
+  grid.innerHTML = '';
+  projectStore[cat].forEach(proj => grid.appendChild(makeProjectCard(proj, cat)));
+}
+['commercial','wedding','urban'].forEach(cat => renderProjectGrid(cat));
+
+function makeProjectCard(proj, cat) {
+  const card = document.createElement('div');
+  card.className = 'project-card';
+  card.dataset.id = proj.id;
+  card.innerHTML = `
+    <div class="project-cover">
+      <div class="project-cover-placeholder">
+        <div class="ph-icon">📷</div>
+        <span>Add Cover Photo</span>
+        <div style="font-family:var(--font-mono);font-size:.5rem;color:var(--text-dim);opacity:.7;">URL or file</div>
+      </div>
+      <img class="project-cover-img" src="${proj.coverSrc}" alt="${proj.name}" style="${proj.coverSrc ? 'display:block' : 'display:none'}"/>
+      <div class="project-cover-url-overlay" style="position:absolute;inset:0;background:rgba(5,10,5,.93);display:none;flex-direction:column;align-items:center;justify-content:center;gap:8px;padding:14px;z-index:10;">
+        <div class="media-url-label">Paste Image URL</div>
+        <input type="text" placeholder="https://res.cloudinary.com/..." style="font-family:var(--font-mono);font-size:.6rem;background:var(--black);border:1px solid rgba(0,255,65,.4);color:var(--text);padding:8px 10px;width:100%;outline:none;"/>
+        <div class="media-url-or">— or —</div>
+        <label class="media-url-file-btn">Choose File<input type="file" accept="image/*" style="display:none"/></label>
+        <div class="media-url-overlay-btns">
+          <button class="media-url-confirm">Apply ✓</button>
+          <button class="media-url-cancel">Cancel</button>
+        </div>
+      </div>
+      <div class="project-cover-overlay"><div class="project-cover-overlay-text">Open Project →</div></div>
+    </div>
+    <div class="project-info">
+      <input class="project-name-input" type="text" value="${proj.name}" placeholder="Project name..." />
+      <div class="project-tag-row">
+        <span class="project-tag">${proj.tag}</span>
+        <span class="project-photo-count">${proj.photos.length} photo${proj.photos.length !== 1 ? 's' : ''}</span>
+      </div>
+    </div>
+    <div class="project-open-arrow">Open →</div>
+  `;
+  // Cover: URL input or file upload
+  const placeholder = card.querySelector('.project-cover-placeholder');
+  const coverImg    = card.querySelector('.project-cover-img');
+  const overlay     = card.querySelector('.project-cover-url-overlay');
+  const urlInp      = overlay ? overlay.querySelector('input[type=text]') : null;
+  const fileInp     = overlay ? overlay.querySelector('input[type=file]') : null;
+  function applyCover(src){
+    proj.coverSrc=src; coverImg.src=src; coverImg.style.display='block';
+    placeholder.style.display='none';
+    if(overlay) overlay.style.display='none';
+  }
+  if(placeholder) placeholder.addEventListener('click', e=>{
+    e.stopPropagation();
+    if(overlay){ overlay.style.display=overlay.style.display==='flex'?'none':'flex'; if(urlInp) urlInp.focus(); }
+  });
+  if(overlay){
+    overlay.addEventListener('click',e=>e.stopPropagation());
+    overlay.querySelector('.media-url-confirm')?.addEventListener('click',()=>{ if(urlInp?.value.trim()) applyCover(urlInp.value.trim()); });
+    overlay.querySelector('.media-url-cancel')?.addEventListener('click',()=>overlay.style.display='none');
+    if(urlInp) urlInp.addEventListener('keydown',e=>{ if(e.key==='Enter'&&urlInp.value.trim()) applyCover(urlInp.value.trim()); });
+  }
+  if(fileInp) fileInp.addEventListener('change',function(e){
+    const f=e.target.files[0]; if(!f) return;
+    const r=new FileReader(); r.onload=ev=>applyCover(ev.target.result); r.readAsDataURL(f);
+  });
+  // Name edit
+  const nameInput = card.querySelector('.project-name-input');
+  nameInput.addEventListener('input', e => { proj.name = e.target.value; });
+  nameInput.addEventListener('click', e => e.stopPropagation());
+  // Open project on card click (not on input)
+  card.addEventListener('click', function(e) {
+    if (e.target.tagName === 'INPUT') return;
+    openProject(proj, cat);
+  });
+  return card;
+}
+
+function openProject(proj, cat) {
+  currentProjectCat = cat;
+  currentProjectId  = proj.id;
+  const catLabel = cat.charAt(0).toUpperCase() + cat.slice(1);
+  const catPage  = 'photos-' + cat;
+
+  // Set breadcrumb
+  document.getElementById('proj-breadcrumb').innerHTML = `
+    <button onclick="goTo('home')">Home</button><span class="sep">/</span>
+    <button onclick="goTo('photos')">Photography</button><span class="sep">/</span>
+    <button onclick="goTo('${catPage}')">${catLabel}</button><span class="sep">/</span>
+    <span class="cur">${proj.name}</span>
+  `;
+  // Set header
+  const words = proj.name.toUpperCase().split(' ');
+  const half  = Math.ceil(words.length / 2);
+  document.getElementById('proj-title').innerHTML = `${words.slice(0,half).join(' ')}<br><span class="accent">${words.slice(half).join(' ') || '&nbsp;'}</span>`;
+  document.getElementById('proj-label').textContent = catLabel + ' Photography';
+  document.getElementById('proj-meta-row').innerHTML = `<span class="proj-meta-tag">${proj.tag}</span><span class="proj-meta-tag">${proj.photos.length} Photos</span>`;
+  document.getElementById('proj-desc').textContent = proj.desc || 'Click to add a project description...';
+  // Back link
+  document.getElementById('proj-back-link').innerHTML = `<button onclick="goTo('${catPage}')">← Back to ${catLabel}</button>`;
+  // Build gallery
+  const gallery = document.getElementById('proj-gallery');
+  gallery.innerHTML = '';
+  proj.photos.forEach((src, i) => {
+    const item = makePhotoCard(proj.name + ' #' + (i+1), proj.tag, i % 3 === 0);
+    const img  = item.querySelector('img');
+    img.src = src; img.style.display = 'block';
+    item.querySelector('.gallery-placeholder-icon').style.display = 'none';
+    item.querySelector('span').style.display = 'none';
+    gallery.appendChild(item);
+  });
+  // If no photos yet add placeholders
+  if (proj.photos.length === 0) {
+    for (let i = 0; i < 6; i++) {
+      const ph = makeProjectPhoto(proj, i % 3 === 0);
+      gallery.appendChild(ph);
+    }
+  }
+  goTo('project');
+}
+
+function makeProjectPhoto(proj, tall = false) {
+  const d = document.createElement('div');
+  d.className = 'gallery-item' + (tall ? ' tall' : '');
+  d.innerHTML = `<div class="gallery-placeholder"><div class="gallery-placeholder-icon">🖼</div><span>Upload Photo</span><input type="file" accept="image/*"/><img src="" alt=""/></div><div class="gallery-overlay"><div class="gallery-overlay-title">${proj.name}</div><div class="gallery-overlay-tag">${proj.tag}</div></div><div class="gallery-corner-accent"></div>`;
+  const input = d.querySelector('input[type=file]');
+  input.addEventListener('change', function(e) {
+    const f = e.target.files[0]; if (!f) return;
+    const r = new FileReader();
+    r.onload = ev => {
+      const img = input.nextElementSibling;
+      img.src = ev.target.result; img.style.display = 'block';
+      input.parentElement.querySelector('.gallery-placeholder-icon').style.display = 'none';
+      input.parentElement.querySelector('span').style.display = 'none';
+      proj.photos.push(ev.target.result);
+      updateProjectMeta(proj);
+    };
+    r.readAsDataURL(f);
+  });
+  d.addEventListener('click', function(e) {
+    if (e.target.tagName !== 'INPUT') {
+      const img = this.querySelector('img');
+      if (img && img.src && img.src !== location.href) openLightbox(img.src);
+    }
+  });
+  return d;
+}
+
+function addPhotoToProject() {
+  const proj = getProjectById(currentProjectCat, currentProjectId);
+  if (!proj) return;
+  const gallery = document.getElementById('proj-gallery');
+  gallery.appendChild(makeProjectPhoto(proj, gallery.children.length % 3 === 0));
+}
+
+function updateProjectMeta(proj) {
+  document.getElementById('proj-meta-row').innerHTML = `<span class="proj-meta-tag">${proj.tag}</span><span class="proj-meta-tag">${proj.photos.length} Photos</span>`;
+  // Update count on project card
+  const card = document.querySelector(`.project-card[data-id="${proj.id}"]`);
+  if (card) card.querySelector('.project-photo-count').textContent = proj.photos.length + ' photo' + (proj.photos.length !== 1 ? 's' : '');
+}
+
+function getProjectById(cat, id) {
+  return (projectStore[cat] || []).find(p => p.id === id);
+}
+
+function addProject(cat) {
+  const id   = 'proj-' + cat[0] + Date.now();
+  const tags = {commercial:'Commercial', wedding:'Wedding', urban:'Urban'};
+  const proj = {id, name:'New Project', tag: tags[cat] || cat, coverSrc:'', photos:[], desc:''};
+  projectStore[cat].push(proj);
+  const grid = document.getElementById('proj-' + cat);
+  if (grid) grid.appendChild(makeProjectCard(proj, cat));
+}
+
+// ── PHOTO GALLERY (All Work only) ──
+const photoData={
+  all:[{t:'Brand Campaign',tag:'Commercial'},{t:'Golden Hour',tag:'Wedding'},{t:'City Nights',tag:'Urban'},{t:'Product Launch',tag:'Commercial'},{t:'First Dance',tag:'Wedding'},{t:'Street Portraits',tag:'Urban'}],
+};
+Object.entries(photoData).forEach(([cat,items])=>{
+  const g=document.getElementById('gallery-'+cat); if(!g)return;
+  items.forEach((item,i)=>g.appendChild(makePhotoCard(item.t,item.tag,i%3===0)));
+});
+function makePhotoCard(title,tag,tall=false){
+  const d=document.createElement('div');
+  d.className='gallery-item'+(tall?' tall':'');
+  d.innerHTML=`
+    <div class="gallery-placeholder">
+      <div class="gallery-placeholder-icon">🖼</div>
+      <span>Add Photo</span>
+      <div style="font-family:var(--font-mono);font-size:.55rem;color:var(--text-dim);opacity:.7;letter-spacing:1px;">URL or file</div>
+      <img src="" alt="${title}" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:none;"/>
+      <div class="media-url-overlay" onclick="event.stopPropagation()">
+        <div class="media-url-label">Paste Image URL</div>
+        <input type="text" placeholder="https://res.cloudinary.com/..." style="font-family:var(--font-mono);font-size:.62rem;background:var(--black);border:1px solid rgba(0,255,65,.4);color:var(--text);padding:9px 10px;width:100%;outline:none;" />
+        <div class="media-url-or">— or —</div>
+        <label class="media-url-file-btn">Choose File<input type="file" accept="image/*" style="display:none"/></label>
+        <div class="media-url-overlay-btns">
+          <button class="media-url-confirm">Apply ✓</button>
+          <button class="media-url-cancel">Cancel</button>
+        </div>
+      </div>
+    </div>
+    <div class="gallery-overlay"><div class="gallery-overlay-title">${title}</div><div class="gallery-overlay-tag">${tag}</div></div>
+    <div class="gallery-corner-accent"></div>`;
+  // Wire up the overlay
+  const overlay   = d.querySelector('.media-url-overlay');
+  const urlInput  = overlay.querySelector('input[type=text]');
+  const fileInput = overlay.querySelector('input[type=file]');
+  const confirmBtn= overlay.querySelector('.media-url-confirm');
+  const cancelBtn = overlay.querySelector('.media-url-cancel');
+  const img       = d.querySelector('.gallery-placeholder img');
+  const icon      = d.querySelector('.gallery-placeholder-icon');
+  const hint      = d.querySelectorAll('.gallery-placeholder span, .gallery-placeholder div:not(.media-url-overlay):not(.gallery-placeholder-icon)');
+  function showImg(src){
+    img.src=src; img.style.display='block';
+    icon.style.display='none';
+    hint.forEach(el=>el.style.display='none');
+    overlay.classList.remove('active');
+  }
+  // Open overlay on placeholder click
+  d.querySelector('.gallery-placeholder').addEventListener('click',function(e){
+    if(!overlay.classList.contains('active')){ overlay.classList.add('active'); urlInput.focus(); }
+  });
+  confirmBtn.addEventListener('click',()=>{ if(urlInput.value.trim()) showImg(urlInput.value.trim()); });
+  urlInput.addEventListener('keydown',e=>{ if(e.key==='Enter'&&urlInput.value.trim()) showImg(urlInput.value.trim()); });
+  cancelBtn.addEventListener('click',()=>overlay.classList.remove('active'));
+  fileInput.addEventListener('change',function(e){
+    const f=e.target.files[0]; if(!f) return;
+    const r=new FileReader(); r.onload=ev=>showImg(ev.target.result); r.readAsDataURL(f);
+  });
+  // Lightbox on image click
+  img.addEventListener('click',function(e){ e.stopPropagation(); if(img.src&&img.src!==location.href) openLightbox(img.src); });
+  return d;
+}
+function loadGalleryImg(e,input){
+  const f=e.target.files[0];if(!f)return;
+  const r=new FileReader();
+  r.onload=ev=>{const img=input.nextElementSibling;img.src=ev.target.result;img.style.display='block';input.parentElement.querySelector('.gallery-placeholder-icon').style.display='none';input.parentElement.querySelector('span').style.display='none';};
+  r.readAsDataURL(f);
+}
+function addGalleryItem(cat){const g=document.getElementById('gallery-'+cat);if(g)g.appendChild(makePhotoCard('New Photo',cat.charAt(0).toUpperCase()+cat.slice(1)));}
+
+// ── VIDEO ──
+const videoData={
+  'all-vid':[{t:'Brand Reel 2024',tag:'Commercial',dur:'2:30'},{t:'Sarah & James',tag:'Wedding Film',dur:'4:15'},{t:'Road to the Top',tag:'Music Video',dur:'3:45'}],
+  'commercial-vid':[{t:'Product Launch',tag:'Commercial',dur:'1:00'},{t:'Brand Story',tag:'Commercial',dur:'2:30'},{t:'Social Ad Campaign',tag:'Commercial',dur:'0:30'}],
+  'wedding-vid':[{t:'Sarah & James',tag:'Wedding Film',dur:'4:15'},{t:'Marcus & Aisha',tag:'Wedding Film',dur:'5:00'}],
+  'urban-vid':[{t:'Road to the Top',tag:'Music Video',dur:'3:45'},{t:'City Anthem',tag:'Music Video',dur:'4:00'},{t:'Block Stories',tag:'Short Film',dur:'6:20'}],
+};
+Object.entries(videoData).forEach(([cat,items])=>{
+  const g=document.getElementById('vgrid-'+cat);if(!g)return;
+  items.forEach(item=>g.appendChild(makeVideoCard(item.t,item.tag,item.dur)));
+});
+function makeVideoCard(title,tag,dur){
+  const d=document.createElement('div');d.className='video-card';
+  d.innerHTML=`<div class="video-thumb"><div class="video-thumb-placeholder">
+    <img src="" alt="${title}" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:none;"/>
+    <div class="play-btn" style="position:relative;z-index:3;">▶</div>
+    <div class="media-url-overlay" onclick="event.stopPropagation()">
+      <div class="media-url-label">Paste Thumbnail URL</div>
+      <input type="text" placeholder="https://res.cloudinary.com/..." style="font-family:var(--font-mono);font-size:.6rem;background:var(--black);border:1px solid rgba(0,255,65,.4);color:var(--text);padding:8px 10px;width:100%;outline:none;"/>
+      <div class="media-url-or">— or —</div>
+      <label class="media-url-file-btn">Choose File<input type="file" accept="image/*" style="display:none"/></label>
+      <div class="media-url-overlay-btns"><button class="media-url-confirm">Apply ✓</button><button class="media-url-cancel">Cancel</button></div>
+    </div>
+    <div style="position:absolute;bottom:8px;left:0;right:0;text-align:center;font-family:var(--font-mono);font-size:.55rem;color:var(--text-dim);letter-spacing:1px;opacity:.7;z-index:2;">Click thumbnail to add image</div>
+  </div></div><div class="video-info"><div class="video-title">${title}</div><div class="video-meta"><span class="video-tag">${tag}</span><span class="video-duration">${dur}</span></div><input class="video-url-input" type="text" placeholder="Paste YouTube / Vimeo URL..."/></div>`;
+  // Wire thumbnail overlay
+  const vOverlay   = d.querySelector('.media-url-overlay');
+  const vUrlInp    = vOverlay.querySelector('input[type=text]');
+  const vFileInp   = vOverlay.querySelector('input[type=file]');
+  const vThumbImg  = d.querySelector('.video-thumb-placeholder img');
+  function applyThumb(src){ vThumbImg.src=src; vThumbImg.style.display='block'; vOverlay.classList.remove('active'); }
+  d.querySelector('.video-thumb-placeholder').addEventListener('click',function(e){
+    if(e.target===d.querySelector('.play-btn')||d.querySelector('.play-btn').contains(e.target)) return;
+    vOverlay.classList.add('active'); vUrlInp.focus();
+  });
+  vOverlay.querySelector('.media-url-confirm').addEventListener('click',()=>{ if(vUrlInp.value.trim()) applyThumb(vUrlInp.value.trim()); });
+  vOverlay.querySelector('.media-url-cancel').addEventListener('click',()=>vOverlay.classList.remove('active'));
+  vUrlInp.addEventListener('keydown',e=>{ if(e.key==='Enter'&&vUrlInp.value.trim()) applyThumb(vUrlInp.value.trim()); });
+  vFileInp.addEventListener('change',function(e){
+    const f=e.target.files[0]; if(!f) return;
+    const r=new FileReader(); r.onload=ev=>applyThumb(ev.target.result); r.readAsDataURL(f);
+  });
+  d.querySelector('.play-btn').addEventListener('click',function(){
+    const url=d.querySelector('.video-url-input').value;if(!url)return;
+    let e=url;
+    if(url.includes('youtube.com/watch?v='))e='https://www.youtube.com/embed/'+url.split('v=')[1].split('&')[0];
+    else if(url.includes('youtu.be/'))e='https://www.youtube.com/embed/'+url.split('youtu.be/')[1];
+    else if(url.includes('vimeo.com/'))e='https://player.vimeo.com/video/'+url.split('vimeo.com/')[1];
+    openVideoModal(e,title);
+  });
+  return d;
+}
+function loadVideoThumb(e,input){const f=e.target.files[0];if(!f)return;const r=new FileReader();r.onload=ev=>{const img=input.nextElementSibling;img.src=ev.target.result;img.style.display='block';};r.readAsDataURL(f);}
+function addVideoItem(cat){const g=document.getElementById('vgrid-'+cat);if(g)g.appendChild(makeVideoCard('New Video','Video','0:00'));}
+
+// ── DESIGN ──
+const designData={
+  'design-all':[{t:'GSM Brand Identity',tag:'Branding'},{t:'Album Cover — Vol.1',tag:'Music'},{t:'Event Flyer',tag:'Print'},{t:'Social Pack',tag:'Digital'},{t:'Merch Mockup',tag:'Branding'},{t:'Single Art',tag:'Music'}],
+  'design-branding':[{t:'Logo Design',tag:'Branding'},{t:'Brand Guidelines',tag:'Branding'},{t:'Merch Mockup',tag:'Branding'},{t:'Business Cards',tag:'Branding'}],
+  'design-music':[{t:'Album Cover',tag:'Music'},{t:'EP Artwork',tag:'Music'},{t:'Single Cover',tag:'Music'},{t:'Mixtape Art',tag:'Music'}],
+  'design-print':[{t:'Event Flyer',tag:'Print'},{t:'Concert Poster',tag:'Print'},{t:'Promo Sheet',tag:'Print'}],
+  'design-social':[{t:'IG Story Pack',tag:'Digital'},{t:'Banner Design',tag:'Digital'},{t:'Content Template',tag:'Digital'}],
+};
+Object.entries(designData).forEach(([cat,items])=>{
+  const g=document.getElementById('dgrid-'+cat);if(!g)return;
+  items.forEach(item=>{const d=makePhotoCard(item.t,item.tag);d.className='gallery-item square';g.appendChild(d);});
+});
+function addDesignItem(cat){const g=document.getElementById('dgrid-'+cat);if(!g)return;const d=makePhotoCard('New Design','Design');d.className='gallery-item square';g.appendChild(d);}
+
+// ── VIDEO MODAL ──
+let vModal=null;
+function openVideoModal(url,title){
+  if(vModal)vModal.remove();
+  vModal=document.createElement('div');
+  vModal.style.cssText='position:fixed;inset:0;background:rgba(0,0,0,.97);z-index:5001;display:flex;align-items:center;justify-content:center;padding:40px;';
+  vModal.innerHTML=`<button onclick="this.parentElement.remove()" style="position:absolute;top:24px;right:32px;font-family:var(--font-mono);font-size:1.4rem;color:var(--green);background:none;border:none;cursor:pointer;">✕</button><div style="width:100%;max-width:900px;aspect-ratio:16/9;"><iframe src="${url}" style="width:100%;height:100%;border:1px solid rgba(0,255,65,.2);" allowfullscreen></iframe></div>`;
+  document.body.appendChild(vModal);
+}
+
+// ── LIGHTBOX ──
+function openLightbox(src){document.getElementById('lightboxImg').src=src;document.getElementById('lightbox').classList.add('open');}
+function closeLightbox(){document.getElementById('lightbox').classList.remove('open');}
+document.getElementById('lightbox').addEventListener('click',function(e){if(e.target===this)closeLightbox();});
+
+// ── ABOUT IMAGE ──
+function openAboutMediaInput(){
+  document.getElementById('aboutUrlOverlay').classList.add('active');
+  document.getElementById('aboutUrlInput').focus();
+}
+function applyAboutUrl(){
+  const url = document.getElementById('aboutUrlInput').value.trim();
+  if(!url) return;
+  setAboutImg(url);
+}
+function loadAboutFile(e){
+  const f=e.target.files[0]; if(!f) return;
+  const r=new FileReader();
+  r.onload=ev=>setAboutImg(ev.target.result);
+  r.readAsDataURL(f);
+}
+function setAboutImg(src){
+  const img=document.getElementById('aboutImg');
+  img.src=src; img.style.display='block';
+  const wrap=document.getElementById('aboutImgWrap');
+  wrap.querySelector('.img-icon').style.display='none';
+  wrap.querySelectorAll('span').forEach(s=>s.style.display='none');
+  closeAboutOverlay();
+}
+function closeAboutOverlay(){
+  document.getElementById('aboutUrlOverlay').classList.remove('active');
+}
+
+// ── FORM ──
+function handleFormSubmit(e){
+  const btn=e.target;btn.textContent='✓ Message Sent!';btn.style.background='var(--green-dark)';btn.style.color='var(--green)';
+  setTimeout(()=>{btn.textContent='Send Message';btn.style.background='';btn.style.color='';},3000);
+}
+
+// ── DROPDOWN TOGGLE ──
+function toggleServicesDropdown(e) {
+  e.stopPropagation();
+  const menu = document.getElementById('servicesMenu');
+  const btn  = document.getElementById('servicesBtn');
+  const open = menu.classList.toggle('open');
+  btn.classList.toggle('open', open);
+}
+function closeDropdown() {
+  document.getElementById('servicesMenu').classList.remove('open');
+  document.getElementById('servicesBtn').classList.remove('open');
+}
+document.addEventListener('click', function(e) {
+  const dd = document.getElementById('servicesDropdown');
+  if (dd && !dd.contains(e.target)) closeDropdown();
+});
+
+// ── BOOK PACKAGE (from pricing page) ──
+// Pre-fills the contact questionnaire with the selected package details
+function bookPackage(service, tier, price) {
+  // Pre-fill ALL known answers from the package selection
+  quizAnswers.service       = service;
+  quizAnswers.step0         = service;
+  quizAnswers.step1         = tier;
+  quizAnswers.selectedTier  = tier;
+  quizAnswers.selectedPrice = price;
+  quizAnswers.budget        = price;
+  quizAnswers.timeline      = 'To be confirmed';
+  quizAnswers.dateNote      = '';
+  quizAnswers.q2a           = tier + ' package';
+  quizAnswers.q2b           = service;
+  quizAnswers.q2c           = price;
+
+  goTo('contact');
+  setTimeout(() => {
+    // Reset quiz state cleanly
+    quizReset();
+
+    // Re-apply answers after reset
+    quizAnswers.service       = service;
+    quizAnswers.step0         = service;
+    quizAnswers.step1         = tier;
+    quizAnswers.selectedTier  = tier;
+    quizAnswers.selectedPrice = price;
+    quizAnswers.budget        = price;
+    quizAnswers.timeline      = 'To be confirmed';
+    quizAnswers.q2a           = tier;
+    quizAnswers.q2b           = service;
+    quizAnswers.q2c           = price;
+
+    // Show banner at top of quiz
+    const wrap = document.getElementById('quizWrap');
+    let banner = document.getElementById('pkg-banner');
+    if (!banner) {
+      banner = document.createElement('div');
+      banner.id = 'pkg-banner';
+      banner.style.cssText = 'font-family:var(--font-mono);font-size:.62rem;letter-spacing:2px;color:var(--black);background:var(--green);padding:12px 16px;margin-bottom:20px;text-transform:uppercase;display:flex;align-items:center;gap:10px;';
+      wrap.insertBefore(banner, wrap.firstChild);
+    }
+    banner.innerHTML = `✓ &nbsp;<strong>${service} — ${tier} — ${price}</strong>&nbsp; · Package pre-selected`;
+
+    // Skip to Step 3 — timeline/location/headcount still needed, but budget is pre-filled
+    showStep(3);
+
+    // Show pre-filled budget, hide manual budget selector
+    const budgetSection   = document.getElementById('q3-budget-section');
+    const budgetPrefilled = document.getElementById('q3-budget-prefilled');
+    const budgetLabel     = document.getElementById('q3-budget-label');
+    if (budgetSection)   budgetSection.style.display   = 'none';
+    if (budgetPrefilled) budgetPrefilled.style.display = 'block';
+    if (budgetLabel)     budgetLabel.textContent        = price;
+
+    // Budget already known — check if step 3 next button can be enabled
+    checkStep3();
+
+    // Update progress dots to show steps 0-2 as done
+    for (let i = 0; i < 3; i++) {
+      const dot = document.getElementById('qdot-' + i);
+      if (dot) dot.className = 'quiz-progress-dot done';
+    }
+    const dot3 = document.getElementById('qdot-3');
+    if (dot3) dot3.className = 'quiz-progress-dot active';
+
+  }, 150);
+}
+
+// ── BOOK SERVICE (from services page sub-items) ──
+function bookService(service) {
+  const tabMap = {'Photography':'photography','Video':'video','Graphic Design':'design'};
+  const tab = tabMap[service] || 'photography';
+  goToPricing(tab);
+}
+
+
+function switchPricing(id, btn) {
+  document.querySelectorAll('.pricing-tab').forEach(b => b.classList.remove('active'));
+  document.querySelectorAll('.pricing-panel').forEach(p => p.classList.remove('active'));
+  btn.classList.add('active');
+  document.getElementById('pricing-' + id).classList.add('active');
+}
+
+// Navigate to pricing page and activate a specific tab
+function goToPricing(tab) {
+  goTo('pricing');
+  setTimeout(() => {
+    const tabs = document.querySelectorAll('.pricing-tab');
+    const panels = document.querySelectorAll('.pricing-panel');
+    tabs.forEach(b => b.classList.remove('active'));
+    panels.forEach(p => p.classList.remove('active'));
+    // Find and activate the right tab
+    tabs.forEach(b => {
+      const label = b.textContent.toLowerCase();
+      if (
+        (tab === 'photography' && label.includes('photo')) ||
+        (tab === 'video'       && label.includes('film')) ||
+        (tab === 'design'      && label.includes('design')) ||
+        (tab === 'bundles'     && label.includes('bundle'))
+      ) {
+        b.classList.add('active');
+      }
+    });
+    const panel = document.getElementById('pricing-' + tab);
+    if (panel) panel.classList.add('active');
+  }, 50);
+}
+
+// ── SMART QUESTIONNAIRE ──
+const quizAnswers = {};
+const totalSteps  = 6; // 0–5 + done
+
+const subTypes = {
+  Photography: {
+    title: 'What type of photography?',
+    hint:  'Pick the closest match',
+    opts:  ['Wedding / Engagement', 'Commercial / Brand', 'Music / Artist', 'Street / Editorial', 'Event', 'Other'],
+  },
+  Video: {
+    title: 'What type of video?',
+    hint:  'Pick the closest match',
+    opts:  ['Music Video', 'Wedding Film', 'Brand / Commercial', 'Short Film', 'Social Media Content', 'Other'],
+  },
+  'Graphic Design': {
+    title: 'What type of design?',
+    hint:  'Pick the closest match',
+    opts:  ['Logo / Branding', 'Album / Single Cover', 'Event Flyer / Poster', 'Merch Design', 'Social Media Pack', 'Other'],
+  },
+  'Multiple Services': {
+    title: 'Which services do you need?',
+    hint:  'Select all that apply',
+    opts:  ['Photography', 'Video', 'Graphic Design', 'Creative Direction'],
+  },
+};
+
+const detailQuestions = {
+  'Wedding / Engagement':    {title:'Tell us about the wedding', hint:'Help us understand the vision', fields:[{id:'q2a',ph:'Venue or location (city/state)'},{id:'q2b',ph:'Estimated guest count'},{id:'q2c',ph:'Vibe or style (e.g. intimate, lavish, outdoor)'}]},
+  'Commercial / Brand':      {title:'Tell us about your brand', hint:'Help us understand the project', fields:[{id:'q2a',ph:'Brand or company name'},{id:'q2b',ph:'What are you shooting? (product, team, event...)'},{id:'q2c',ph:'Where will this content be used?'}]},
+  'Music / Artist':          {title:'Tell us about the shoot', hint:'Artist info helps us prep', fields:[{id:'q2a',ph:'Artist or project name'},{id:'q2b',ph:'Genre or vibe'},{id:'q2c',ph:'Concept or references (optional)'}]},
+  'Street / Editorial':      {title:'Tell us about the project', hint:'', fields:[{id:'q2a',ph:'Subject or theme'},{id:'q2b',ph:'Preferred location or city'},{id:'q2c',ph:'Where will images be published?'}]},
+  'Event':                   {title:'Tell us about the event', hint:'', fields:[{id:'q2a',ph:'Event name or type'},{id:'q2b',ph:'Expected attendance'},{id:'q2c',ph:'Venue or location'}]},
+  'Music Video':             {title:'Tell us about the video', hint:'', fields:[{id:'q2a',ph:'Artist & song title'},{id:'q2b',ph:'Genre / vibe / concept'},{id:'q2c',ph:'Preferred location(s)'}]},
+  'Wedding Film':            {title:'Tell us about the wedding', hint:'', fields:[{id:'q2a',ph:'Venue or location'},{id:'q2b',ph:'Ceremony date (if set)'},{id:'q2c',ph:'Style (cinematic, documentary, both)'}]},
+  'Brand / Commercial':      {title:'Tell us about the project', hint:'', fields:[{id:'q2a',ph:'Brand name'},{id:'q2b',ph:'Video purpose (ad, promo, social...)'},{id:'q2c',ph:'Target platform (IG, YouTube, TV...)'}]},
+  'Short Film':              {title:'Tell us about the film', hint:'', fields:[{id:'q2a',ph:'Title or concept'},{id:'q2b',ph:'Estimated runtime'},{id:'q2c',ph:'Distribution plan (festival, online...)'}]},
+  'Social Media Content':    {title:'Tell us about your content', hint:'', fields:[{id:'q2a',ph:'Platform(s)'},{id:'q2b',ph:'How many videos needed?'},{id:'q2c',ph:'Topic or theme'}]},
+  'Logo / Branding':         {title:'Tell us about your brand', hint:'', fields:[{id:'q2a',ph:'Brand or company name'},{id:'q2b',ph:'Industry'},{id:'q2c',ph:'Vibe or style (modern, bold, minimal...)'}]},
+  'Album / Single Cover':    {title:'Tell us about the release', hint:'', fields:[{id:'q2a',ph:'Artist name'},{id:'q2b',ph:'Project title'},{id:'q2c',ph:'Genre & mood'}]},
+  'Event Flyer / Poster':    {title:'Tell us about the event', hint:'', fields:[{id:'q2a',ph:'Event name'},{id:'q2b',ph:'Date & venue'},{id:'q2c',ph:'Style or theme'}]},
+  'Merch Design':            {title:'Tell us about the merch', hint:'', fields:[{id:'q2a',ph:'Brand or artist name'},{id:'q2b',ph:'Items needed (tee, hoodie, hat...)'},{id:'q2c',ph:'Concept or existing brand colors'}]},
+  'Social Media Pack':       {title:'Tell us about your pages', hint:'', fields:[{id:'q2a',ph:'Platform(s)'},{id:'q2b',ph:'Brand name'},{id:'q2c',ph:'How many templates needed?'}]},
+  'Other':                   {title:'Tell us more', hint:'', fields:[{id:'q2a',ph:'Describe your project'},{id:'q2b',ph:'Any references or examples?'},{id:'q2c',ph:'Special requirements'}]},
+  'Multiple Services':       {title:'Tell us about the project', hint:'', fields:[{id:'q2a',ph:'Describe the overall project'},{id:'q2b',ph:'Timeline or deadline'},{id:'q2c',ph:'Any references or mood board?'}]},
+};
+
+let quizStep = 0;
+
+function initQuizProgress() {
+  const prog = document.getElementById('quizProgress');
+  prog.innerHTML = '';
+  for (let i = 0; i < 5; i++) {
+    const dot = document.createElement('div');
+    dot.className = 'quiz-progress-dot' + (i === 0 ? ' active' : '');
+    dot.id = 'qdot-' + i;
+    prog.appendChild(dot);
+  }
+}
+initQuizProgress();
+
+function updateProgress(step) {
+  for (let i = 0; i < 5; i++) {
+    const dot = document.getElementById('qdot-' + i);
+    if (!dot) continue;
+    dot.className = 'quiz-progress-dot' + (i < step ? ' done' : i === step ? ' active' : '');
+  }
+}
+
+function selectOpt(btn, step) {
+  // For step 3 timeline options — separate from budget
+  btn.closest('.quiz-options').querySelectorAll('.quiz-opt').forEach(b => b.classList.remove('selected'));
+  btn.classList.add('selected');
+  quizAnswers['step' + step] = btn.dataset.val;
+  const nextBtn = document.getElementById('qnext-' + step);
+  if (nextBtn) nextBtn.disabled = false;
+  // For step 1 populate step 2
+  if (step === 1) populateStep2(btn.dataset.val);
+}
+
+function selectBudget(btn) {
+  btn.closest('.quiz-options').querySelectorAll('.quiz-opt').forEach(b => b.classList.remove('selected'));
+  btn.classList.add('selected');
+  quizAnswers.budget = btn.dataset.val;
+  checkStep3();
+}
+
+function selectHeadcount(btn) {
+  btn.closest('.quiz-options').querySelectorAll('.quiz-opt').forEach(b => b.classList.remove('selected'));
+  btn.classList.add('selected');
+  quizAnswers.headcount = btn.dataset.val;
+  checkStep3();
+}
+
+function checkStep3() {
+  const timeline  = quizAnswers.step3;
+  const location  = document.getElementById('q3-location')?.value.trim();
+  const headcount = quizAnswers.headcount;
+  const budget    = quizAnswers.budget; // pre-filled or manually selected
+  // Need: timeline OR date + location + headcount + budget
+  const hasTimeline = timeline || document.getElementById('q3-date')?.value.trim();
+  const hasBudget   = !!budget;
+  document.getElementById('qnext-3').disabled = !(hasTimeline && hasBudget);
+}
+
+function checkStep4() {
+  const name  = document.getElementById('q4-name').value.trim();
+  const email = document.getElementById('q4-email').value.trim();
+  document.getElementById('qnext-4').disabled = !(name && email);
+}
+
+function populateStep1(service) {
+  const data = subTypes[service] || subTypes['Multiple Services'];
+  document.getElementById('q1-title').textContent = data.title;
+  document.getElementById('q1-hint').textContent  = data.hint;
+  const opts = document.getElementById('q1-options');
+  opts.innerHTML = '';
+  data.opts.forEach(o => {
+    const btn = document.createElement('button');
+    btn.className = 'quiz-opt';
+    btn.dataset.val = o;
+    btn.textContent = o;
+    btn.onclick = function() { selectOpt(this, 1); };
+    opts.appendChild(btn);
+  });
+  document.getElementById('qnext-1').disabled = true;
+}
+
+function populateStep2(subtype) {
+  const key  = subtype === 'Multiple Services' ? 'Multiple Services' : subtype;
+  const data = detailQuestions[key] || detailQuestions['Other'];
+  document.getElementById('q2-title').textContent = data.title;
+  document.getElementById('q2-hint').textContent  = data.hint;
+  const cont = document.getElementById('q2-content');
+  cont.innerHTML = '';
+  data.fields.forEach(f => {
+    const inp = document.createElement('input');
+    inp.className   = 'quiz-input';
+    inp.id          = f.id;
+    inp.placeholder = f.ph;
+    inp.oninput     = () => { document.getElementById('qnext-2').disabled = false; };
+    cont.appendChild(inp);
+  });
+  document.getElementById('qnext-2').disabled = true;
+}
+
+function quizNext(step) {
+  if (step === 0) {
+    const svc = quizAnswers.step0;
+    quizAnswers.service = svc;
+    populateStep1(svc);
+    // Show budget selector when going through normal flow
+    const budgetSection = document.getElementById('q3-budget-section');
+    if (budgetSection) budgetSection.style.display = 'block';
+    const budgetPrefilled = document.getElementById('q3-budget-prefilled');
+    if (budgetPrefilled) budgetPrefilled.style.display = 'none';
+  }
+  if (step === 3) {
+    quizAnswers.timeline  = quizAnswers.step3;
+    quizAnswers.dateNote  = document.getElementById('q3-date')?.value || '';
+    quizAnswers.location  = document.getElementById('q3-location')?.value.trim() || 'TBD';
+    quizAnswers.headcount = quizAnswers.headcount || 'Not specified';
+  }
+  showStep(step + 1);
+}
+
+function quizBack(step) { showStep(step - 1); }
+
+function showStep(step) {
+  document.querySelectorAll('.quiz-step').forEach(s => s.classList.remove('active'));
+  const el = document.getElementById('qstep-' + step);
+  if (el) { el.classList.add('active'); quizStep = step; updateProgress(step); }
+}
+
+function quizSubmit() {
+  quizAnswers.name  = document.getElementById('q4-name').value.trim();
+  quizAnswers.email = document.getElementById('q4-email').value.trim();
+  quizAnswers.phone = document.getElementById('q4-phone').value.trim();
+  quizAnswers.extra = document.getElementById('q4-extra').value.trim();
+  // Collect detail fields only if they exist on screen (not skipped)
+  ['q2a','q2b','q2c'].forEach(id => {
+    const el = document.getElementById(id);
+    if (el && el.value.trim()) quizAnswers[id] = el.value.trim();
+  });
+  // Capture location and headcount from step 3
+  quizAnswers.location  = document.getElementById('q3-location')?.value.trim() || quizAnswers.location || 'TBD';
+  quizAnswers.headcount = quizAnswers.headcount || 'Not specified';
+
+  const packageLabel = quizAnswers.selectedTier
+    ? `${quizAnswers.selectedTier} (${quizAnswers.selectedPrice})`
+    : quizAnswers.step1 || '—';
+  const detailsLabel = quizAnswers.selectedTier
+    ? `${quizAnswers.service} — ${quizAnswers.selectedTier} package at ${quizAnswers.selectedPrice}`
+    : [quizAnswers.q2a, quizAnswers.q2b, quizAnswers.q2c].filter(Boolean).join(' · ') || '—';
+  const rows = [
+    ['Service',   quizAnswers.service   || '—'],
+    ['Package',   packageLabel],
+    ['Details',   detailsLabel],
+    ['Timeline',  (quizAnswers.timeline || 'To be confirmed') + (quizAnswers.dateNote ? ' · ' + quizAnswers.dateNote : '')],
+    ['Location',  quizAnswers.location  || 'TBD'],
+    ['Headcount', quizAnswers.headcount || 'Not specified'],
+    ['Budget',    quizAnswers.budget    || quizAnswers.selectedPrice || '—'],
+    ['Name',      quizAnswers.name      || '—'],
+    ['Email',     quizAnswers.email     || '—'],
+    ['Phone',     quizAnswers.phone     || 'Not provided'],
+    ['Notes',     quizAnswers.extra     || 'None'],
+  ];
+  const summary = document.getElementById('quizSummary');
+  summary.innerHTML = rows.map(([l,v]) => `<div class="quiz-summary-row"><div class="quiz-summary-label">${l}</div><div class="quiz-summary-value">${v}</div></div>`).join('');
+  showStep(5);
+}
+
+function quizConfirm() {
+  sendInquiryEmail(quizAnswers);
+  showStep('done');
+}
+
+// ── EMAIL PIPELINE → bryantleemgmt@gmail.com ──
+// Uses mailto as default. To upgrade to background sending:
+// 1. Sign up free at emailjs.com
+// 2. Create a Gmail service + email template
+// 3. Replace the placeholder IDs below with your real ones
+// ═══ INQUIRY EMAIL PIPELINE ═══
+// OPTION A — Formspree (Recommended, free at formspree.io)
+// 1. Go to formspree.io → create account → New Form
+// 2. Replace YOUR_FORMSPREE_ID below with your form ID (e.g. xpzgkwqr)
+// 3. Done — inquiries go straight to bryantleemgmt@gmail.com
+const FORMSPREE_ID = 'xojyzeoj';
+const OWNER_EMAIL  = 'bryantleemgmt@gmail.com';
+
+async function sendInquiryEmail(a) {
+  const payload = {
+    name:      a.name,
+    email:     a.email,
+    phone:     a.phone     || 'Not provided',
+    service:   a.service,
+    package:   a.selectedTier ? `${a.selectedTier} (${a.selectedPrice})` : (a.step1 || '—'),
+    details:   a.selectedTier ? `${a.service} — ${a.selectedTier} at ${a.selectedPrice}` : [a.q2a,a.q2b,a.q2c].filter(Boolean).join(' | '),
+    timeline:  (a.timeline||'To be confirmed')+' '+(a.dateNote||''),
+    location:  a.location  || 'TBD',
+    headcount: a.headcount || 'Not specified',
+    budget:    a.budget    || a.selectedPrice || '—',
+    notes:     a.extra     || 'None',
+    _subject:  `New Inquiry — Grove Street Media: ${a.service}${a.selectedTier?' · '+a.selectedTier:''}`
+  };
+
+  if (FORMSPREE_ID !== 'YOUR_FORMSPREE_ID') {
+    // Formspree silent submission
+    try {
+      await fetch(`https://formspree.io/f/${FORMSPREE_ID}`, {
+        method:'POST',
+        headers:{'Content-Type':'application/json','Accept':'application/json'},
+        body: JSON.stringify(payload)
+      });
+      return;
+    } catch(err) { console.warn('Formspree failed, falling back to mailto'); }
+  }
+
+  // Fallback: mailto (opens email client)
+  const body = encodeURIComponent(
+    Object.entries(payload).filter(([k])=>k!=='_subject')
+      .map(([k,v])=>`${k.toUpperCase()}: ${v}`).join('\n')
+  );
+  window.location.href = `mailto:${OWNER_EMAIL}?subject=${encodeURIComponent(payload._subject)}&body=${body}`;
+}
+
+function quizReset() {
+  Object.keys(quizAnswers).forEach(k => delete quizAnswers[k]);
+  quizStep = 0;
+  document.getElementById('q4-name').value  = '';
+  document.getElementById('q4-email').value = '';
+  document.getElementById('q4-phone').value = '';
+  document.getElementById('q4-extra').value = '';
+  document.getElementById('q3-date').value  = '';
+  document.querySelectorAll('.quiz-opt').forEach(b => b.classList.remove('selected'));
+  document.querySelectorAll('.quiz-next').forEach(b => b.disabled = true);
+  document.getElementById('qnext-0').disabled = true;
+  initQuizProgress();
+  showStep(0);
+}
+
+
+// ══════════════════════════════════════════════════════
+// CART SYSTEM
+// ══════════════════════════════════════════════════════
+const STRIPE_LINK  = 'YOUR_STRIPE_PAYMENT_LINK'; // e.g. https://buy.stripe.com/xxxxx
+const PAYPAL_LINK  = 'YOUR_PAYPAL_LINK';          // e.g. https://www.paypal.com/ncp/payment/xxxxx
+
+// Package feature lookup
+const pkgFeatures = {
+  'Artist Session':    ['Up to 2 hours on location','25+ edited digital images','1 location','Artist & promo use rights'],
+  'Brand Shoot':       ['Up to 4 hours on location','50+ edited digital images','2 locations','Commercial use rights'],
+  'Full Production':   ['Up to 6 hours on location','75+ edited images','Multiple locations','Full commercial usage rights'],
+  'Premium Campaign':  ['Full day on location (8hrs)','100+ edited images','Unlimited locations','Print & digital ready files'],
+  'Visual Content':    ['Up to 2 hours filming','60–90 sec final cut','Color grade included','Social media ready'],
+  'Music Video':       ['Up to 4 hours filming','2–3 minute final cut','Cinematic color grade','Vertical cut for social'],
+  'Brand Film':        ['Full production day','3–4 minute final cut','Multiple locations','Behind-the-scenes clip'],
+  'Brand Campaign':    ['Multi-day production','Full concept development','Hero film + social cut-downs','Unlimited revisions'],
+  'Quick Turnaround':  ['1 design deliverable','Flyer, cover art, or banner','2 concept directions','Print & digital ready files'],
+  'Brand Blueprint':   ['Logo + variations','Color palette & typography','Brand guidelines doc','Social media kit'],
+  'Full Campaign':     ['Full brand identity','Album or merch artwork','Social content templates (10+)','Priority turnaround'],
+  'Story Starter':     ['Up to 2 hrs on location','25+ edited photos','60–90 sec video final cut','Social media ready'],
+  'Brand Story':       ['Up to 4 hrs on location','50+ edited photos','2–3 min video final cut','2 locations'],
+  'Full Story':        ['Up to 6 hrs on location','75+ edited photos','3–4 min video final cut','Behind-the-scenes clip'],
+  'Premium Story':     ['Full day on location','100+ edited photos','Multi-day video production','Unlimited revisions'],
+};
+
+let cart = JSON.parse(localStorage.getItem('gsm-cart') || '[]');
+
+function saveCart() {
+  localStorage.setItem('gsm-cart', JSON.stringify(cart));
+  updateCartUI();
+}
+
+function addToCart(service, tier, price, btn) {
+  // Check if already in cart
+  const exists = cart.find(i => i.service === service && i.tier === tier);
+  if (exists) {
+    openCart();
+    return;
+  }
+  const priceNum = parseInt(price.replace(/[$,]/g,'')) || 0;
+  cart.push({ id: Date.now(), service, tier, price, priceNum });
+  saveCart();
+  // Update button
+  if (btn) {
+    btn.textContent = '✓ Added to Cart';
+    btn.classList.add('added');
+    setTimeout(() => { btn.textContent = '🛒 View in Cart'; }, 1500);
+    btn.onclick = function() { openCart(); };
+  }
+  // Pulse cart count
+  const count = document.getElementById('cartCount');
+  count.classList.remove('pulse');
+  void count.offsetWidth;
+  count.classList.add('pulse');
+  openCart();
+}
+
+function removeFromCart(id) {
+  cart = cart.filter(i => i.id !== id);
+  saveCart();
+}
+
+function updateCartUI() {
+  const count    = document.getElementById('cartCount');
+  const footer   = document.getElementById('cartFooter');
+  const empty    = document.getElementById('cartEmpty');
+  const items    = document.getElementById('cartItems');
+  const totalEl  = document.getElementById('cartTotal');
+  const savings  = document.getElementById('cartSavings');
+
+  // Update count badge
+  if (cart.length > 0) {
+    count.textContent = cart.length;
+    count.classList.remove('hidden');
+  } else {
+    count.classList.add('hidden');
+  }
+
+  // Show/hide empty state and footer
+  if (cart.length === 0) {
+    empty.style.display = 'flex';
+    footer.style.display = 'none';
+  } else {
+    empty.style.display = 'none';
+    footer.style.display = 'block';
+  }
+
+  // Render cart items (preserve empty div, rebuild the rest)
+  const existing = items.querySelectorAll('.cart-item');
+  existing.forEach(el => el.remove());
+
+  cart.forEach(item => {
+    const features = pkgFeatures[item.tier] || [];
+    const el = document.createElement('div');
+    el.className = 'cart-item';
+    el.innerHTML = `
+      <div class="cart-item-header">
+        <div>
+          <div class="cart-item-service">${item.service}</div>
+          <div class="cart-item-name">${item.tier}</div>
+        </div>
+        <button class="cart-item-remove" onclick="removeFromCart(${item.id})" title="Remove">✕</button>
+      </div>
+      <div class="cart-item-price">${item.price}</div>
+      ${features.length ? `<ul class="cart-item-features">${features.map(f=>`<li>${f}</li>`).join('')}</ul>` : ''}
+    `;
+    items.appendChild(el);
+  });
+
+  // Total
+  const total = cart.reduce((sum, i) => sum + i.priceNum, 0);
+  totalEl.textContent = '$' + total.toLocaleString();
+
+  // Bundle savings hint
+  const hasPhoto  = cart.some(i => i.service === 'Photography');
+  const hasVideo  = cart.some(i => i.service === 'Video');
+  if (hasPhoto && hasVideo && cart.length >= 2) {
+    savings.style.display = 'block';
+    savings.textContent = '💡 Tip: Check our Bundles tab for combined photo + video savings';
+  } else {
+    savings.style.display = 'none';
+  }
+}
+
+function openCart() {
+  document.getElementById('cartDrawer').classList.add('open');
+  document.getElementById('cartOverlay').classList.add('open');
+  document.body.style.overflow = 'hidden';
+  updateCartUI();
+}
+
+function closeCart() {
+  document.getElementById('cartDrawer').classList.remove('open');
+  document.getElementById('cartOverlay').classList.remove('open');
+  document.body.style.overflow = '';
+}
+
+function getCartSummary() {
+  return cart.map(i => `${i.service} - ${i.tier} (${i.price})`).join(' | ');
+}
+
+function getCartTotal() {
+  return cart.reduce((sum, i) => sum + i.priceNum, 0);
+}
+
+function checkoutStripe() {
+  if (STRIPE_LINK === 'YOUR_STRIPE_PAYMENT_LINK') {
+    alert('Stripe not configured yet.\n\nTo activate:\n1. Go to dashboard.stripe.com\n2. Create a Payment Link\n3. Replace YOUR_STRIPE_PAYMENT_LINK in the code');
+    return;
+  }
+  // Build Stripe URL with cart metadata
+  const total   = getCartTotal();
+  const summary = encodeURIComponent(getCartSummary());
+  window.open(`${STRIPE_LINK}?prefilled_email=&client_reference_id=${Date.now()}&metadata[cart]=${summary}`, '_blank');
+}
+
+function checkoutPayPal() {
+  if (PAYPAL_LINK === 'YOUR_PAYPAL_LINK') {
+    alert('PayPal not configured yet.\n\nTo activate:\n1. Go to paypal.com/buttons\n2. Create a payment button\n3. Replace YOUR_PAYPAL_LINK in the code');
+    return;
+  }
+  const total = getCartTotal();
+  window.open(`${PAYPAL_LINK}&amount=${total}&item_name=${encodeURIComponent(getCartSummary())}`, '_blank');
+}
+
+function checkoutInquiry() {
+  // Pre-fill questionnaire with cart contents
+  closeCart();
+  const firstItem = cart[0];
+  if (firstItem) {
+    bookPackage(firstItem.service, firstItem.tier, firstItem.price);
+    // If multiple items, add them to extra notes
+    if (cart.length > 1) {
+      setTimeout(() => {
+        const extra = document.getElementById('q4-extra');
+        if (extra) extra.value = 'Additional packages: ' + cart.slice(1).map(i => `${i.tier} (${i.price})`).join(', ');
+      }, 300);
+    }
+  } else {
+    goTo('contact');
+  }
+}
+
+// Init cart on load
+updateCartUI();
+
+
+// Only animate elements inside the currently active page
+// to prevent opacity:0 getting stuck on hidden page elements
+function initPageAnimations(pageId) {
+  const page = document.getElementById('page-' + pageId);
+  if (!page) return;
+  const els = page.querySelectorAll('.service-card,.stat-box,.video-card,.cat-card,.project-card,.price-card,.ret-card,.pricing-preview-card,.book-step');
+  els.forEach((el, i) => {
+    el.style.opacity = '0';
+    el.style.transform = 'translateY(20px)';
+    el.style.transition = 'opacity .5s ease ' + (i * 0.05) + 's, transform .5s ease ' + (i * 0.05) + 's';
+    setTimeout(() => {
+      el.style.opacity = '1';
+      el.style.transform = 'translateY(0)';
+    }, 50 + i * 50);
+  });
+}
+// Run on initial home page
+initPageAnimations('home');
+</script>
+</body>
+</html>
