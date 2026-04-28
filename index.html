@@ -447,7 +447,6 @@ footer{background:var(--black);border-top:1px solid rgba(0,255,65,.15);padding:4
 .price-cta:hover{background:rgba(0,255,65,.08);border-color:var(--green);}
 .price-card.featured .price-cta{background:var(--green);color:var(--black);border-color:var(--green);}
 .price-card.featured .price-cta:hover{background:var(--green-dim);}
-.price-edit-hint{font-family:var(--font-mono);font-size:.6rem;letter-spacing:2px;color:var(--green);opacity:.5;text-transform:uppercase;margin-bottom:32px;}
 
 /* ── SMART QUESTIONNAIRE ── */
 .quiz-wrap{background:var(--black3);border:1px solid rgba(0,255,65,.12);padding:36px;}
@@ -715,7 +714,7 @@ footer{background:var(--black);border-top:1px solid rgba(0,255,65,.15);padding:4
         <div class="book-step"><div class="book-step-num">03</div><div class="book-step-label">We Create Together</div></div>
       </div>
       <div style="display:flex;gap:16px;flex-wrap:wrap;justify-content:center;margin-top:40px;">
-        <button class="btn-primary" onclick="goTo('pricing')" style="font-size:.8rem;padding:16px 48px;">Start Your Inquiry →</button>
+        <button class="btn-primary" onclick="goTo('contact')" style="font-size:.8rem;padding:16px 48px;">Start Your Inquiry →</button>
         <button class="btn-outline" onclick="goTo('pricing')" style="font-size:.8rem;padding:15px 40px;">View Pricing</button>
       </div>
     </div>
@@ -807,7 +806,6 @@ footer{background:var(--black);border-top:1px solid rgba(0,255,65,.15);padding:4
         <div class="about-img-placeholder" id="aboutImgWrap" onclick="openAboutMediaInput()">
           <div class="img-icon">📷</div>
           <span>Click to add photo</span>
-          <div style="font-family:var(--font-mono);font-size:.55rem;color:var(--text-dim);letter-spacing:1px;opacity:.7;">URL or file upload</div>
           <img id="aboutImg" src="" alt="About"/>
           <!-- URL overlay -->
           <div class="media-url-overlay" id="aboutUrlOverlay" onclick="event.stopPropagation()">
@@ -847,7 +845,7 @@ footer{background:var(--black);border-top:1px solid rgba(0,255,65,.15);padding:4
 <!-- PHOTO: ALL -->
 <div class="page" id="page-photos-all">
   <div class="breadcrumb"><button onclick="goTo('home')">Home</button><span class="sep">/</span><button onclick="goTo('photos')">Photography</button><span class="sep">/</span><span class="cur">All Work</span></div>
-  <div class="page-inner"><div class="section-label">Photography</div><h2 class="section-title">ALL<br><span class="accent">WORK</span></h2><div class="gallery-grid masonry" id="gallery-all"></div><button class="add-btn" onclick="addGalleryItem('all')">+ Add Photo</button><div class="portfolio-booknow"><div class="portfolio-booknow-title">READY TO <span>BOOK?</span></div><div class="portfolio-booknow-sub">Let's create something unforgettable together.</div><button class="btn-primary" onclick="goToPricing('photography')" style="margin-top:8px;">Start Your Inquiry →</button></div></div>
+  <div class="page-inner"><div class="section-label">Photography</div><h2 class="section-title">ALL<br><span class="accent">WORK</span></h2><div class="gallery-grid masonry" id="gallery-all"></div><div class="portfolio-booknow"><div class="portfolio-booknow-title">READY TO <span>BOOK?</span></div><div class="portfolio-booknow-sub">Let's create something unforgettable together.</div><div style="display:flex;gap:12px;flex-wrap:wrap;justify-content:center;margin-top:8px;"><button class="btn-primary" onclick="goTo('contact')" style="font-size:.75rem;">Start Your Inquiry →</button><button class="btn-outline" onclick="goToPricing('photography')" style="font-size:.75rem;">Book Now</button></div></div></div>
   <footer><button class="footer-logo" onclick="goTo('home')">GROVE STREET MEDIA</button><ul class="footer-links"><li><button onclick="goTo('photos')">← Back to Photos</button></li><li><button onclick="goTo('pricing')">Pricing</button></li></ul><div class="footer-copy">© 2025 Grove Street Media.</div></footer>
 </div>
 
@@ -859,8 +857,8 @@ footer{background:var(--black);border-top:1px solid rgba(0,255,65,.15);padding:4
     <h2 class="section-title">COMMERCIAL<br><span class="accent">PROJECTS</span></h2>
     <p class="section-desc">Click a project to open its full gallery.</p>
     <div class="project-grid" id="proj-commercial"></div>
-    <button class="add-btn" onclick="addProject('commercial')">+ Add Project</button>
-    <div class="portfolio-booknow"><div class="portfolio-booknow-title">READY TO <span>BOOK?</span></div><div class="portfolio-booknow-sub">Let's create something unforgettable together.</div><button class="btn-primary" onclick="goToPricing('photography')" style="margin-top:8px;">Start Your Inquiry →</button></div>
+    
+    <div class="portfolio-booknow"><div class="portfolio-booknow-title">READY TO <span>BOOK?</span></div><div class="portfolio-booknow-sub">Let's create something unforgettable together.</div><div style="display:flex;gap:12px;flex-wrap:wrap;justify-content:center;margin-top:8px;"><button class="btn-primary" onclick="goTo('contact')" style="font-size:.75rem;">Start Your Inquiry →</button><button class="btn-outline" onclick="goToPricing('photography')" style="font-size:.75rem;">Book Now</button></div></div>
   <div style="padding:0 48px 60px;"><button class="btn-primary" style="font-size:.75rem;" onclick="goToPricing('photography')">📅 Book Now →</button></div>
   </div><!-- close page-inner -->
   <footer><button class="footer-logo" onclick="goTo('home')">GROVE STREET MEDIA</button><ul class="footer-links"><li><button onclick="goTo('photos')">← Back to Photos</button></li><li><button onclick="goTo('contact')">Book Now</button></li></ul><div class="footer-copy">© 2025 Grove Street Media.</div></footer>
@@ -874,8 +872,8 @@ footer{background:var(--black);border-top:1px solid rgba(0,255,65,.15);padding:4
     <h2 class="section-title">WEDDING<br><span class="accent">PROJECTS</span></h2>
     <p class="section-desc">Click a project to open its full gallery.</p>
     <div class="project-grid" id="proj-wedding"></div>
-    <button class="add-btn" onclick="addProject('wedding')">+ Add Project</button>
-    <div class="portfolio-booknow"><div class="portfolio-booknow-title">READY TO <span>BOOK?</span></div><div class="portfolio-booknow-sub">Let's create something unforgettable together.</div><button class="btn-primary" onclick="goToPricing('photography')" style="margin-top:8px;">Start Your Inquiry →</button></div>
+    
+    <div class="portfolio-booknow"><div class="portfolio-booknow-title">READY TO <span>BOOK?</span></div><div class="portfolio-booknow-sub">Let's create something unforgettable together.</div><div style="display:flex;gap:12px;flex-wrap:wrap;justify-content:center;margin-top:8px;"><button class="btn-primary" onclick="goTo('contact')" style="font-size:.75rem;">Start Your Inquiry →</button><button class="btn-outline" onclick="goToPricing('photography')" style="font-size:.75rem;">Book Now</button></div></div>
   <div style="padding:0 48px 60px;"><button class="btn-primary" style="font-size:.75rem;" onclick="goToPricing('photography')">📅 Book Now →</button></div>
   </div><!-- close page-inner -->
   <footer><button class="footer-logo" onclick="goTo('home')">GROVE STREET MEDIA</button><ul class="footer-links"><li><button onclick="goTo('photos')">← Back to Photos</button></li><li><button onclick="goTo('contact')">Book Now</button></li></ul><div class="footer-copy">© 2025 Grove Street Media.</div></footer>
@@ -889,8 +887,8 @@ footer{background:var(--black);border-top:1px solid rgba(0,255,65,.15);padding:4
     <h2 class="section-title">URBAN &amp;<br><span class="accent">PROJECTS</span></h2>
     <p class="section-desc">Click a project to open its full gallery.</p>
     <div class="project-grid" id="proj-urban"></div>
-    <button class="add-btn" onclick="addProject('urban')">+ Add Project</button>
-    <div class="portfolio-booknow"><div class="portfolio-booknow-title">READY TO <span>BOOK?</span></div><div class="portfolio-booknow-sub">Let's create something unforgettable together.</div><button class="btn-primary" onclick="goToPricing('photography')" style="margin-top:8px;">Start Your Inquiry →</button></div>
+    
+    <div class="portfolio-booknow"><div class="portfolio-booknow-title">READY TO <span>BOOK?</span></div><div class="portfolio-booknow-sub">Let's create something unforgettable together.</div><div style="display:flex;gap:12px;flex-wrap:wrap;justify-content:center;margin-top:8px;"><button class="btn-primary" onclick="goTo('contact')" style="font-size:.75rem;">Start Your Inquiry →</button><button class="btn-outline" onclick="goToPricing('photography')" style="font-size:.75rem;">Book Now</button></div></div>
   </div><!-- /page-inner -->
   <footer><button class="footer-logo" onclick="goTo('home')">GROVE STREET MEDIA</button><ul class="footer-links"><li><button onclick="goTo('photos')">← Back to Photos</button></li><li><button onclick="goTo('contact')">Book Now</button></li></ul><div class="footer-copy">© 2025 Grove Street Media.</div></footer>
 </div>
@@ -901,11 +899,11 @@ footer{background:var(--black);border-top:1px solid rgba(0,255,65,.15);padding:4
   <div class="page-inner">
     <div class="section-label" id="proj-label">Project</div>
     <h2 class="section-title" id="proj-title">PROJECT<br><span class="accent">GALLERY</span></h2>
-    <p class="section-desc editable-field" id="proj-desc" contenteditable="true">Click to add a project description...</p>
+    <p class="section-desc" id="proj-desc"></p>
     <div class="proj-meta-row" id="proj-meta-row"></div>
     <div class="gallery-grid masonry" id="proj-gallery"></div>
-    <button class="add-btn" onclick="addPhotoToProject()">+ Add Photo</button>
-    <div class="portfolio-booknow"><div class="portfolio-booknow-title">LOVE WHAT <span>YOU SEE?</span></div><div class="portfolio-booknow-sub">Book your own session with Grove Street Media.</div><button class="btn-primary" onclick="goToPricing('photography')" style="margin-top:8px;">Start Your Inquiry →</button></div>
+    
+    <div class="portfolio-booknow"><div class="portfolio-booknow-title">LOVE WHAT <span>YOU SEE?</span></div><div class="portfolio-booknow-sub">Book your own session with Grove Street Media.</div><div style="display:flex;gap:12px;flex-wrap:wrap;justify-content:center;margin-top:8px;"><button class="btn-primary" onclick="goTo('contact')" style="font-size:.75rem;">Start Your Inquiry →</button><button class="btn-outline" onclick="goToPricing('photography')" style="font-size:.75rem;">Book Now</button></div></div>
   <div style="padding:0 48px 60px;"><button class="btn-primary" style="font-size:.75rem;" onclick="goToPricing('photography')">📅 Book Now →</button></div>
   </div><!-- close page-inner -->
   <footer><button class="footer-logo" onclick="goTo('home')">GROVE STREET MEDIA</button><ul class="footer-links"><li id="proj-back-link"></li><li><button onclick="goTo('contact')">Book Now</button></li></ul><div class="footer-copy">© 2025 Grove Street Media.</div></footer>
@@ -931,7 +929,7 @@ footer{background:var(--black);border-top:1px solid rgba(0,255,65,.15);padding:4
 <!-- VIDEO: ALL -->
 <div class="page" id="page-videos-all">
   <div class="breadcrumb"><button onclick="goTo('home')">Home</button><span class="sep">/</span><button onclick="goTo('videos')">Video</button><span class="sep">/</span><span class="cur">All Videos</span></div>
-  <div class="page-inner"><div class="section-label">Video</div><h2 class="section-title">ALL<br><span class="accent">VIDEOS</span></h2><div class="video-grid" id="vgrid-all-vid"></div><button class="add-btn" onclick="addVideoItem('all-vid')">+ Add Video</button><div class="portfolio-booknow"><div class="portfolio-booknow-title">READY TO <span>BOOK?</span></div><div class="portfolio-booknow-sub">Let's create something unforgettable together.</div><button class="btn-primary" onclick="goToPricing('video')" style="margin-top:8px;">Start Your Inquiry →</button></div></div>
+  <div class="page-inner"><div class="section-label">Video</div><h2 class="section-title">ALL<br><span class="accent">VIDEOS</span></h2><div class="video-grid" id="vgrid-all-vid"></div><div class="portfolio-booknow"><div class="portfolio-booknow-title">READY TO <span>BOOK?</span></div><div class="portfolio-booknow-sub">Let's create something unforgettable together.</div><div style="display:flex;gap:12px;flex-wrap:wrap;justify-content:center;margin-top:8px;"><button class="btn-primary" onclick="goTo('contact')" style="font-size:.75rem;">Start Your Inquiry →</button><button class="btn-outline" onclick="goToPricing('video')" style="font-size:.75rem;">Book Now</button></div></div></div>
   <div style="padding:0 48px 60px;"><button class="btn-primary" style="font-size:.75rem;" onclick="goToPricing('video')">📅 Book Now →</button></div>
   <footer><button class="footer-logo" onclick="goTo('home')">GROVE STREET MEDIA</button><ul class="footer-links"><li><button onclick="goTo('videos')">← Back to Videos</button></li><li><button onclick="goTo('contact')">Book Now</button></li></ul><div class="footer-copy">© 2025 Grove Street Media.</div></footer>
 </div>
@@ -939,7 +937,7 @@ footer{background:var(--black);border-top:1px solid rgba(0,255,65,.15);padding:4
 <!-- VIDEO: COMMERCIAL -->
 <div class="page" id="page-videos-commercial">
   <div class="breadcrumb"><button onclick="goTo('home')">Home</button><span class="sep">/</span><button onclick="goTo('videos')">Video</button><span class="sep">/</span><span class="cur">Commercial</span></div>
-  <div class="page-inner"><div class="section-label">Video</div><h2 class="section-title">COMMERCIAL<br><span class="accent">VIDEOS</span></h2><div class="video-grid" id="vgrid-commercial-vid"></div><button class="add-btn" onclick="addVideoItem('commercial-vid')">+ Add Video</button><div class="portfolio-booknow"><div class="portfolio-booknow-title">READY TO <span>BOOK?</span></div><div class="portfolio-booknow-sub">Let's create something unforgettable together.</div><button class="btn-primary" onclick="goToPricing('video')" style="margin-top:8px;">Start Your Inquiry →</button></div></div>
+  <div class="page-inner"><div class="section-label">Video</div><h2 class="section-title">COMMERCIAL<br><span class="accent">VIDEOS</span></h2><div class="video-grid" id="vgrid-commercial-vid"></div><div class="portfolio-booknow"><div class="portfolio-booknow-title">READY TO <span>BOOK?</span></div><div class="portfolio-booknow-sub">Let's create something unforgettable together.</div><div style="display:flex;gap:12px;flex-wrap:wrap;justify-content:center;margin-top:8px;"><button class="btn-primary" onclick="goTo('contact')" style="font-size:.75rem;">Start Your Inquiry →</button><button class="btn-outline" onclick="goToPricing('video')" style="font-size:.75rem;">Book Now</button></div></div></div>
   <div style="padding:0 48px 60px;"><button class="btn-primary" style="font-size:.75rem;" onclick="goToPricing('video')">📅 Book Now →</button></div>
   <footer><button class="footer-logo" onclick="goTo('home')">GROVE STREET MEDIA</button><ul class="footer-links"><li><button onclick="goTo('videos')">← Back to Videos</button></li><li><button onclick="goTo('contact')">Book Now</button></li></ul><div class="footer-copy">© 2025 Grove Street Media.</div></footer>
 </div>
@@ -947,7 +945,7 @@ footer{background:var(--black);border-top:1px solid rgba(0,255,65,.15);padding:4
 <!-- VIDEO: WEDDING -->
 <div class="page" id="page-videos-wedding">
   <div class="breadcrumb"><button onclick="goTo('home')">Home</button><span class="sep">/</span><button onclick="goTo('videos')">Video</button><span class="sep">/</span><span class="cur">Wedding Films</span></div>
-  <div class="page-inner"><div class="section-label">Video</div><h2 class="section-title">WEDDING<br><span class="accent">FILMS</span></h2><div class="video-grid" id="vgrid-wedding-vid"></div><button class="add-btn" onclick="addVideoItem('wedding-vid')">+ Add Video</button><div class="portfolio-booknow"><div class="portfolio-booknow-title">READY TO <span>BOOK?</span></div><div class="portfolio-booknow-sub">Let's create something unforgettable together.</div><button class="btn-primary" onclick="goToPricing('video')" style="margin-top:8px;">Start Your Inquiry →</button></div></div>
+  <div class="page-inner"><div class="section-label">Video</div><h2 class="section-title">WEDDING<br><span class="accent">FILMS</span></h2><div class="video-grid" id="vgrid-wedding-vid"></div><div class="portfolio-booknow"><div class="portfolio-booknow-title">READY TO <span>BOOK?</span></div><div class="portfolio-booknow-sub">Let's create something unforgettable together.</div><div style="display:flex;gap:12px;flex-wrap:wrap;justify-content:center;margin-top:8px;"><button class="btn-primary" onclick="goTo('contact')" style="font-size:.75rem;">Start Your Inquiry →</button><button class="btn-outline" onclick="goToPricing('video')" style="font-size:.75rem;">Book Now</button></div></div></div>
   <div style="padding:0 48px 60px;"><button class="btn-primary" style="font-size:.75rem;" onclick="goToPricing('video')">📅 Book Now →</button></div>
   <footer><button class="footer-logo" onclick="goTo('home')">GROVE STREET MEDIA</button><ul class="footer-links"><li><button onclick="goTo('videos')">← Back to Videos</button></li><li><button onclick="goTo('contact')">Book Now</button></li></ul><div class="footer-copy">© 2025 Grove Street Media.</div></footer>
 </div>
@@ -955,7 +953,7 @@ footer{background:var(--black);border-top:1px solid rgba(0,255,65,.15);padding:4
 <!-- VIDEO: MUSIC -->
 <div class="page" id="page-videos-music">
   <div class="breadcrumb"><button onclick="goTo('home')">Home</button><span class="sep">/</span><button onclick="goTo('videos')">Video</button><span class="sep">/</span><span class="cur">Music Videos</span></div>
-  <div class="page-inner"><div class="section-label">Video</div><h2 class="section-title">MUSIC<br><span class="accent">VIDEOS</span></h2><div class="video-grid" id="vgrid-urban-vid"></div><button class="add-btn" onclick="addVideoItem('urban-vid')">+ Add Video</button><div class="portfolio-booknow"><div class="portfolio-booknow-title">READY TO <span>BOOK?</span></div><div class="portfolio-booknow-sub">Let's create something unforgettable together.</div><button class="btn-primary" onclick="goToPricing('video')" style="margin-top:8px;">Start Your Inquiry →</button></div></div>
+  <div class="page-inner"><div class="section-label">Video</div><h2 class="section-title">MUSIC<br><span class="accent">VIDEOS</span></h2><div class="video-grid" id="vgrid-urban-vid"></div><div class="portfolio-booknow"><div class="portfolio-booknow-title">READY TO <span>BOOK?</span></div><div class="portfolio-booknow-sub">Let's create something unforgettable together.</div><div style="display:flex;gap:12px;flex-wrap:wrap;justify-content:center;margin-top:8px;"><button class="btn-primary" onclick="goTo('contact')" style="font-size:.75rem;">Start Your Inquiry →</button><button class="btn-outline" onclick="goToPricing('video')" style="font-size:.75rem;">Book Now</button></div></div></div>
   <div style="padding:0 48px 60px;"><button class="btn-primary" style="font-size:.75rem;" onclick="goToPricing('video')">📅 Book Now →</button></div>
   <footer><button class="footer-logo" onclick="goTo('home')">GROVE STREET MEDIA</button><ul class="footer-links"><li><button onclick="goTo('videos')">← Back to Videos</button></li><li><button onclick="goTo('contact')">Book Now</button></li></ul><div class="footer-copy">© 2025 Grove Street Media.</div></footer>
 </div>
@@ -979,7 +977,7 @@ footer{background:var(--black);border-top:1px solid rgba(0,255,65,.15);padding:4
 <!-- DESIGN: ALL -->
 <div class="page" id="page-design-all">
   <div class="breadcrumb"><button onclick="goTo('home')">Home</button><span class="sep">/</span><button onclick="goTo('design')">Design</button><span class="sep">/</span><span class="cur">All Design</span></div>
-  <div class="page-inner"><div class="section-label">Design</div><h2 class="section-title">ALL<br><span class="accent">DESIGN</span></h2><div class="gallery-grid" id="dgrid-design-all" style="grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:12px;"></div><button class="add-btn" onclick="addDesignItem('design-all')">+ Add Design</button><div class="portfolio-booknow"><div class="portfolio-booknow-title">READY TO <span>BOOK?</span></div><div class="portfolio-booknow-sub">Let's create something unforgettable together.</div><button class="btn-primary" onclick="goToPricing('design')" style="margin-top:8px;">Start Your Inquiry →</button></div></div>
+  <div class="page-inner"><div class="section-label">Design</div><h2 class="section-title">ALL<br><span class="accent">DESIGN</span></h2><div class="gallery-grid" id="dgrid-design-all" style="grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:12px;"></div><div class="portfolio-booknow"><div class="portfolio-booknow-title">READY TO <span>BOOK?</span></div><div class="portfolio-booknow-sub">Let's create something unforgettable together.</div><div style="display:flex;gap:12px;flex-wrap:wrap;justify-content:center;margin-top:8px;"><button class="btn-primary" onclick="goTo('contact')" style="font-size:.75rem;">Start Your Inquiry →</button><button class="btn-outline" onclick="goToPricing('design')" style="font-size:.75rem;">Book Now</button></div></div></div>
   <div style="padding:0 48px 60px;"><button class="btn-primary" style="font-size:.75rem;" onclick="goToPricing('design')">📅 Book Now →</button></div>
   <footer><button class="footer-logo" onclick="goTo('home')">GROVE STREET MEDIA</button><ul class="footer-links"><li><button onclick="goTo('design')">← Back to Design</button></li><li><button onclick="goTo('contact')">Book Now</button></li></ul><div class="footer-copy">© 2025 Grove Street Media.</div></footer>
 </div>
@@ -987,7 +985,7 @@ footer{background:var(--black);border-top:1px solid rgba(0,255,65,.15);padding:4
 <!-- DESIGN: MUSIC -->
 <div class="page" id="page-design-music">
   <div class="breadcrumb"><button onclick="goTo('home')">Home</button><span class="sep">/</span><button onclick="goTo('design')">Design</button><span class="sep">/</span><span class="cur">Music &amp; Albums</span></div>
-  <div class="page-inner"><div class="section-label">Design</div><h2 class="section-title">MUSIC &amp;<br><span class="accent">ALBUMS</span></h2><div class="gallery-grid" id="dgrid-design-music" style="grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:12px;"></div><button class="add-btn" onclick="addDesignItem('design-music')">+ Add Design</button><div class="portfolio-booknow"><div class="portfolio-booknow-title">READY TO <span>BOOK?</span></div><div class="portfolio-booknow-sub">Let's create something unforgettable together.</div><button class="btn-primary" onclick="goToPricing('design')" style="margin-top:8px;">Start Your Inquiry →</button></div></div>
+  <div class="page-inner"><div class="section-label">Design</div><h2 class="section-title">MUSIC &amp;<br><span class="accent">ALBUMS</span></h2><div class="gallery-grid" id="dgrid-design-music" style="grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:12px;"></div><div class="portfolio-booknow"><div class="portfolio-booknow-title">READY TO <span>BOOK?</span></div><div class="portfolio-booknow-sub">Let's create something unforgettable together.</div><div style="display:flex;gap:12px;flex-wrap:wrap;justify-content:center;margin-top:8px;"><button class="btn-primary" onclick="goTo('contact')" style="font-size:.75rem;">Start Your Inquiry →</button><button class="btn-outline" onclick="goToPricing('design')" style="font-size:.75rem;">Book Now</button></div></div></div>
   <div style="padding:0 48px 60px;"><button class="btn-primary" style="font-size:.75rem;" onclick="goToPricing('design')">📅 Book Now →</button></div>
   <footer><button class="footer-logo" onclick="goTo('home')">GROVE STREET MEDIA</button><ul class="footer-links"><li><button onclick="goTo('design')">← Back to Design</button></li><li><button onclick="goTo('contact')">Book Now</button></li></ul><div class="footer-copy">© 2025 Grove Street Media.</div></footer>
 </div>
@@ -995,7 +993,7 @@ footer{background:var(--black);border-top:1px solid rgba(0,255,65,.15);padding:4
 <!-- DESIGN: PRINT -->
 <div class="page" id="page-design-print">
   <div class="breadcrumb"><button onclick="goTo('home')">Home</button><span class="sep">/</span><button onclick="goTo('design')">Design</button><span class="sep">/</span><span class="cur">Print &amp; Flyers</span></div>
-  <div class="page-inner"><div class="section-label">Design</div><h2 class="section-title">PRINT &amp;<br><span class="accent">FLYERS</span></h2><div class="gallery-grid" id="dgrid-design-print" style="grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:12px;"></div><button class="add-btn" onclick="addDesignItem('design-print')">+ Add Design</button><div class="portfolio-booknow"><div class="portfolio-booknow-title">READY TO <span>BOOK?</span></div><div class="portfolio-booknow-sub">Let's create something unforgettable together.</div><button class="btn-primary" onclick="goToPricing('design')" style="margin-top:8px;">Start Your Inquiry →</button></div></div>
+  <div class="page-inner"><div class="section-label">Design</div><h2 class="section-title">PRINT &amp;<br><span class="accent">FLYERS</span></h2><div class="gallery-grid" id="dgrid-design-print" style="grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:12px;"></div><div class="portfolio-booknow"><div class="portfolio-booknow-title">READY TO <span>BOOK?</span></div><div class="portfolio-booknow-sub">Let's create something unforgettable together.</div><div style="display:flex;gap:12px;flex-wrap:wrap;justify-content:center;margin-top:8px;"><button class="btn-primary" onclick="goTo('contact')" style="font-size:.75rem;">Start Your Inquiry →</button><button class="btn-outline" onclick="goToPricing('design')" style="font-size:.75rem;">Book Now</button></div></div></div>
   <div style="padding:0 48px 60px;"><button class="btn-primary" style="font-size:.75rem;" onclick="goToPricing('design')">📅 Book Now →</button></div>
   <footer><button class="footer-logo" onclick="goTo('home')">GROVE STREET MEDIA</button><ul class="footer-links"><li><button onclick="goTo('design')">← Back to Design</button></li><li><button onclick="goTo('contact')">Book Now</button></li></ul><div class="footer-copy">© 2025 Grove Street Media.</div></footer>
 </div>
@@ -1106,7 +1104,6 @@ footer{background:var(--black);border-top:1px solid rgba(0,255,65,.15);padding:4
     <div class="section-label">Investment</div>
     <h2 class="section-title">PRICING &amp;<br><span class="accent">PACKAGES</span></h2>
     <p class="section-desc">Transparent starting prices across all services. Every project is unique — <a href="javascript:goTo('contact')" style="color:var(--green);text-decoration:none;">reach out</a> for a custom quote.</p>
-    <p class="price-edit-hint">✎ Click any price to edit</p>
 
     <div class="pricing-tabs">
       <button class="pricing-tab active" onclick="switchPricing('photography',this)">Photography</button>
@@ -1700,9 +1697,11 @@ if(!isTouch){
 const projectStore = {
   commercial: [
     {id:'proj-c1', name:'The Kilogram Shoot', tag:'Commercial', coverSrc:'https://res.cloudinary.com/dwjkgvkis/image/upload/v1777266993/Jada_Ali_-_Kilogram-06-2_nijs4n.jpg', photos:['https://res.cloudinary.com/dwjkgvkis/image/upload/v1777266993/Jada_Ali_-_Kilogram-06-2_nijs4n.jpg','https://res.cloudinary.com/dwjkgvkis/image/upload/v1777266993/Jada_Ali_-_Kilogram-10-2_a8dbzb.jpg','https://res.cloudinary.com/dwjkgvkis/image/upload/v1777266995/Jada_Ali_-_Kilogram-37-2_wupexy.jpg','https://res.cloudinary.com/dwjkgvkis/image/upload/v1777266993/Jada_Ali_-_Kilogram-15-2_jdlhdf.jpg','https://res.cloudinary.com/dwjkgvkis/image/upload/v1777266994/Jada_Ali_-_Kilogram-36-2_kn8efy.jpg']},
-    {id:'proj-c2', name:'Pizza Cat Detroit', tag:'Commercial', coverSrc:'https://res.cloudinary.com/dwjkgvkis/image/upload/v1777269834/11_corjjj.jpg', photos:['https://res.cloudinary.com/dwjkgvkis/image/upload/v1777269834/11_corjjj.jpg','https://res.cloudinary.com/dwjkgvkis/image/upload/v1777269833/08_lbskgc.jpg','https://res.cloudinary.com/dwjkgvkis/image/upload/v1777269832/10_a9jbm3.jpg','https://res.cloudinary.com/dwjkgvkis/image/upload/v1777269832/18_plsgm8.jpg','https://res.cloudinary.com/dwjkgvkis/image/upload/v1777269832/10_a9jbm3.jpg']},
-    {id:'proj-c3', name:'Loveless BLVD', tag:'Commercial', coverSrc:'https://res.cloudinary.com/dwjkgvkis/image/upload/v1777272637/the_loveless-41-2_tingdh.jpg', photos:['https://res.cloudinary.com/dwjkgvkis/image/upload/v1777272634/Jay-09-2_yvaplm.jpg','https://res.cloudinary.com/dwjkgvkis/image/upload/v1777272635/Jay-07-2_dnzpxw.jpg','https://res.cloudinary.com/dwjkgvkis/image/upload/v1777272635/the_loveless-17-2_gotyqm.jpg','https://res.cloudinary.com/dwjkgvkis/image/upload/v1777272636/the_loveless-26-2_dgmouy.jpg','https://res.cloudinary.com/dwjkgvkis/image/upload/v1777272637/the_loveless-44-2_vw31ze.jpg','https://res.cloudinary.com/dwjkgvkis/image/upload/v1777272637/the_loveless-38-2_fjc6ak.jpg']},
-    {id:'proj-c4', name:'Studio Portrait', tag:'Commercial', coverSrc:'', photos:[]},
+    {id:'proj-c2', name:'A Classic Birthday', tag:'Events', coverSrc:'https://res.cloudinary.com/dwjkgvkis/image/upload/v1777412243/16-2_bgvhwd.jpg', photos:['https://res.cloudinary.com/dwjkgvkis/image/upload/v1777412243/16-2_bgvhwd.jpg','https://res.cloudinary.com/dwjkgvkis/image/upload/v1777412243/20-2_r6tam0.jpg','https://res.cloudinary.com/dwjkgvkis/image/upload/v1777412242/4-2_xgfqwj.jpg','https://res.cloudinary.com/dwjkgvkis/image/upload/v1777412242/3-2_dw2pdd.jpg','https://res.cloudinary.com/dwjkgvkis/image/upload/v1777412242/10-2_y4yncu.jpg']},
+    {id:'proj-c3', name:'Pisces Szn (Birthday Shoot)', tag:'Events', coverSrc:'https://res.cloudinary.com/dwjkgvkis/image/upload/v1777413231/00_z1fwsu.jpg', photos:['https://res.cloudinary.com/dwjkgvkis/image/upload/v1777413231/00_z1fwsu.jpg','https://res.cloudinary.com/dwjkgvkis/image/upload/v1777413231/03_osmqny.jpg','https://res.cloudinary.com/dwjkgvkis/image/upload/v1777413230/02_ippepr.jpg','https://res.cloudinary.com/dwjkgvkis/image/upload/v1777413232/04_hlux6y.jpg','https://res.cloudinary.com/dwjkgvkis/image/upload/v1777413232/06_xlxagv.jpg','https://res.cloudinary.com/dwjkgvkis/image/upload/v1777413233/07_ndlwin.jpg']},
+    {id:'proj-c4', name:'Loveless BLVD', tag:'Commercial', coverSrc:'https://res.cloudinary.com/dwjkgvkis/image/upload/v1777272637/the_loveless-41-2_tingdh.jpg', photos:['https://res.cloudinary.com/dwjkgvkis/image/upload/v1777272634/Jay-09-2_yvaplm.jpg','https://res.cloudinary.com/dwjkgvkis/image/upload/v1777272635/Jay-07-2_dnzpxw.jpg','https://res.cloudinary.com/dwjkgvkis/image/upload/v1777272635/the_loveless-17-2_gotyqm.jpg','https://res.cloudinary.com/dwjkgvkis/image/upload/v1777272636/the_loveless-26-2_dgmouy.jpg','https://res.cloudinary.com/dwjkgvkis/image/upload/v1777272637/the_loveless-44-2_vw31ze.jpg','https://res.cloudinary.com/dwjkgvkis/image/upload/v1777272637/the_loveless-38-2_fjc6ak.jpg']},
+    {id:'proj-c5', name:'Pizza Cat Detroit', tag:'Commercial', coverSrc:'https://res.cloudinary.com/dwjkgvkis/image/upload/v1777269834/11_corjjj.jpg', photos:['https://res.cloudinary.com/dwjkgvkis/image/upload/v1777269834/11_corjjj.jpg','https://res.cloudinary.com/dwjkgvkis/image/upload/v1777269833/08_lbskgc.jpg','https://res.cloudinary.com/dwjkgvkis/image/upload/v1777269832/10_a9jbm3.jpg','https://res.cloudinary.com/dwjkgvkis/image/upload/v1777269832/18_plsgm8.jpg','https://res.cloudinary.com/dwjkgvkis/image/upload/v1777269832/10_a9jbm3.jpg']},
+    {id:'proj-c6', name:'Studio Portrait', tag:'Commercial', coverSrc:'', photos:[]},
   ],
   wedding: [
     {id:'proj-w1', name:'Sarah & James',   tag:'Events & Celebrations', coverSrc:'', photos:[]},
@@ -1739,7 +1738,6 @@ function makeProjectCard(proj, cat) {
       <div class="project-cover-placeholder">
         <div class="ph-icon">📷</div>
         <span>Add Cover Photo</span>
-        <div style="font-family:var(--font-mono);font-size:.5rem;color:var(--text-dim);opacity:.7;">URL or file</div>
       </div>
       <img class="project-cover-img" src="${proj.coverSrc}" alt="${proj.name}" style="${proj.coverSrc ? 'display:block' : 'display:none'}"/>
       <div class="project-cover-url-overlay" style="position:absolute;inset:0;background:rgba(5,10,5,.93);display:none;flex-direction:column;align-items:center;justify-content:center;gap:8px;padding:14px;z-index:10;">
@@ -1752,7 +1750,7 @@ function makeProjectCard(proj, cat) {
           <button class="media-url-cancel">Cancel</button>
         </div>
       </div>
-      <div class="project-cover-overlay"><div class="project-cover-overlay-text">Open Project →</div></div>
+      <div class="project-cover-overlay"><div class="project-cover-overlay-text">View Project →</div></div>
     </div>
     <div class="project-info">
       <input class="project-name-input" type="text" value="${proj.name}" placeholder="Project name..." />
@@ -1788,20 +1786,29 @@ function makeProjectCard(proj, cat) {
     const f=e.target.files[0]; if(!f) return;
     const r=new FileReader(); r.onload=ev=>applyCover(ev.target.result); r.readAsDataURL(f);
   });
-  // Open cover image in lightbox on click (not when overlay is open)
-  card.addEventListener('click', function(e) {
-    if (e.target.tagName === 'INPUT' || e.target.tagName === 'BUTTON') return;
-    const img = card.querySelector('.project-cover-img');
-    if (img && img.src && img.src !== location.href && !card.querySelector('.project-cover-url-overlay[style*="flex"]')) {
-      openLightbox(img.src);
-    }
-  });
   const nameInput = card.querySelector('.project-name-input');
   nameInput.addEventListener('input', e => { proj.name = e.target.value; });
   nameInput.addEventListener('click', e => e.stopPropagation());
-  // Open project on card click (not on input)
+
+  // Cover photo click → lightbox
+  coverImg.addEventListener('click', function(e) {
+    e.stopPropagation();
+    if(coverImg.src && coverImg.src !== location.href) openLightbox(coverImg.src);
+  });
+
+  // View Project overlay button → open project gallery
+  const overlayBtn = card.querySelector('.project-cover-overlay');
+  if(overlayBtn) overlayBtn.addEventListener('click', function(e) {
+    e.stopPropagation();
+    openProject(proj, cat);
+  });
+
+  // Card click → open project (fallback)
   card.addEventListener('click', function(e) {
-    if (e.target.tagName === 'INPUT') return;
+    if (e.target.tagName === 'INPUT' || e.target.tagName === 'BUTTON') return;
+    if (e.target === coverImg || coverImg.contains(e.target)) return;
+    const overlay = card.querySelector('.project-cover-url-overlay');
+    if (overlay && overlay.style.display === 'flex') return;
     openProject(proj, cat);
   });
   return card;
@@ -1826,7 +1833,7 @@ function openProject(proj, cat) {
   document.getElementById('proj-title').innerHTML = `${words.slice(0,half).join(' ')}<br><span class="accent">${words.slice(half).join(' ') || '&nbsp;'}</span>`;
   document.getElementById('proj-label').textContent = catLabel + ' Photography';
   document.getElementById('proj-meta-row').innerHTML = `<span class="proj-meta-tag">${proj.tag}</span><span class="proj-meta-tag">${proj.photos.length} Photos</span>`;
-  document.getElementById('proj-desc').textContent = proj.desc || 'Click to add a project description...';
+  document.getElementById('proj-desc').textContent = proj.desc || '';
   // Back link
   document.getElementById('proj-back-link').innerHTML = `<button onclick="goTo('${catPage}')">← Back to ${catLabel}</button>`;
   // Build gallery
@@ -1905,13 +1912,6 @@ function addProject(cat) {
 }
 
 // ── PHOTO GALLERY (All Work only) ──
-const photoData={
-  all:[{t:'Brand Campaign',tag:'Commercial'},{t:'Golden Hour',tag:'Wedding'},{t:'City Nights',tag:'Urban'},{t:'Product Launch',tag:'Commercial'},{t:'First Dance',tag:'Wedding'},{t:'Street Portraits',tag:'Urban'}],
-};
-Object.entries(photoData).forEach(([cat,items])=>{
-  const g=document.getElementById('gallery-'+cat); if(!g)return;
-  items.forEach((item,i)=>g.appendChild(makePhotoCard(item.t,item.tag,i%3===0)));
-});
 function makePhotoCard(title,tag,tall=false){
   const d=document.createElement('div');
   d.className='gallery-item'+(tall?' tall':'');
@@ -1919,7 +1919,6 @@ function makePhotoCard(title,tag,tall=false){
     <div class="gallery-placeholder">
       <div class="gallery-placeholder-icon">🖼</div>
       <span>Add Photo</span>
-      <div style="font-family:var(--font-mono);font-size:.55rem;color:var(--text-dim);opacity:.7;letter-spacing:1px;">URL or file</div>
       <img src="" alt="${title}" style="position:relative;width:100%;height:auto;object-fit:contain;display:none;"/>
       <div class="media-url-overlay" onclick="event.stopPropagation()">
         <div class="media-url-label">Paste Image URL</div>
@@ -1949,9 +1948,15 @@ function makePhotoCard(title,tag,tall=false){
     hint.forEach(el=>el.style.display='none');
     overlay.classList.remove('active');
   }
-  // Open overlay on placeholder click
+  // Open overlay on placeholder click — or lightbox if image already loaded
   d.querySelector('.gallery-placeholder').addEventListener('click',function(e){
-    if(!overlay.classList.contains('active')){ overlay.classList.add('active'); urlInput.focus(); }
+    if(e.target === img || img.contains(e.target)) return; // handled by img listener
+    if(img.src && img.src !== location.href && img.src !== ''){
+      // Image already loaded — open lightbox
+      openLightbox(img.src);
+    } else if(!overlay.classList.contains('active')){
+      overlay.classList.add('active'); urlInput.focus();
+    }
   });
   confirmBtn.addEventListener('click',()=>{ if(urlInput.value.trim()) showImg(urlInput.value.trim()); });
   urlInput.addEventListener('keydown',e=>{ if(e.key==='Enter'&&urlInput.value.trim()) showImg(urlInput.value.trim()); });
@@ -1971,6 +1976,37 @@ function loadGalleryImg(e,input){
   r.readAsDataURL(f);
 }
 function addGalleryItem(cat){const g=document.getElementById('gallery-'+cat);if(g)g.appendChild(makePhotoCard('New Photo',cat.charAt(0).toUpperCase()+cat.slice(1)));}
+
+// Auto-populate All Photos from projectStore
+(function(){
+  const g = document.getElementById('gallery-all');
+  if(!g) return;
+  ['commercial','wedding','urban'].forEach(cat => {
+    (projectStore[cat]||[]).forEach(proj => {
+      if(proj.coverSrc){
+        const card = makePhotoCard(proj.name, proj.tag);
+        const img  = card.querySelector('img');
+        const icon = card.querySelector('.gallery-placeholder-icon');
+        const hints = card.querySelectorAll('.gallery-placeholder span,.gallery-placeholder div:not(.media-url-overlay):not(.gallery-placeholder-icon)');
+        img.src=proj.coverSrc; img.style.display='block';
+        if(icon) icon.style.display='none';
+        hints.forEach(el=>el.style.display='none');
+        g.appendChild(card);
+      }
+      proj.photos.forEach((src,i)=>{
+        if(!src||src===proj.coverSrc) return;
+        const card=makePhotoCard(proj.name+' #'+(i+1),proj.tag);
+        const img=card.querySelector('img');
+        const icon=card.querySelector('.gallery-placeholder-icon');
+        const hints=card.querySelectorAll('.gallery-placeholder span,.gallery-placeholder div:not(.media-url-overlay):not(.gallery-placeholder-icon)');
+        img.src=src; img.style.display='block';
+        if(icon) icon.style.display='none';
+        hints.forEach(el=>el.style.display='none');
+        g.appendChild(card);
+      });
+    });
+  });
+})();
 
 // ── VIDEO ──
 const videoData={
@@ -2058,6 +2094,7 @@ const designData={
     {t:'OMB Peezy Ft Jada Ali',tag:'Print',src:'https://res.cloudinary.com/dwjkgvkis/image/upload/v1777403674/Jada_Ali_flcvqa.jpg'},
     {t:'Celebration',tag:'Print',src:'https://res.cloudinary.com/dwjkgvkis/image/upload/v1777404319/Its_Pisces_Szn_2_olfcbo.jpg'},
     {t:'Memorial Day Laughs',tag:'Print',src:'https://res.cloudinary.com/dwjkgvkis/image/upload/v1777405399/Memorial_Day_Laughs_pe9hfa.jpg'},
+    {t:'Back to School',tag:'Print',src:'https://res.cloudinary.com/dwjkgvkis/image/upload/v1777410945/BTS-2_u8zuob.jpg'},
   ],
 };
 Object.entries(designData).forEach(([cat,items])=>{
