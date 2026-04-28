@@ -1678,7 +1678,7 @@ if(!isTouch){
   document.addEventListener('mousemove',e=>{mx=e.clientX;my=e.clientY;});
   (function animCur(){
     cur.style.left=mx+'px';cur.style.top=my+'px';
-    rx+=(mx-rx)*.14;ry+=(my-ry)*.14;
+    rx+=(mx-rx)*.25;ry+=(my-ry)*.25;
     ring.style.left=rx+'px';ring.style.top=ry+'px';
     requestAnimationFrame(animCur);
   })();
@@ -2072,6 +2072,16 @@ Object.entries(designData).forEach(([cat,items])=>{
       img.src=item.src; img.style.display='block';
       if(icon) icon.style.display='none';
       hints.forEach(el=>el.style.display='none');
+      // Wire lightbox on click
+      img.addEventListener('click', function(e){
+        e.stopPropagation();
+        if(img.src && img.src !== location.href) openLightbox(img.src);
+      });
+      // Also wire the card click to open lightbox
+      d.addEventListener('click', function(e){
+        if(e.target.tagName==='INPUT'||e.target.tagName==='BUTTON') return;
+        if(img.src && img.src !== location.href) openLightbox(img.src);
+      });
     }
     g.appendChild(d);
   });
@@ -2089,23 +2099,21 @@ function openVideoModal(url,title){
 }
 
 // ── LIGHTBOX ──
-// ── LIGHTBOX ──
 let lightboxImages = [];
 let lightboxIndex  = 0;
 
 function openLightbox(src) {
-  // Collect all loaded images on the current active page for navigation
+  // Collect all images with real src on the active page for navigation
   const activePage = document.querySelector('.page.active');
   if (activePage) {
     const imgs = [...activePage.querySelectorAll('img')]
-      .filter(img => img.src && img.src !== location.href && img.src !== '' && img.naturalWidth > 0);
+      .filter(img => img.src && img.src !== location.href && img.src !== '' && !img.src.endsWith('/'));
     lightboxImages = imgs.map(img => img.src);
     lightboxIndex  = lightboxImages.findIndex(s => s === src);
     if (lightboxIndex === -1) { lightboxImages = [src]; lightboxIndex = 0; }
   } else {
     lightboxImages = [src]; lightboxIndex = 0;
   }
-  // Safety fallback
   if (lightboxImages.length === 0) { lightboxImages = [src]; lightboxIndex = 0; }
   showLightboxImage();
   document.getElementById('lightbox').classList.add('open');
