@@ -249,7 +249,7 @@ nav{position:fixed;top:0;left:0;right:0;z-index:1000;display:flex;align-items:ce
 .gallery-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:6px;}
 .gallery-grid.masonry{columns:3;column-gap:6px;}
 .gallery-grid.masonry .gallery-item{break-inside:avoid;margin-bottom:6px;}
-.gallery-item{position:relative;overflow:hidden;background:var(--black3);border:1px solid rgba(0,255,65,.06);aspect-ratio:3/4;cursor:pointer;transition:border-color .3s;}
+.gallery-item{position:relative;overflow:hidden;background:var(--black3);border:none;cursor:pointer;transition:border-color .3s;}
 .gallery-item.tall{aspect-ratio:3/4;}
 .gallery-item.square{aspect-ratio:1/1;}
 .gallery-item:hover{border-color:rgba(0,255,65,.4);}
@@ -258,7 +258,7 @@ nav{position:fixed;top:0;left:0;right:0;z-index:1000;display:flex;align-items:ce
 .gallery-placeholder{width:100%;height:100%;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:12px;color:var(--text-dim);font-family:var(--font-mono);font-size:.65rem;letter-spacing:2px;position:relative;}
 .gallery-placeholder-icon{font-size:2rem;color:var(--green);opacity:.3;}
 .gallery-placeholder input[type=file]{position:absolute;inset:0;opacity:0;cursor:pointer;width:100%;height:100%;}
-.gallery-placeholder img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:none;}
+.gallery-placeholder img{position:relative;width:100%;height:auto;object-fit:contain;display:none;}
 .gallery-overlay{position:absolute;inset:0;background:linear-gradient(180deg,transparent 30%,rgba(0,0,0,.85) 100%);display:flex;flex-direction:column;justify-content:flex-end;padding:20px;opacity:0;transition:opacity .3s;}
 .gallery-overlay-title{font-family:var(--font-display);font-size:1.3rem;color:var(--text);-webkit-font-smoothing:antialiased;}
 .gallery-overlay-tag{font-family:var(--font-mono);font-size:.6rem;letter-spacing:2px;color:var(--green);text-transform:uppercase;margin-top:4px;}
@@ -343,8 +343,8 @@ footer{background:var(--black);border-top:1px solid rgba(0,255,65,.15);padding:4
 .project-card{position:relative;overflow:hidden;background:var(--black3);border:1px solid rgba(0,255,65,.08);cursor:pointer;transition:border-color .3s,transform .3s;}
 .project-card:hover{border-color:rgba(0,255,65,.4);transform:translateY(-4px);}
 .project-card:hover .project-cover-overlay{opacity:1;}
-.project-cover{position:relative;aspect-ratio:3/4;overflow:hidden;background:var(--black);}
-.project-cover-img{width:100%;height:100%;object-fit:cover;display:none;transition:transform .5s ease;}
+.project-cover{position:relative;overflow:hidden;background:var(--black);}
+.project-cover-img{width:100%;height:auto;object-fit:contain;display:none;transition:transform .5s ease;}
 .project-card:hover .project-cover-img{transform:scale(1.05);}
 .project-cover-placeholder{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:10px;color:var(--text-dim);font-family:var(--font-mono);font-size:.6rem;letter-spacing:2px;}
 .project-cover-placeholder .ph-icon{font-size:2rem;color:var(--green);opacity:.25;}
@@ -762,10 +762,8 @@ footer{background:var(--black);border-top:1px solid rgba(0,255,65,.15);padding:4
         <div class="phub-title">Graphic Design</div>
         <div class="phub-desc">Branding, album artwork, flyers, merch &amp; digital content.</div>
         <div class="phub-sub-links">
-          <button onclick="event.stopPropagation();goTo('design-branding')" class="phub-sub">Branding →</button>
           <button onclick="event.stopPropagation();goTo('design-music')" class="phub-sub">Music &amp; Albums →</button>
           <button onclick="event.stopPropagation();goTo('design-print')" class="phub-sub">Print &amp; Flyers →</button>
-          <button onclick="event.stopPropagation();goTo('design-social')" class="phub-sub">Social &amp; Digital →</button>
         </div>
         <div class="phub-cta">View All Design →</div>
       </div>
@@ -971,10 +969,8 @@ footer{background:var(--black);border-top:1px solid rgba(0,255,65,.15);padding:4
     <p class="section-desc">Choose a category to explore our design work.</p>
     <div class="cat-grid">
       <div class="cat-card" onclick="goTo('design-all')"><div class="cat-card-num">01</div><div class="cat-card-icon">🎨</div><div class="cat-card-title">All Design</div><div class="cat-card-desc">Everything across all design categories.</div><div class="cat-card-arrow">Browse All →</div></div>
-      <div class="cat-card" onclick="goTo('design-branding')"><div class="cat-card-num">02</div><div class="cat-card-icon">✒️</div><div class="cat-card-title">Branding</div><div class="cat-card-desc">Logos, brand guidelines and identity systems.</div><div class="cat-card-arrow">View Work →</div></div>
       <div class="cat-card" onclick="goTo('design-music')"><div class="cat-card-num">03</div><div class="cat-card-icon">💿</div><div class="cat-card-title">Music &amp; Albums</div><div class="cat-card-desc">Album covers, single art and EP artwork.</div><div class="cat-card-arrow">View Work →</div></div>
       <div class="cat-card" onclick="goTo('design-print')"><div class="cat-card-num">04</div><div class="cat-card-icon">🖨️</div><div class="cat-card-title">Print &amp; Flyers</div><div class="cat-card-desc">Event flyers, concert posters and promo print.</div><div class="cat-card-arrow">View Work →</div></div>
-      <div class="cat-card" onclick="goTo('design-social')"><div class="cat-card-num">05</div><div class="cat-card-icon">📱</div><div class="cat-card-title">Social / Digital</div><div class="cat-card-desc">IG packs, banners and digital content templates.</div><div class="cat-card-arrow">View Work →</div></div>
     </div>
   </div>
   <footer><button class="footer-logo" onclick="goTo('home')">GROVE STREET MEDIA</button><ul class="footer-links"><li><button onclick="goTo('home')">Home</button></li><li><button onclick="goTo('photos')">Photos</button></li><li><button onclick="goTo('contact')">Contact</button></li></ul><div class="footer-copy">© 2025 Grove Street Media.</div></footer>
@@ -984,14 +980,6 @@ footer{background:var(--black);border-top:1px solid rgba(0,255,65,.15);padding:4
 <div class="page" id="page-design-all">
   <div class="breadcrumb"><button onclick="goTo('home')">Home</button><span class="sep">/</span><button onclick="goTo('design')">Design</button><span class="sep">/</span><span class="cur">All Design</span></div>
   <div class="page-inner"><div class="section-label">Design</div><h2 class="section-title">ALL<br><span class="accent">DESIGN</span></h2><div class="gallery-grid" id="dgrid-design-all" style="grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:12px;"></div><button class="add-btn" onclick="addDesignItem('design-all')">+ Add Design</button><div class="portfolio-booknow"><div class="portfolio-booknow-title">READY TO <span>BOOK?</span></div><div class="portfolio-booknow-sub">Let's create something unforgettable together.</div><button class="btn-primary" onclick="goToPricing('design')" style="margin-top:8px;">Start Your Inquiry →</button></div></div>
-  <div style="padding:0 48px 60px;"><button class="btn-primary" style="font-size:.75rem;" onclick="goToPricing('design')">📅 Book Now →</button></div>
-  <footer><button class="footer-logo" onclick="goTo('home')">GROVE STREET MEDIA</button><ul class="footer-links"><li><button onclick="goTo('design')">← Back to Design</button></li><li><button onclick="goTo('contact')">Book Now</button></li></ul><div class="footer-copy">© 2025 Grove Street Media.</div></footer>
-</div>
-
-<!-- DESIGN: BRANDING -->
-<div class="page" id="page-design-branding">
-  <div class="breadcrumb"><button onclick="goTo('home')">Home</button><span class="sep">/</span><button onclick="goTo('design')">Design</button><span class="sep">/</span><span class="cur">Branding</span></div>
-  <div class="page-inner"><div class="section-label">Design</div><h2 class="section-title">BRANDING<br><span class="accent">WORK</span></h2><div class="gallery-grid" id="dgrid-design-branding" style="grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:12px;"></div><button class="add-btn" onclick="addDesignItem('design-branding')">+ Add Design</button><div class="portfolio-booknow"><div class="portfolio-booknow-title">READY TO <span>BOOK?</span></div><div class="portfolio-booknow-sub">Let's create something unforgettable together.</div><button class="btn-primary" onclick="goToPricing('design')" style="margin-top:8px;">Start Your Inquiry →</button></div></div>
   <div style="padding:0 48px 60px;"><button class="btn-primary" style="font-size:.75rem;" onclick="goToPricing('design')">📅 Book Now →</button></div>
   <footer><button class="footer-logo" onclick="goTo('home')">GROVE STREET MEDIA</button><ul class="footer-links"><li><button onclick="goTo('design')">← Back to Design</button></li><li><button onclick="goTo('contact')">Book Now</button></li></ul><div class="footer-copy">© 2025 Grove Street Media.</div></footer>
 </div>
@@ -1008,14 +996,6 @@ footer{background:var(--black);border-top:1px solid rgba(0,255,65,.15);padding:4
 <div class="page" id="page-design-print">
   <div class="breadcrumb"><button onclick="goTo('home')">Home</button><span class="sep">/</span><button onclick="goTo('design')">Design</button><span class="sep">/</span><span class="cur">Print &amp; Flyers</span></div>
   <div class="page-inner"><div class="section-label">Design</div><h2 class="section-title">PRINT &amp;<br><span class="accent">FLYERS</span></h2><div class="gallery-grid" id="dgrid-design-print" style="grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:12px;"></div><button class="add-btn" onclick="addDesignItem('design-print')">+ Add Design</button><div class="portfolio-booknow"><div class="portfolio-booknow-title">READY TO <span>BOOK?</span></div><div class="portfolio-booknow-sub">Let's create something unforgettable together.</div><button class="btn-primary" onclick="goToPricing('design')" style="margin-top:8px;">Start Your Inquiry →</button></div></div>
-  <div style="padding:0 48px 60px;"><button class="btn-primary" style="font-size:.75rem;" onclick="goToPricing('design')">📅 Book Now →</button></div>
-  <footer><button class="footer-logo" onclick="goTo('home')">GROVE STREET MEDIA</button><ul class="footer-links"><li><button onclick="goTo('design')">← Back to Design</button></li><li><button onclick="goTo('contact')">Book Now</button></li></ul><div class="footer-copy">© 2025 Grove Street Media.</div></footer>
-</div>
-
-<!-- DESIGN: SOCIAL -->
-<div class="page" id="page-design-social">
-  <div class="breadcrumb"><button onclick="goTo('home')">Home</button><span class="sep">/</span><button onclick="goTo('design')">Design</button><span class="sep">/</span><span class="cur">Social / Digital</span></div>
-  <div class="page-inner"><div class="section-label">Design</div><h2 class="section-title">SOCIAL &amp;<br><span class="accent">DIGITAL</span></h2><div class="gallery-grid" id="dgrid-design-social" style="grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:12px;"></div><button class="add-btn" onclick="addDesignItem('design-social')">+ Add Design</button><div class="portfolio-booknow"><div class="portfolio-booknow-title">READY TO <span>BOOK?</span></div><div class="portfolio-booknow-sub">Let's create something unforgettable together.</div><button class="btn-primary" onclick="goToPricing('design')" style="margin-top:8px;">Start Your Inquiry →</button></div></div>
   <div style="padding:0 48px 60px;"><button class="btn-primary" style="font-size:.75rem;" onclick="goToPricing('design')">📅 Book Now →</button></div>
   <footer><button class="footer-logo" onclick="goTo('home')">GROVE STREET MEDIA</button><ul class="footer-links"><li><button onclick="goTo('design')">← Back to Design</button></li><li><button onclick="goTo('contact')">Book Now</button></li></ul><div class="footer-copy">© 2025 Grove Street Media.</div></footer>
 </div>
@@ -1100,11 +1080,6 @@ footer{background:var(--black);border-top:1px solid rgba(0,255,65,.15);padding:4
         </div>
         <div class="svc-desc">Bold design rooted in culture. From brand identities to album covers — we make your visual presence unforgettable.</div>
         <div class="svc-sub-list">
-          <button class="svc-sub-item" onclick="goTo('design-branding')">
-            <span class="svc-sub-icon">✒️</span>
-            <div><div class="svc-sub-name">Branding &amp; Identity</div><div class="svc-sub-desc">Logos, guidelines &amp; brand systems</div></div>
-            <span class="svc-sub-arrow">→</span>
-          </button>
           <button class="svc-sub-item" onclick="goTo('design-music')">
             <span class="svc-sub-icon">💿</span>
             <div><div class="svc-sub-name">Music &amp; Album Art</div><div class="svc-sub-desc">Covers, singles &amp; EP artwork</div></div>
@@ -1113,11 +1088,6 @@ footer{background:var(--black);border-top:1px solid rgba(0,255,65,.15);padding:4
           <button class="svc-sub-item" onclick="goTo('design-print')">
             <span class="svc-sub-icon">🖨️</span>
             <div><div class="svc-sub-name">Print &amp; Flyers</div><div class="svc-sub-desc">Event posters, flyers &amp; merch</div></div>
-            <span class="svc-sub-arrow">→</span>
-          </button>
-          <button class="svc-sub-item" onclick="goTo('design-social')">
-            <span class="svc-sub-icon">📱</span>
-            <div><div class="svc-sub-name">Social &amp; Digital</div><div class="svc-sub-desc">IG packs, banners &amp; templates</div></div>
             <span class="svc-sub-arrow">→</span>
           </button>
         </div>
@@ -1653,16 +1623,35 @@ footer{background:var(--black);border-top:1px solid rgba(0,255,65,.15);padding:4
 
 <script>
 // ── NAVIGATION ──
-function goTo(pageId){
+function goTo(pageId, addHistory=true){
   document.querySelectorAll('.page').forEach(p=>p.classList.remove('active'));
   const t=document.getElementById('page-'+pageId);
   if(t){t.classList.add('active');window.scrollTo(0,0);}
   document.querySelectorAll('.nav-links [data-page]').forEach(b=>{
     b.classList.toggle('active', pageId===b.dataset.page || pageId.startsWith(b.dataset.page+'-'));
   });
-  // Trigger entrance animations for the new page
+  if(addHistory){
+    try { history.pushState({page: pageId}, '', '#' + pageId); } catch(e){}
+  }
   setTimeout(()=>initPageAnimations(pageId), 10);
 }
+
+// Browser back/forward support
+window.addEventListener('popstate', function(e){
+  const pageId = e.state?.page || 'home';
+  goTo(pageId, false);
+});
+window.addEventListener('DOMContentLoaded', function(){
+  try {
+    const hash = window.location.hash.replace('#','');
+    if(hash && document.getElementById('page-'+hash)){
+      goTo(hash, false);
+      history.replaceState({page: hash}, '', '#' + hash);
+    } else {
+      history.replaceState({page: 'home'}, '', '#home');
+    }
+  } catch(e){}
+});
 
 // ── MOBILE NAV ──
 function toggleMobileNav(){
@@ -1710,21 +1699,21 @@ if(!isTouch){
 // projectStore: { commercial: [{id, name, tag, coverSrc, photos:[]}], wedding:[...], urban:[...] }
 const projectStore = {
   commercial: [
-    {id:'proj-c1', name:'Product Launch 01', tag:'Commercial', coverSrc:'', photos:[]},
-    {id:'proj-c2', name:'Brand Campaign 02', tag:'Commercial', coverSrc:'', photos:[]},
-    {id:'proj-c3', name:'Lifestyle Shoot',   tag:'Commercial', coverSrc:'', photos:[]},
-    {id:'proj-c4', name:'Studio Portrait',   tag:'Commercial', coverSrc:'', photos:[]},
+    {id:'proj-c1', name:'The Kilogram Shoot', tag:'Commercial', coverSrc:'https://res.cloudinary.com/dwjkgvkis/image/upload/v1777266993/Jada_Ali_-_Kilogram-06-2_nijs4n.jpg', photos:['https://res.cloudinary.com/dwjkgvkis/image/upload/v1777266993/Jada_Ali_-_Kilogram-06-2_nijs4n.jpg','https://res.cloudinary.com/dwjkgvkis/image/upload/v1777266993/Jada_Ali_-_Kilogram-10-2_a8dbzb.jpg','https://res.cloudinary.com/dwjkgvkis/image/upload/v1777266995/Jada_Ali_-_Kilogram-37-2_wupexy.jpg','https://res.cloudinary.com/dwjkgvkis/image/upload/v1777266993/Jada_Ali_-_Kilogram-15-2_jdlhdf.jpg','https://res.cloudinary.com/dwjkgvkis/image/upload/v1777266994/Jada_Ali_-_Kilogram-36-2_kn8efy.jpg']},
+    {id:'proj-c2', name:'Pizza Cat Detroit', tag:'Commercial', coverSrc:'https://res.cloudinary.com/dwjkgvkis/image/upload/v1777269834/11_corjjj.jpg', photos:['https://res.cloudinary.com/dwjkgvkis/image/upload/v1777269834/11_corjjj.jpg','https://res.cloudinary.com/dwjkgvkis/image/upload/v1777269833/08_lbskgc.jpg','https://res.cloudinary.com/dwjkgvkis/image/upload/v1777269832/10_a9jbm3.jpg','https://res.cloudinary.com/dwjkgvkis/image/upload/v1777269832/18_plsgm8.jpg','https://res.cloudinary.com/dwjkgvkis/image/upload/v1777269832/10_a9jbm3.jpg']},
+    {id:'proj-c3', name:'Loveless BLVD', tag:'Commercial', coverSrc:'https://res.cloudinary.com/dwjkgvkis/image/upload/v1777272637/the_loveless-41-2_tingdh.jpg', photos:['https://res.cloudinary.com/dwjkgvkis/image/upload/v1777272634/Jay-09-2_yvaplm.jpg','https://res.cloudinary.com/dwjkgvkis/image/upload/v1777272635/Jay-07-2_dnzpxw.jpg','https://res.cloudinary.com/dwjkgvkis/image/upload/v1777272635/the_loveless-17-2_gotyqm.jpg','https://res.cloudinary.com/dwjkgvkis/image/upload/v1777272636/the_loveless-26-2_dgmouy.jpg','https://res.cloudinary.com/dwjkgvkis/image/upload/v1777272637/the_loveless-44-2_vw31ze.jpg','https://res.cloudinary.com/dwjkgvkis/image/upload/v1777272637/the_loveless-38-2_fjc6ak.jpg']},
+    {id:'proj-c4', name:'Studio Portrait', tag:'Commercial', coverSrc:'', photos:[]},
   ],
   wedding: [
-    {id:'proj-w1', name:'Sarah & James',   tag:'Wedding', coverSrc:'', photos:[]},
-    {id:'proj-w2', name:'Marcus & Aisha',  tag:'Wedding', coverSrc:'', photos:[]},
-    {id:'proj-w3', name:'The Rivera Wedding', tag:'Wedding', coverSrc:'', photos:[]},
+    {id:'proj-w1', name:'Sarah & James',   tag:'Events & Celebrations', coverSrc:'', photos:[]},
+    {id:'proj-w2', name:'Marcus & Aisha',  tag:'Events & Celebrations', coverSrc:'', photos:[]},
+    {id:'proj-w3', name:'The Rivera Wedding', tag:'Events & Celebrations', coverSrc:'', photos:[]},
   ],
   urban: [
-    {id:'proj-u1', name:'Jada Ali', tag:'Lifestyle & Culture', coverSrc:'https://res.cloudinary.com/dwjkgvkis/image/upload/v1777266993/Jada_Ali_-_Kilogram-06-2_nijs4n.jpg', photos:['https://res.cloudinary.com/dwjkgvkis/image/upload/v1777266993/Jada_Ali_-_Kilogram-06-2_nijs4n.jpg','https://res.cloudinary.com/dwjkgvkis/image/upload/v1777266993/Jada_Ali_-_Kilogram-10-2_a8dbzb.jpg','https://res.cloudinary.com/dwjkgvkis/image/upload/v1777266995/Jada_Ali_-_Kilogram-37-2_wupexy.jpg','https://res.cloudinary.com/dwjkgvkis/image/upload/v1777266993/Jada_Ali_-_Kilogram-15-2_jdlhdf.jpg','https://res.cloudinary.com/dwjkgvkis/image/upload/v1777266994/Jada_Ali_-_Kilogram-36-2_kn8efy.jpg']},
-    {id:'proj-u2', name:'Culture Portraits',  tag:'Urban', coverSrc:'', photos:[]},
-    {id:'proj-u3', name:'City Skyline Shots', tag:'Urban', coverSrc:'', photos:[]},
-    {id:'proj-u4', name:'Culture & Community',tag:'Urban', coverSrc:'', photos:[]},
+    {id:'proj-u1', name:'Culture Portraits',  tag:'Lifestyle & Culture', coverSrc:'', photos:[]},
+    {id:'proj-u2', name:'City Skyline Shots', tag:'Lifestyle & Culture', coverSrc:'', photos:[]},
+    {id:'proj-u3', name:'Street Sessions',    tag:'Lifestyle & Culture', coverSrc:'', photos:[]},
+    {id:'proj-u4', name:'Culture & Community',tag:'Lifestyle & Culture', coverSrc:'', photos:[]},
   ],
 };
 
@@ -1807,6 +1796,7 @@ function makeProjectCard(proj, cat) {
       openLightbox(img.src);
     }
   });
+  const nameInput = card.querySelector('.project-name-input');
   nameInput.addEventListener('input', e => { proj.name = e.target.value; });
   nameInput.addEventListener('click', e => e.stopPropagation());
   // Open project on card click (not on input)
@@ -1930,7 +1920,7 @@ function makePhotoCard(title,tag,tall=false){
       <div class="gallery-placeholder-icon">🖼</div>
       <span>Add Photo</span>
       <div style="font-family:var(--font-mono);font-size:.55rem;color:var(--text-dim);opacity:.7;letter-spacing:1px;">URL or file</div>
-      <img src="" alt="${title}" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:none;"/>
+      <img src="" alt="${title}" style="position:relative;width:100%;height:auto;object-fit:contain;display:none;"/>
       <div class="media-url-overlay" onclick="event.stopPropagation()">
         <div class="media-url-label">Paste Image URL</div>
         <input type="text" placeholder="https://res.cloudinary.com/..." style="font-family:var(--font-mono);font-size:.62rem;background:var(--black);border:1px solid rgba(0,255,65,.4);color:var(--text);padding:9px 10px;width:100%;outline:none;" />
@@ -1996,7 +1986,7 @@ Object.entries(videoData).forEach(([cat,items])=>{
 function makeVideoCard(title,tag,dur){
   const d=document.createElement('div');d.className='video-card';
   d.innerHTML=`<div class="video-thumb"><div class="video-thumb-placeholder">
-    <img src="" alt="${title}" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:none;"/>
+    <img src="" alt="${title}" style="position:relative;width:100%;height:auto;object-fit:contain;display:none;"/>
     <div class="play-btn" style="position:relative;z-index:3;">▶</div>
     <div class="media-url-overlay" onclick="event.stopPropagation()">
       <div class="media-url-label">Paste Thumbnail URL</div>
@@ -2039,15 +2029,52 @@ function addVideoItem(cat){const g=document.getElementById('vgrid-'+cat);if(g)g.
 
 // ── DESIGN ──
 const designData={
-  'design-all':[{t:'GSM Brand Identity',tag:'Branding'},{t:'Album Cover — Vol.1',tag:'Music'},{t:'Event Flyer',tag:'Print'},{t:'Social Pack',tag:'Digital'},{t:'Merch Mockup',tag:'Branding'},{t:'Single Art',tag:'Music'}],
-  'design-branding':[{t:'Logo Design',tag:'Branding'},{t:'Brand Guidelines',tag:'Branding'},{t:'Merch Mockup',tag:'Branding'},{t:'Business Cards',tag:'Branding'}],
-  'design-music':[{t:'Album Cover',tag:'Music'},{t:'EP Artwork',tag:'Music'},{t:'Single Cover',tag:'Music'},{t:'Mixtape Art',tag:'Music'}],
-  'design-print':[{t:'Event Flyer',tag:'Print'},{t:'Concert Poster',tag:'Print'},{t:'Promo Sheet',tag:'Print'}],
-  'design-social':[{t:'IG Story Pack',tag:'Digital'},{t:'Banner Design',tag:'Digital'},{t:'Content Template',tag:'Digital'}],
+  'design-all':[
+    {t:'Doja Cat — Lil Tito',tag:'Music',src:'https://res.cloudinary.com/dwjkgvkis/image/upload/v1777337478/Doja_Cat_cyc3mn.jpg'},
+    {t:'YOU N I — Jay Prime',tag:'Music',src:'https://res.cloudinary.com/dwjkgvkis/image/upload/v1777337611/Champagne_Black_iytcwj.jpg'},
+    {t:'Turks and Caics — Jay Prime',tag:'Music',src:'https://res.cloudinary.com/dwjkgvkis/image/upload/v1777338100/Turks_and_Caics_abaxu2.jpg'},
+    {t:'Maximum — Champagne937',tag:'Music',src:'https://res.cloudinary.com/dwjkgvkis/image/upload/v1777337478/Maximum_-_Champagne937Artboard_3-2_ur4ypy.jpg'},
+    {t:'Pop Out — Prince Devv',tag:'Music',src:'https://res.cloudinary.com/dwjkgvkis/image/upload/q_auto/f_auto/v1777338329/Pop_Out_ewsylv.jpg'},
+    {t:'CTRL — Y3NOM',tag:'Music',src:'https://res.cloudinary.com/dwjkgvkis/image/upload/v1777339302/CRWD-2_fkrmoq.jpg'},
+    {t:'RAW ENERGY FEST',tag:'Print',src:'https://res.cloudinary.com/dwjkgvkis/image/upload/q_auto/f_auto/v1777273073/Raw_Energy_Fest_b2upld.png'},
+    {t:'DJ ErnieT — Party Flyer',tag:'Print',src:'https://res.cloudinary.com/dwjkgvkis/image/upload/v1777339708/DJ_ErnieT_Party_and_BS_Flyer_ko5psi.jpg'},
+    {t:'Not Another 00s Party',tag:'Print',src:'https://res.cloudinary.com/dwjkgvkis/image/upload/v1777403675/NATP_j2zsgh.jpg'},
+    {t:'OMB Peezy Ft Jada Ali',tag:'Print',src:'https://res.cloudinary.com/dwjkgvkis/image/upload/v1777403674/Jada_Ali_flcvqa.jpg'},
+    {t:'Celebration',tag:'Print',src:'https://res.cloudinary.com/dwjkgvkis/image/upload/v1777404319/Its_Pisces_Szn_2_olfcbo.jpg'},
+    {t:'Memorial Day Laughs',tag:'Print',src:'https://res.cloudinary.com/dwjkgvkis/image/upload/v1777405399/Memorial_Day_Laughs_pe9hfa.jpg'},
+  ],
+  'design-music':[
+    {t:'Doja Cat — Lil Tito',tag:'Music',src:'https://res.cloudinary.com/dwjkgvkis/image/upload/v1777337478/Doja_Cat_cyc3mn.jpg'},
+    {t:'YOU N I — Jay Prime',tag:'Music',src:'https://res.cloudinary.com/dwjkgvkis/image/upload/v1777337611/Champagne_Black_iytcwj.jpg'},
+    {t:'Turks and Caics — Jay Prime',tag:'Music',src:'https://res.cloudinary.com/dwjkgvkis/image/upload/v1777338100/Turks_and_Caics_abaxu2.jpg'},
+    {t:'Maximum — Champagne937',tag:'Music',src:'https://res.cloudinary.com/dwjkgvkis/image/upload/v1777337478/Maximum_-_Champagne937Artboard_3-2_ur4ypy.jpg'},
+    {t:'Pop Out — Prince Devv',tag:'Music',src:'https://res.cloudinary.com/dwjkgvkis/image/upload/q_auto/f_auto/v1777338329/Pop_Out_ewsylv.jpg'},
+    {t:'CTRL — Y3NOM',tag:'Music',src:'https://res.cloudinary.com/dwjkgvkis/image/upload/v1777339302/CRWD-2_fkrmoq.jpg'},
+  ],
+  'design-print':[
+    {t:'RAW ENERGY FEST',tag:'Print',src:'https://res.cloudinary.com/dwjkgvkis/image/upload/q_auto/f_auto/v1777273073/Raw_Energy_Fest_b2upld.png'},
+    {t:'DJ ErnieT — Party Flyer',tag:'Print',src:'https://res.cloudinary.com/dwjkgvkis/image/upload/v1777339708/DJ_ErnieT_Party_and_BS_Flyer_ko5psi.jpg'},
+    {t:'Not Another 00s Party',tag:'Print',src:'https://res.cloudinary.com/dwjkgvkis/image/upload/v1777403675/NATP_j2zsgh.jpg'},
+    {t:'OMB Peezy Ft Jada Ali',tag:'Print',src:'https://res.cloudinary.com/dwjkgvkis/image/upload/v1777403674/Jada_Ali_flcvqa.jpg'},
+    {t:'Celebration',tag:'Print',src:'https://res.cloudinary.com/dwjkgvkis/image/upload/v1777404319/Its_Pisces_Szn_2_olfcbo.jpg'},
+    {t:'Memorial Day Laughs',tag:'Print',src:'https://res.cloudinary.com/dwjkgvkis/image/upload/v1777405399/Memorial_Day_Laughs_pe9hfa.jpg'},
+  ],
 };
 Object.entries(designData).forEach(([cat,items])=>{
   const g=document.getElementById('dgrid-'+cat);if(!g)return;
-  items.forEach(item=>{const d=makePhotoCard(item.t,item.tag);d.className='gallery-item square';g.appendChild(d);});
+  items.forEach(item=>{
+    const d=makePhotoCard(item.t,item.tag);
+    d.className='gallery-item square';
+    if(item.src){
+      const img=d.querySelector('img');
+      const icon=d.querySelector('.gallery-placeholder-icon');
+      const hints=d.querySelectorAll('.gallery-placeholder span, .gallery-placeholder div:not(.media-url-overlay):not(.gallery-placeholder-icon)');
+      img.src=item.src; img.style.display='block';
+      if(icon) icon.style.display='none';
+      hints.forEach(el=>el.style.display='none');
+    }
+    g.appendChild(d);
+  });
 });
 function addDesignItem(cat){const g=document.getElementById('dgrid-'+cat);if(!g)return;const d=makePhotoCard('New Design','Design');d.className='gallery-item square';g.appendChild(d);}
 
